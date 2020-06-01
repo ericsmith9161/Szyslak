@@ -2,6 +2,7 @@ import React from "react";
 
 import LoginFormContainer from "./LoginFormContainer";
 import SignupFormContainer from "./SignupFormContainer";
+import GreetingContainer from "./GreetingContainer"
 
 import {Route} from "react-router-dom";
 import { AuthRoute } from "../util/route_util";

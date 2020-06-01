@@ -18,17 +18,18 @@ export const logoutCurrentUser = () => {
 };
 
 export const receiveErrors = errors => {
+  console.log(errors);
   return {
     type: RECEIVE_SESSION_ERRORS,
-    errors
+    errors: errors.responseJSON
   }
 }
 
 export const signup = (user) => (dispatch) => APIUtil.signup(user)
-  .then(user => dispatch(receiveCurrentUser(user)));
+  .then((user) => dispatch(receiveCurrentUser(user)), resp => dispatch(receiveErrors(resp)));
 
 export const login = (user) => (dispatch) => APIUtil.login(user)
-  .then(currentUser => dispatch(receiveCurrentUser(currentUser)));
+  .then( (currentUser) => dispatch(receiveCurrentUser(currentUser)), resp => dispatch(receiveErrors(resp)));
 
 export const logout = () => (dispatch) => APIUtil.logout()
-  .then(() => dispatch(logoutCurrentUser()));
+  .then(() => dispatch(logoutCurrentUser()), resp => dispatch(receiveErrors(resp)));

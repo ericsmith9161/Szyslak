@@ -5,8 +5,9 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      email: "",
       username: "",
-      password: ""
+      password: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,6 +15,10 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const un = this.state.email.split("@")[0];
+    console.log(un);
+    this.setState({"username": un});
+    console.log(this.state);
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(() => {
       this.props.history.push('/')
@@ -39,11 +44,11 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label> username
+          <label> email
             <input
               type="text"
-              value={this.state.username}
-              onChange={this.handleChange('username')}
+              value={this.state.email}
+              onChange={this.handleChange('email')}
             />
           </label>
           <label> password
