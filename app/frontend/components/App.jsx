@@ -7,11 +7,14 @@ import {Route} from "react-router-dom";
 
 const App = () => (
   <div>
-    <h1>Szyslak</h1>
-    <GreetingContainer />
+  <header>
+      <h1>Szyslak</h1>
+      <GreetingContainer />
+    </header>
+    
+    <Route exact path="/login" component={LoginFormContainer} />
+    <Route exact path="/signup" component={SignupFormContainer} />
   </div>
-  <Route exact path="/login" component={LoginFormContainer} />
-  <Route exact path="/signup" component={SignupFormContainer} />
 );
 
 export default App;
