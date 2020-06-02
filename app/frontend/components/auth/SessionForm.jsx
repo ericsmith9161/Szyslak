@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
+import SessionFormHeader from './SessionFormHeader';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -31,16 +33,24 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let otherPath, otherPathName
+    let otherPath, otherPathName, pathName, formTitle
     if (this.props.formType === 'signup') {
-      otherPath = '/login'
-      otherPathName = "Login"
+      otherPath = '/login';
+      otherPathName = "login to an existing account";
+      pathName = "Sign Up";
+      formTitle = "Sign up for Szylack";
     } else {
-      otherPath = '/signup'
-      otherPathName = "Signup"
+      otherPath = '/signup';
+      otherPathName = "create an account";
+      pathName = "Create Account";
+      formTitle = "Sign in to Szylack";
     };
     return (
-      <div>
+      <div className = {SessionForm}>
+        <SessionFormHeader />
+        <h3>Sign in to Szylack</h3>
+        <p>szyslak.herokuapp.com/</p>
+        <p>Enter your <b>email address</b> and <b>password.</b></p>
         <form onSubmit={this.handleSubmit}>
           <label> email
             <input
