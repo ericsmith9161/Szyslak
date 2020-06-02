@@ -15,7 +15,7 @@ class UserInfoDropdown extends React.Component{
     }else{
       this.setState({status: "active"})
     }
-    this.props.updateUser(this.state)
+    this.props.editUser(this.state)
   }
 
   render(){

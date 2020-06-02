@@ -10,7 +10,7 @@ class Splash extends React.Component{
         <SplashHeader />
         <div className = "splash-top-section">
           <SplashTopSectionLeft />
-          <img src="../../../assets/images/moes-tavern-splash.png" className="splash-img-top"/>
+          {/* <img src="../../../assets/images/moes-tavern-splash.png" className="splash-img-top"/> */}
         </div>
         <div className = "splash-middle-section">
           <h1>Break out of the Inbox</h1>

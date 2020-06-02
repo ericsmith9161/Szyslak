@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import Sidebar from './Sidebar';
 
-import updateUser from '../../actions/user_actions'
+import editUser from '../../actions/user_actions'
 
 
 
@@ -19,7 +19,7 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
   return {
-    updateUser: user => dispatch(updateUser(user))
+    editUser: user => dispatch(editUser(user))
   }
 }
 
