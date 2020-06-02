@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Splash from './Splash/Splash';
+
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,7 @@ class Greeting extends React.Component {
       return (
         //this will become Splash component
         <div>
+          <Splash />
           <Link to="/signup"> Sign Up</Link>
           <Link to="/login">Log In </Link>
         </div>
