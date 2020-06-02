@@ -37,6 +37,6 @@ const removeUser = (userId) => {
   }
 }
 
-export const removeUser = (userId) => (dispatch) => {
-  return APIUtil.removeUser(userId).then(user => dispatch(removeUser(user.id)))
+export const deleteUser = (userId) => (dispatch) => {
+  return APIUtil.deleteUser(userId).then(user => dispatch(removeUser(user.id)))
 }

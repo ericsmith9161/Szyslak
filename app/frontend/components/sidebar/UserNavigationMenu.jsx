@@ -18,3 +18,5 @@ class UserNavigationMenu extends React.Component{
     )
   }
 }
+
+export default UserNavigationMenu;

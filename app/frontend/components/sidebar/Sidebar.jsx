@@ -5,10 +5,12 @@ import UserNavigationMenu from './UserNavigationMenu';
 
 class Sidebar extends React.Component{
   render(){
-    <div>
-      <WorkSpaceHeader />
-      <UserNavigationMenu />
-    </div>
+    return (
+      <div className = "sidebar"> 
+        <WorkSpaceHeader user = {this.props.currentUser}/>
+        <UserNavigationMenu user = {this.props.currentUser}/>
+      </div>
+    )
   }
 }
 
