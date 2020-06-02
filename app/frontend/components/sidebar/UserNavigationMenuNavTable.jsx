@@ -24,4 +24,4 @@ class UserNavigationMenuNavTable extends React.Component{
 export default UserNavigationMenuNavTable;
 
 // how to get icons?
-// ampersand red?
+//change inner elements of li to links as functionality is built out
