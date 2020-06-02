@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
     return (
       <div className = {SessionForm}>
         <SessionFormHeader />
-        <h3>Sign in to Szylack</h3>
+        <h3>{formTitle}</h3>
         <p>szyslak.herokuapp.com/</p>
         <p>Enter your <b>email address</b> and <b>password.</b></p>
         <form onSubmit={this.handleSubmit}>
