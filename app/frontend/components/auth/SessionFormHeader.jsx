@@ -24,9 +24,9 @@ class SessionFormHeader extends React.Component{
           <span><Link to="/greeting">szylack</Link></span>
         </div>
         <div className="session-form-header-links">
-          <a href="https://github.com/ericsmith9161">Github</a>
-          <a href="https://www.linkedin.com/in/eric-smith-8832b41aa/">LinkedIn</a>
-          <a href="https://www.facebook.com/profile.php?id=100047966766811">Facebook</a>
+          <a className="normal-link" href="https://github.com/ericsmith9161">Github</a>
+          <a className="normal-link" href="https://www.linkedin.com/in/eric-smith-8832b41aa/">LinkedIn</a>
+          <a className="normal-link" href="https://www.facebook.com/profile.php?id=100047966766811">Facebook</a>
           <Link to="/" className="session-header-demo-login" onClick={this.handleDemoLogin}>Sign in as demo user</Link>
           {/* icon goes here */}
         </div>

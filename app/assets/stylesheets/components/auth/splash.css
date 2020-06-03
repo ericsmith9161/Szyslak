@@ -40,6 +40,10 @@
   text-decoration: none;
 }
 
+.splash-header-resources a:hover{
+  color: lightblue;
+}
+
 .splash-header button{
   background-color: lightblue;
   color: lightgoldenrodyellow;
@@ -51,6 +55,10 @@
   border-radius: 3px;
   display: flex;
   align-items: center;
+}
+
+.splash-header button:hover{
+  background-color: skyblue;
 }
 
 .splash-header button span{
@@ -125,11 +133,29 @@
 
 .button-color-one{
   background-color: lightblue;
-  color: lightgoldenrodyellow;
+}
+
+.button-color-one:hover{
+  background-color: skyblue;
 }
 
 .button-color-two{
   background-color: lightgoldenrodyellow;
+  box-sizing: border-box;
+}
+
+.button-color-two:hover{
+  border: 2px solid skyblue;
+  padding: 17px 34px;
+  
+}
+
+.button-color-one a{
+  color: lightgoldenrodyellow;
+  
+}
+
+.button-color-two a{
   color: lightblue;
 }
 
