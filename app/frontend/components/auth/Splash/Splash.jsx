@@ -1,9 +1,5 @@
 import React from 'React';
 
-import moeImg from 'images/moes_tavern_splash.png'
-import abe from 'images/abegif.gif'
-import homerTVGif from 'images/homertv.gif'
-
 import SplashHeader from './SplashHeader';
 import SplashTopSectionLeft from './SplashTopSectionLeft';
 
@@ -19,12 +15,12 @@ class Splash extends React.Component{
         <div className = "splash-body">
           <div className = "splash-top-section">
             <SplashTopSectionLeft login={this.props.login} />
-            <img className="splash-top-section-img" width="600"  src = {moeImg} />
+            <img className="splash-top-section-img" width="600"  src = {window.moesTavernSplashURL} />
           </div>
           <div className = "splash-middle-section">
             <h1>Break out of the inbox</h1>
             <p>Working in channels gives everyone on your team a shared view of progress and purpose</p>
-            <img className="splash-middle-section-video" width="600" src = {homerTVGif} />
+            <img className="splash-middle-section-video" width="600" src = {window.homerTVURL} />
           </div>
           <div className = "splash-bottom-section">
             <div className = "splash-bottom-section-subsection">
@@ -71,7 +67,7 @@ class Splash extends React.Component{
               <p>If you like what you saw, links to contact me can be found
               in the navigation bar</p>
             </div>
-            <img src={abe} width="600" />
+            <img src={window.abeURL} width="600" />
           </div>
             
           </div>

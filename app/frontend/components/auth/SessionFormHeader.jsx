@@ -20,7 +20,7 @@ class SessionFormHeader extends React.Component{
     return (
       <div className="session-form-header">
         <div className="session-form-header-logo">
-          <Link to="/greeting"><img className="logo" src={moeGo} width="30" /></Link>
+          <Link to="/greeting"><img className="logo" src={window.moegoURL} width="30" /></Link>
           <span><Link to="/greeting">szylack</Link></span>
         </div>
         <div className="session-form-header-links">

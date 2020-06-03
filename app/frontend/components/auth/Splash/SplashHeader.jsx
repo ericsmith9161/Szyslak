@@ -7,7 +7,7 @@ const SplashHeader = () => {
     <div className = "splash-header">
       <div className = "splash-header-resources">
         <div className = "logo-and-home-link">
-          <img className="logo" src={moeGo} width="30" />
+          <img className="logo" src={window.moegoURL} width="30" />
           <span>szyslak</span>
         </div>
         <label> Eric Smith
