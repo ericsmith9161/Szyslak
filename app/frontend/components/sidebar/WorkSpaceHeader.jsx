@@ -18,7 +18,7 @@ class WorkSpaceHeader extends React.Component{
   render(){
     return (
       <div className = "work-space-header" onClick={this.handleDropdown}>
-        <UserInfoDropdown user={this.props.user} />
+        <UserInfoDropdown user={this.props.user} logout = {this.props.logout}/>
         <div>
           <p className = "work-space-header-name">Szylack</p>
           <UserWithOnlineStatus user={this.props.user}/>

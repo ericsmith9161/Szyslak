@@ -5,7 +5,9 @@ import {connect} from 'react-redux';
 
 import Sidebar from './Sidebar';
 
-import editUser from '../../actions/user_actions'
+import {editUser} from '../../actions/user_actions'
+import { logout } from '../../actions/session_actions'
+
 
 
 
@@ -19,7 +21,8 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
   return {
-    editUser: user => dispatch(editUser(user))
+    editUser: user => dispatch(editUser(user)),
+    logout: () => dispatch(logout()),
   }
 }
 

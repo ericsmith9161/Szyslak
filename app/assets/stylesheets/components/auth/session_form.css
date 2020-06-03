@@ -1,0 +1,101 @@
+.session-form-header-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.session-form{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vw;
+}
+
+.session-form-header-links a{
+  line-height: 2rem;
+  margin: .75rem;
+  text-decoration: none;
+  color: skyblue;
+}
+
+.session-form-header{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-top: 1px solid lightblue;
+  border-bottom: 1px solid lightblue;
+  background-color: lightgoldenrodyellow;
+  position: fixed;
+  width: 100vw;
+  color: lightblue;
+}
+
+.session-form-body input{
+  font-size: 1.2rem;
+  padding: 13px 100px 13px 13px;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  margin: 4px;
+}
+
+.session-form button{
+  background-color: lightblue;
+  color: lightgoldenrodyellow;
+  font-size: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 10px 50px;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  margin: 1rem 0rem;
+  text-align: center;
+  
+}
+
+.session-form-body{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  transform: translateY(100px);
+  width: 32rem;
+  height: 22rem;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  position: fixed;
+  padding: 2rem;
+}
+
+.session-form-body form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  margin: 0 auto;
+
+}
+
+
+.session-form-body h3{
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.session-form-body p{
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.directions{
+  padding-top: 1.75rem;
+}
+
+.session-form-body a{
+  color: skyblue;
+  text-decoration: none;
+  margin: 0 auto;
+}

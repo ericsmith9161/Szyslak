@@ -10,12 +10,12 @@ const SplashTopSectionLeft = () => {
         remote teams will stay productive no matter where you're
         working from.
       </p>
-      <button className = "button-color-one">TRY SZYLACK FOR FREE</button>
-      <button className = "button-color-one">LEARN MORE</button>
-      <div className = "get-started">
-        <p>Want to give it a try?</p>
-        {/* demo user login, add logic */}
+      <div className="button-flex-splash">
+        <button className = "button-color-one">TRY SZYLACK FOR FREE</button>
+        <button className = "button-color-two">LEARN MORE</button>
       </div>
+      <p className = "get-started">Want to give it a try?</p>
+        {/* demo user login, add logic */}
     </div>
   )
 }

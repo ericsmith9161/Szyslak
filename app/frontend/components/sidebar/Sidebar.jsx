@@ -7,7 +7,7 @@ class Sidebar extends React.Component{
   render(){
     return (
       <div className = "sidebar"> 
-        <WorkSpaceHeader user = {this.props.currentUser}/>
+        <WorkSpaceHeader user = {this.props.currentUser} logout = {this.props.logout}/>
         <UserNavigationMenu user = {this.props.currentUser}/>
       </div>
     )

@@ -9,6 +9,7 @@ class UserInfoDropdown extends React.Component{
       {user: this.props.user,
        displayed: false};
     this.changeStatus = this.changeStatus.bind(this);
+    this.handleSignout = this.handleSignout.bind(this);
   }
 
   changeStatus(e){
@@ -19,6 +20,12 @@ class UserInfoDropdown extends React.Component{
       this.setState({status: "active"})
     }
     this.props.editUser(this.state.user)
+  }
+
+  handleSignout(e){
+    console.log(this.props)
+    e.preventDefault
+    this.props.logout()
   }
 
   render(){
@@ -41,7 +48,7 @@ class UserInfoDropdown extends React.Component{
           {/* weird workspace and total messages stuff? */}
           <li id = "tools-hover" className = "ui-dropdown-hover">Tools</li>
           <li id= "help-hover" className = "ui-dropdown-hover">Help</li>
-          <li>Sign out of Szyslak</li>
+          <li onClick={this.handleSignout}><Link to="/greeting">Sign out of Szyslak</Link></li>
           <li id= "add-workspaces-hover" className = "ui-dropdown-hover">Add Workspaces</li>
         </ul>
       </div>

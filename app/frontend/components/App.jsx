@@ -2,7 +2,7 @@ import React from "react";
 
 import LoginFormContainer from "./auth/LoginFormContainer";
 import SignupFormContainer from "./auth/SignupFormContainer";
-import GreetingContainer from "./auth/GreetingContainer"
+import GreetingContainer from "./auth/GreetingContainer";
 
 import {Route} from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
@@ -18,7 +18,10 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path = "/" component={SidebarContainer} />
+      
   </div>
 );
 
 export default App;
+
+//how to structure routes?
