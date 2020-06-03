@@ -22,11 +22,25 @@
 }
 
 .session-form-header-links a{
-  line-height: 2rem;
-  margin: .75rem;
+  line-height: 1.75rem;
+  padding: 0rem .2rem;
   text-decoration: none;
   color: skyblue;
   font-size: .95rem;
+  margin: .2rem .50rem;
+}
+
+.normal-link:hover{
+  color: darkblue;
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  margin: .45rem;
+}
+
+.session-header-demo-login:hover{
+  color: skyblue;
+  border: 2px solid skyblue;
 }
 
 .session-form-header{
@@ -51,17 +65,22 @@
 }
 
 .session-form button{
-  background-color: lightblue;
+  background-color: skyblue;
   color: lightgoldenrodyellow;
   font-size: 14px;
   font-weight: 700;
   font-size: 1.1rem;
   padding: 10px 50px;
-  border: 1px solid lightblue;
+  border: 1px solid skyblue;
   border-radius: 3px;
   margin: 1rem 0rem;
   text-align: center;
-  
+  cursor: pointer;
+}
+
+.session-form button:hover{
+  background-color: lightblue;
+  border-color: lightblue;
 }
 
 .session-form-errors-list{
