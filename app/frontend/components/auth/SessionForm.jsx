@@ -15,6 +15,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const un = this.state.email.split("@")[0];
