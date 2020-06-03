@@ -1,11 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import moeGo from 'images/moego.png'
 
 const SplashHeader = () => {
   return (
     <div className = "splash-header">
-      {/* logo goes here */}
       <div className = "splash-header-resources">
+        <div className = "logo-and-home-link">
+          <img className="logo" src={moeGo} width="30" />
+          <span>szyslak</span>
+        </div>
         <label> Eric Smith
 
         </label>

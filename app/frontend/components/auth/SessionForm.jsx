@@ -48,9 +48,12 @@ class SessionForm extends React.Component {
     return (
       <div className = "session-form">
         <SessionFormHeader processForm = {this.props.processForm}/>
+        <ul className = "session-form-errors-list">
+          {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
+        </ul>
         <div className = "session-form-body">
-            <h3>{formTitle}</h3>
-            <p>szyslak.herokuapp.com/</p>
+          <h3>{formTitle}</h3>
+          <p>szyslak.herokuapp.com/</p>
           <p className="directions">Enter your <b>email address</b> and <b>password.</b></p>
           <form onSubmit={this.handleSubmit}>
             <label>
@@ -72,10 +75,8 @@ class SessionForm extends React.Component {
             <button>{pathName}</button>
           </form>
           <Link to={otherPath}>{otherPathName}</Link>
-          <ul>
-            {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
-          </ul>
         </div>
+
       </div>
     
     )

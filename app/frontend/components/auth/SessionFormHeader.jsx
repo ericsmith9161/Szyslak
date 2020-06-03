@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import moeGo from 'images/moego.png'
+
 
 
 
@@ -17,14 +19,16 @@ class SessionFormHeader extends React.Component{
   render(){
     return (
       <div className="session-form-header">
-        <div>
+        <div className="session-form-header-logo">
+          <Link to="/greeting"><img className="logo" src={moeGo} width="30" /></Link>
+          <span><Link to="/greeting">szylack</Link></span>
           {/* logo here */}
         </div>
         <div className="session-form-header-links">
           <a href="https://github.com/ericsmith9161">Github</a>
           <a href="https://www.linkedin.com/in/eric-smith-8832b41aa/">LinkedIn</a>
           <a href="https://www.facebook.com/profile.php?id=100047966766811">Facebook</a>
-          <Link to="/" onClick={this.handleDemoLogin}>Sign in as demo user</Link>
+          <Link to="/" className="session-header-demo-login" onClick={this.handleDemoLogin}>Sign in as demo user</Link>
           {/* icon goes here */}
         </div>
       </div>

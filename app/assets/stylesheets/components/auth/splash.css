@@ -178,7 +178,7 @@
 .splash-bottom-section-subsection{
   margin: 1em;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 375px;
   height: 200px;
 }
 
@@ -207,12 +207,19 @@
 .dont-leave{
   display:flex;
   justify-content: flex-start;
+  align-items: center;
   padding: 100px 0px;
 }
 
 .dont-leave img{
   margin-left: 50px;
   border: 1px solid lightgoldenrodyellow;
+  border-radius: 20px;
+  margin-right: 11rem;
+}
+
+.splash-middle-section-video{
+  border: 1px solid yellow;
   border-radius: 20px;
 }
 
@@ -222,7 +229,7 @@
   align-items: flex-start;
   flex-direction: column;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding-right: 3rem;
+  padding-right: 15rem;
   padding-left: 1.5rem;
   min-width: 15rem;
 }
@@ -231,4 +238,24 @@
    font-size: 3rem;
   line-height: 3.5rem;
   font-weight: 700;
+}
+
+.dont-leave-content p{
+  font-size: 1.2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 200;
+  line-height: 1.6rem;
+  margin: 1rem 0rem;
+}
+
+.logo-and-home-link{
+  display:flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.logo-and-home-link span{
+  font-size: 1.68rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
