@@ -1,22 +1,30 @@
 import React from 'React';
 
+import moeImg from 'images/moes_tavern_splash.png'
+import abe from 'images/abegif.gif'
+import homerTVGif from 'images/homertv.gif'
+
 import SplashHeader from './SplashHeader';
 import SplashTopSectionLeft from './SplashTopSectionLeft';
 
 class Splash extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
   render(){
     return (
       <div className = "splash-page">
         <SplashHeader />
         <div className = "splash-body">
           <div className = "splash-top-section">
-            <SplashTopSectionLeft />
-            {/* <img src="../../../assets/images/moes-tavern-splash.png" className="splash-img-top"/> */}
+            <SplashTopSectionLeft login={this.props.login} />
+            <img className="splash-top-section-img" width="600"  src = {moeImg} />
           </div>
           <div className = "splash-middle-section">
             <h1>Break out of the inbox</h1>
             <p>Working in channels gives everyone on your team a shared view of progress and purpose</p>
-            {/* youtube video here? */}
+            <img className="splash-middle-section-video" width="600" src = {homerTVGif} />
           </div>
           <div className = "splash-bottom-section">
             <div className = "splash-bottom-section-subsection">
@@ -57,8 +65,17 @@ class Splash extends React.Component{
 
             </div>
           </div>
+          <div className="dont-leave">
+            <div className="dont-leave-content">
+              <h1>Before you go, be sure to give it a test run</h1>
+              <p>If you like what you saw, links to contact me can be found
+              in the navigation bar</p>
+            </div>
+            <img src={abe} width="600" />
+          </div>
+            
+          </div>
         </div>
-      </div>
     )
 
   }

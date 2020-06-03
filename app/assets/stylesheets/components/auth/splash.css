@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: space-between;
-  padding: 80px;
+  padding: 60px;
+  padding-top: 100px;
   background-color: lightgoldenrodyellow;
 }
 
@@ -58,7 +59,8 @@
 
 .splash-top-section{
   display:flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding: 100px 0px;
 }
 
 .splash-top-section-left{
@@ -66,8 +68,10 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  margin: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-right: 3rem;
+  padding-left: 1.5rem;
+  min-width: 15rem;
 }
 
 .splash-top-section-left h6{
@@ -75,7 +79,6 @@
   font-size: .85rem;
   font-weight: 700;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 0 auto;
 }
 
 .splash-top-section-left h1{
@@ -90,20 +93,27 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 200;
   line-height: 1.6rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
 }
 
-.splash-top-section-left button{
+.splash-top-section-left div button{
 
   padding: 18px 35px;
   font-size: 14px;
   font-weight: 700;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 14px;
   border: 1px solid lightblue;
   border-radius: 3px;
+  margin: 1rem 0rem;
+  margin-right: .5rem;
   display: flex;
   align-items: start;
+}
+
+.splash-top-section-img{
+  margin-left: 50px;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 20px;
 }
 
 .button-color-one{
@@ -119,6 +129,7 @@
 .button-flex-splash{
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .get-started{
@@ -128,6 +139,11 @@
   display: flex;
   flex-direction: column;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  align-items: center;
+}
+
+.splash-middle-section img{
+  margin: 2rem;
 }
 
 .splash-middle-section h1{

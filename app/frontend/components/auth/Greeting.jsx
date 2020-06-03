@@ -11,9 +11,9 @@ class Greeting extends React.Component {
   render() {
     return (
       <div className = "greeting">
-        <Splash />
-        <Link to="/signup"> Sign Up</Link>
-        <Link to="/login">Log In </Link>
+        <Splash login={this.props.login}/>
+        {/* <Link to="/signup"> Sign Up</Link>
+        <Link to="/login">Log In </Link> */}
       </div>
     );
   }

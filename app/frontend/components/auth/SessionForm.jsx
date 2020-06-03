@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
     };
     return (
       <div className = "session-form">
-        <SessionFormHeader />
+        <SessionFormHeader processForm = {this.props.processForm}/>
         <div className = "session-form-body">
             <h3>{formTitle}</h3>
             <p>szyslak.herokuapp.com/</p>
