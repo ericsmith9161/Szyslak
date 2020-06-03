@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 
 import SplashHeader from './SplashHeader';
 import SplashTopSectionLeft from './SplashTopSectionLeft';
