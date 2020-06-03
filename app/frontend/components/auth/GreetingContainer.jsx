@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { logout } from '../actions/session_actions'
+import { logout, login } from '../../actions/session_actions'
 import Greeting from './Greeting';
 
 const mSTP = state => (
@@ -11,6 +11,7 @@ const mSTP = state => (
 
 const mDTP = dispatch => (
   {
+    login: (user) => dispatch(login(user)),
     logout: () => dispatch(logout()),
   }
 )

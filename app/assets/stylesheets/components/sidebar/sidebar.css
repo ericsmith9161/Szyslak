@@ -1,0 +1,14 @@
+.sidebar li{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.sidebar {
+  width: 200px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: lightblue;
+}
+
+.hidden{
+  display: none;
+}

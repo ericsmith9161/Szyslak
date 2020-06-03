@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
         if @user && login!(@user)
           redirect_to api_user_url(@user)
         else
-            render json: ["Invalid Credentials"], status: 422
+            render json: ["⚠️ Sorry, you entered an incorrect email address or password"], status: 422
         end
     end
 
