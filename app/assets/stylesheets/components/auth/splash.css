@@ -4,7 +4,8 @@
   align-items: space-between;
   padding: 60px;
   padding-top: 100px;
-  background-color: lightgoldenrodyellow;
+  background: rgb(249,250,155);
+  background: linear-gradient(135deg, rgba(249,250,155,0.05926120448179273) 0%, rgba(251,255,162,0.09567577030812324) 0%, rgba(251,255,162,1) 100%);
 }
 
 .splash-header{

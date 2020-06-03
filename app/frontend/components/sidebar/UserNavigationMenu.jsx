@@ -9,7 +9,7 @@ class UserNavigationMenu extends React.Component{
 
   render(){
     return (
-      <div className = "UserNavigationMenu">
+      <div className = "user-navigation-menu">
         <UserNavigationMenuNavTable />
         <ChannelDropdown />
         <DMDropdown />

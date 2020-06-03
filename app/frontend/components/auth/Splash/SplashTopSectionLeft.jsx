@@ -24,7 +24,7 @@ class SplashTopSectionLeft extends React.Component{
         </p>
         <div className="button-flex-splash">
           <button className="button-color-one"><Link to="/login">TRY SZYLACK FOR FREE</Link></button>
-          <button className="button-color-two"><a href="https://github.com/ericsmith9161">LEARN MORE</a></button>
+          <button className="button-color-two"><a href="https://github.com/ericsmith9161" target="_blank">LEARN MORE</a></button>
         </div>
         <p className="get-started">Want to give it a try? <button onClick={this.handleDemoUser}>Login as a demo user</button></p>
       </div>
