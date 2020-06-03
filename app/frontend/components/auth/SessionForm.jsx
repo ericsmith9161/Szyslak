@@ -47,8 +47,8 @@ class SessionForm extends React.Component {
     };
     return (
       <div className = "session-form">
-        <SessionFormHeader processForm = {this.props.processForm}/>
-        <ul className = "session-form-errors-list">
+        <SessionFormHeader login = {this.props.login}/>
+        <ul className="session-form-errors-list">
           {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>
         <div className = "session-form-body">

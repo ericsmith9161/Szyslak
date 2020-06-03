@@ -65,7 +65,22 @@
 }
 
 .session-form-errors-list{
-  transform: translateY(50);
+  width: 41vw;
+  margin: 0 auto;
+}
+
+.session-form-errors-list li{
+  margin: 0 auto;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  transform: translateY(100px);
+  width: 36rem;
+  background-color: white;
+  position: fixed;
+  padding: 15px 0px 15px 20px ;
+  text-align: justify;
+  box-sizing: border-box;
+
 }
 
 .session-form-body{
@@ -73,7 +88,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
-  transform: translateY(100px);
+  transform: translateY(160px);
   width: 32rem;
   height: 22rem;
   border: 1px solid skyblue;

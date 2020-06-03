@@ -13,7 +13,7 @@ class SessionFormHeader extends React.Component{
 
   handleDemoLogin(e){
     e.preventDefault();
-    this.props.processForm({username: "demo user", email: "demo@demo.demo", password: "password"});
+    this.props.login({username: "demo user", email: "demo@demo.demo", password: "password"});
   }
 
   render(){
@@ -22,7 +22,6 @@ class SessionFormHeader extends React.Component{
         <div className="session-form-header-logo">
           <Link to="/greeting"><img className="logo" src={moeGo} width="30" /></Link>
           <span><Link to="/greeting">szylack</Link></span>
-          {/* logo here */}
         </div>
         <div className="session-form-header-links">
           <a href="https://github.com/ericsmith9161">Github</a>
