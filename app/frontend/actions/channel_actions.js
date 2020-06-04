@@ -3,7 +3,7 @@ import * as APIUtil from '../util/channel_api_util'
 export const RECEIVE_CHANNELS = 'RECEIVE_CHANNELS';
 export const RECEIVE_CHANNEL = 'RECEIVE_CHANNEL';
 export const DELETE_CHANNEL = 'DELETE_CHANNEL';
-export const RECEIVE_CHANNEL_USERS = 'RECEIVE_CHANNEL_USERS';
+export const RECEIVE_USER_CHANNELS = 'RECEIVE_USER_CHANNELS'
 
 const receiveChannels = (channels) => {
   return {
@@ -42,13 +42,6 @@ export const deleteChannel = (channelId) => (dispatch) => {
   return APIUtil.deleteChannel(channelId).then(channel => dispatch(removeChannel(channel.id)))
 }
 
-const receiveChannelUsers = (users) => {
-  return {
-    type: RECEIVE_CHANNEL_USERS,
-    users
-  }
-}
-
-export const fetchChannelUsers = (channelId) => (dispatch) => {
-  return APIUtil.fetchChannelUsers(channelId).then(users => dispatch(receiveChannelUsers(users)))
+export const fetchUserChannels = (userId) => (dispatch) => {
+  return APIUtil.fetchUserChannels(userId).then(channels => dispatch(receiveChannels(channels)))
 }
