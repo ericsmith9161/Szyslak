@@ -16,6 +16,7 @@ class Api::ChannelsController < ApplicationController
   private
 
   def channel_params
+  end
 
 end
 
