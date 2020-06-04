@@ -1,7 +1,11 @@
 class Api::ChannelsController < ApplicationController
 
   def index
-    @channels = Channel.includes(:subscribed_users).all
+    if params.has_key?(:user_id)
+      @channels = Channel.includes(:subscribed_users).where(user_id: params[:user_id])
+    else
+      @channels = Channel.includes(:subscribed_users).all
+    end
     render :index
   end
 

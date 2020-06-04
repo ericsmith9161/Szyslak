@@ -1,8 +1,12 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @users = User.includes(:subscribed_channels, :created_channels).all
-    render :index
+    if params.has_key?(:channel_id)
+      @users = User.includes(:subscribed_channels, :created_channels).where(channel_id: params[:channel_id])
+    else
+      @users = User.includes(:subscribed_channels, :created_channels).all
+    end
+      render :index
   end
 
   def create
