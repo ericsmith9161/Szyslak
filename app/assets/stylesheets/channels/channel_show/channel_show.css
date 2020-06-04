@@ -1,0 +1,5 @@
+.channel-show{
+  width: calc(100vw - 200px);
+  position: fixed;
+  left: 200px;
+}

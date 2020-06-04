@@ -6,16 +6,28 @@ import MessageList from '../../messages/MessageList'
 import MessageForm from '../../messages/MessageForm'
 
 class ChannelShow extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount(){
+    this.props.fetchChannel(this.props.match.params.channelId)
+    console.log(this.props.channel)
+  }
 
   render() {
-    return (
-      <div>
-        <ChannelShowHeader/>
-        <ChannelForm />
-        <MessageList />
-        <MessageForm />
-      </div>
-    )
+    if (this.props.channel === undefined){
+      return null;
+    }else{
+      return (
+        <div className="channel-show">
+          <ChannelShowHeader channel = {this.props.channel}/>
+          <ChannelForm />
+          <MessageList />
+          <MessageForm />
+        </div>
+      )
+    }
   }
 }
 

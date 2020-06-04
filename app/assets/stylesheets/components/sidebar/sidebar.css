@@ -5,6 +5,7 @@
 
 .sidebar {
   width: 200px;
+  height: 100vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: skyblue;
   display: flex;

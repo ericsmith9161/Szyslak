@@ -18,7 +18,8 @@ class Api::ChannelsController < ApplicationController
     @channel = Channel.new(user_params)
     @channel.creator_id = current_user
     if @channel.save
-      redirect_to api_channel_url(@channel)
+      Subscription.create!({user_id: @channel.creator_id, subscribeable: @channel})
+      render :show
     else
       render json: @channel.errors.full_messages, status: 401
     end
@@ -27,7 +28,7 @@ class Api::ChannelsController < ApplicationController
   def destroy
     @channel = Channel.find_by(id: params[:id])
     if (@channel.creator_id == current_user.id) && @channel.destroy
-      redirect_to api_channel_url(Channel.find_by(name: 'Main'))
+      render `/api/channels/#{Channel.find_by(name: `Main`).id}`
     else
       render json: @channel.errors.full_messages, status: 422
     end

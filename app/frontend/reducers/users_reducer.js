@@ -15,7 +15,7 @@ export default (state = {}, action) => {
       const keys = state.keys;
       let newState = {};
       for(let i = 0; i < keys.length; i++){
-        if (Object.userId !== i){
+        if (action.userId !== i){
           newState[i] = state[i];
         }
       }

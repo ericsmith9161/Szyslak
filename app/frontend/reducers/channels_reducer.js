@@ -1,4 +1,4 @@
-import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, DELETE_CHANNEL } from '../actions/user_actions';
+import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, DELETE_CHANNEL } from '../actions/channel_actions';
 
 const channelsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -12,7 +12,7 @@ const channelsReducer = (state = {}, action) => {
       const keys = state.keys;
       let newState = {};
       for (let i = 0; i < keys.length; i++) {
-        if (Object.channelId !== i) {
+        if (action.channelId !== i) {
           newState[i] = state[i];
         }
       }
