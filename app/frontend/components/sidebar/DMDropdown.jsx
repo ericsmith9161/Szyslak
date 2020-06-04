@@ -7,6 +7,7 @@ class DMDropdown extends React.Component {
   constructor(props){
     super(props);
     this.dmDropdownClick = this.dmDropdownClick.bind(this);
+    this.state = {}
   }
 
   dmDropdownClick(e) {
