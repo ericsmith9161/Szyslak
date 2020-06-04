@@ -8,15 +8,16 @@ class User < ApplicationRecord
 
   has_many :subscriptions,
     foreign_key: :user_id,
-    class_name: Subscription 
+    class_name: 'Subscription'
 
   has_many :subscribed_channels,
     through: :subscriptions,
-    source: :subscribeable
+    source: :subscribeable,
+    source_type: 'Channel'
 
   has_many :created_channels,
     foreign_key: :creator_id,
-    class_name: Channel
+    class_name: 'Channel'
     
 
   def self.find_by_credentials(email, password)

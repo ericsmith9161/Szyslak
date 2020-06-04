@@ -1,6 +1,11 @@
 class Api::UsersController < ApplicationController
 
-    def create
+  def index
+    @users = User.includes(:subscribed_channels, :created_channels).all
+    render :index
+  end
+
+  def create
     @user = User.new(user_params)
     username = user_params[:email].split('@')[0]
     @user.username = username
@@ -13,7 +18,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.includes(:subscribed_channels, :created_channels).find_by(id: params[:id])
     render :show
   end
 

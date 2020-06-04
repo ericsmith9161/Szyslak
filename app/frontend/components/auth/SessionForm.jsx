@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <label>
               <input
-                type="text"
+                type="email"
                 value={this.state.email}
                 onChange={this.handleChange('email')}
                 placeholder="you@example.com"
