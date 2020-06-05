@@ -1,0 +1,8 @@
+.message-form{
+  height: 88px;
+  box-sizing: border-box;
+  margin: 21px;
+  border: 1px solid black;
+  position: fixed;
+  bottom: 0px;
+}

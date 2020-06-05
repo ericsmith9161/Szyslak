@@ -4,7 +4,9 @@
 }
 
 .sidebar {
-  width: 200px;
+  width: 260px;
+  height: calc(100vh - 37px - 68px);
+  box-sizing: inherit;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: skyblue;
   display: flex;

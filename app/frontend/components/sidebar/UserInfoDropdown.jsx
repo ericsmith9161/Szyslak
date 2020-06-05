@@ -23,35 +23,34 @@ class UserInfoDropdown extends React.Component{
   }
 
   handleSignout(e){
-    console.log(this.props)
     e.preventDefault
     this.props.logout()
   }
 
   render(){
     return(
-      <div id="user-info-dropdown" className = "user-info-dropdown">
-        <div className = "user-info-dropdown-head">
-          {/* avatar here */}
-          <div>
-            <h3>{this.state.name}</h3>
-            <p>You're set to <b>{this.state.user.status}.</b>
-            <button className="change-status-button" onClick={this.changeStatus}> Change</button></p>
+        <div id="user-info-dropdown" className="user-info-dropdown hidden">
+          <div className="user-info-dropdown-head">
+            {/* avatar here */}
+            <div>
+              <h3><b>{this.state.user.username}</b></h3>
+              <p>You're set to <b>{this.state.user.status}. </b>
+                <button className="change-status-button" onClick={this.changeStatus}> Change</button></p>
+            </div>
           </div>
-            {/* set status modal? */}
+          <button className="status-update-btn"> <span className="stat-but-emote">☺&nbsp;</span> <span className="stat-but-text">Update your status</span> </button>
+          <ul id="user-info-popout" className="user-info-popout">
+            <li id="pause-notifications-hover" className="ui-dropdown-hover"><span>Pause notifications</span><span>></span></li>
+            <li><Link to={`/users/${this.state.user.id}`}>View profile</Link></li>
+            <li><span>Preferences</span><span>?</span></li>
+            <li id="tools-hover" className="ui-dropdown-hover"><span>Tools</span><span>></span></li>
+            <li id="help-hover" className="ui-dropdown-hover"><span>Help</span><span>></span></li>
+            <li onClick={this.handleSignout}><Link to="/greeting">Sign out of Szyslak</Link></li>
+            {/* weird workspace and total messages stuff? */}
+            <li id="add-workspaces-hover" className="ui-dropdown-hover"><span>Add Workspaces</span><span>></span></li>
 
+          </ul>
         </div>
-        <ul>
-          <li id = "pause-notifications-hover" className = "ui-dropdown-hover">Pause notifications</li>
-          <li><Link to={`/users/${this.state.user.id}`}>View profile</Link></li>
-          <li>Preferences</li>
-          {/* weird workspace and total messages stuff? */}
-          <li id = "tools-hover" className = "ui-dropdown-hover">Tools</li>
-          <li id= "help-hover" className = "ui-dropdown-hover">Help</li>
-          <li onClick={this.handleSignout}><Link to="/greeting">Sign out of Szyslak</Link></li>
-          <li id= "add-workspaces-hover" className = "ui-dropdown-hover">Add Workspaces</li>
-        </ul>
-      </div>
     )
   }
 }
@@ -62,3 +61,4 @@ export default UserInfoDropdown;
 // set status modal?
 
 
+//finish this trash later it stoinks

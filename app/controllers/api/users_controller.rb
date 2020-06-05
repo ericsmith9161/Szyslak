@@ -1,8 +1,12 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @users = User.includes(:subscribed_channels, :created_channels).all
-    render :index
+    if params.has_key?(:channel_id)
+      @users = User.includes(:subscribed_channels, :created_channels).where(channel_id: params[:channel_id])
+    else
+      @users = User.includes(:subscribed_channels, :created_channels).all
+    end
+      render :index
   end
 
   def create
@@ -11,7 +15,9 @@ class Api::UsersController < ApplicationController
     @user.username = username
     if @user.save
       login!(@user)
-      redirect_to api_user_url(@user)
+      puts Channel.all
+      Subscription.create!({user_id: @user.id, subscribeable: Channel.find_by(name: 'Main')})
+      render :show
     else
       render json: @user.errors.full_messages, status: 401
     end

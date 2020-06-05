@@ -4,6 +4,7 @@ export const RECEIVE_USERS = 'RECEIVE_USERS';
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const DELETE_USER = 'DELETE_USER';
 
+
 const receiveUsers = (users) => {
   return {
     type: RECEIVE_USERS,
@@ -39,4 +40,8 @@ const removeUser = (userId) => {
 
 export const deleteUser = (userId) => (dispatch) => {
   return APIUtil.deleteUser(userId).then(user => dispatch(removeUser(user.id)))
+}
+
+export const fetchChannelUsers = (channelId) => (dispatch) => {
+  return APIUtil.fetchChannelUsers(channelId).then(users => dispatch(receiveUsers(users)))
 }

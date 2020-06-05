@@ -11,20 +11,21 @@ class ChannelDropdown extends React.Component{
 
   channelDropdownClick(e) {
     e.preventDefault();
-    document.getElementById("channel-dropdown").classList.toggle("show");
+    // document.getElementById("channel-dropdown").classList.toggle("show");
   }
 
   render(){
-    return (
-      <button onClick={this.channelDropdownClick} className="channel-drop-btn"><span>▼</span> Channels</button>
-
-      // <div class="channel-dropdown">
-      //   <button onClick={this.channelDropdownClick} className="channel-drop-btn">▼ Channels</button>
-      //   <div id="channel-dropdown" class="channel-dropdown-content">
-      //     {this.props.channels.map((channel) => <Link to={`/channels/${channel.id}`}>{channel.name}</Link> )}
-      //   </div>
-      // </div>
-    )
+      return(
+        <button onClick={this.channelDropdownClick} className="channel-drop-btn">▼ Channels</button>
+      )
+    //   return(
+    //   <div className="channel-dropdown">
+    //     <button onClick={this.channelDropdownClick} className="channel-drop-btn">▼ Channels</button>
+    //     <div id="channel-dropdown" className="channel-dropdown-content">
+    //       {this.props.channels.map((channel) => <Link to={`/channels/${channel.id}`}>{channel.name}</Link> )}
+    //     </div>
+    //   </div>
+    // )
   }
 
 }

@@ -1,0 +1,25 @@
+.logged-in-header{
+  height: 37px;
+  background-color: skyblue;
+  border: 1px solid black;
+}
+
+.work-space-header{
+  height: 68px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: skyblue;
+  width: 260px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.work-space-header-body{
+  position: absolute;
+}
+
+.work-space-header-name{
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: lightgoldenrodyellow;
+}
