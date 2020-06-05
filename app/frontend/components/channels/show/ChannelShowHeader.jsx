@@ -11,7 +11,7 @@ class ChannelShowHeader extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className = "channel-show-header">
         <Information channel = {this.props.channel}/>
         <Details channel = {this.props.channel}/>
       </div>

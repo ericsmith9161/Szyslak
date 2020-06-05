@@ -5,24 +5,26 @@ import {connect} from 'react-redux';
 
 import Sidebar from './Sidebar';
 
-import {editUser} from '../../actions/user_actions'
-import { logout } from '../../actions/session_actions'
+import {fetchUserChannels} from '../../actions/session_actions';
+import {editUser, fetchUsers} from '../../actions/user_actions';
+import { logout } from '../../actions/session_actions';
 
 
 
 
 
 const mSTP = (state) => {
+  // console.log(Object.values(fetchUserChannels(state.session.id)));
   return {
     currentUser: state.entities.users[state.session.id],
-
+    //channels: userChannels
   }
 }
 
 const mDTP = (dispatch) => {
   return {
     editUser: user => dispatch(editUser(user)),
-    logout: () => dispatch(logout()),
+    logout: () => dispatch(logout()),    
   }
 }
 

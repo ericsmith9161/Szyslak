@@ -3,7 +3,10 @@ import React from 'react';
 class MessageForm extends React.Component {
 
   render() {
-    return null;
+    return (
+      <div className="message-form">
+      </div>
+    )
   }
 }
 

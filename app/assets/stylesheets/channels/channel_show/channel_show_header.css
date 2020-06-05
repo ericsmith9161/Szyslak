@@ -1,0 +1,7 @@
+.channel-show-header-information{
+  display:flex;
+  flex-direction: column;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid blue;
+}

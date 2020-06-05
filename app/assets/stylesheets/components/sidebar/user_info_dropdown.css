@@ -1,0 +1,83 @@
+.user-info-dropdown{
+  z-index: 2;
+  background-color: whitesmoke;
+  position: relative;
+  top: 32px;
+  left: 20px;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 290px;
+
+}
+
+.hidden{
+  display: none;
+}
+
+.user-info-dropdown-head{
+  display: flex;
+  padding-bottom: 20px;
+  
+}
+
+.user-info-dropdown *{
+  color: cornflowerblue;
+}
+
+.user-info-dropdown b{
+  color: darkblue;
+}
+
+.user-info-dropdown div button{
+  color: darkblue;
+  font-size: .8rem;
+}
+
+.user-info-dropdown p{
+  font-size: .85rem;
+  margin-top: 5px;
+}
+
+.user-info-dropdown ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info-dropdown li{
+  padding: 12px 0px 12px 0px;
+  font-size: .9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-update-btn{
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  text-align: left;
+  padding: 0px 4px 6px 4px ;
+  font-size: .9rem;
+  color: lightblue;
+}
+
+.stat-but-emote{
+  font-size: 1.75rem;
+  color: lightblue
+}
+
+.stat-but-text{
+  font-size: .9rem;
+  color: lightblue
+}
+
+#add-workspaces-hover{
+  border-top: 1px solid lightblue;
+}
+
+#tools-hover{
+  border-top: 1px solid lightblue;
+}

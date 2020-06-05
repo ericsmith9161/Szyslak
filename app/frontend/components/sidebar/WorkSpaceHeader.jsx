@@ -18,11 +18,11 @@ class WorkSpaceHeader extends React.Component{
   render(){
     return (
       <div className = "work-space-header" onClick={this.handleDropdown}>
-        <UserInfoDropdown user={this.props.user} logout = {this.props.logout}/>
-        <div>
-          <p className = "work-space-header-name">Szylack</p>
-          <UserWithOnlineStatus user={this.props.user}/>
+        <div className="work-space-header-body">
+          <p className="work-space-header-name">Szylack</p>
+          <UserWithOnlineStatus user={this.props.user} />
         </div>
+        <UserInfoDropdown user={this.props.user} logout = {this.props.logout}/>
         {/* new message image will go here */}
       </div>
     )

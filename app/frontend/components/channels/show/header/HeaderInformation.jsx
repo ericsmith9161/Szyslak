@@ -11,14 +11,14 @@ class HeaderInformation extends React.Component {
     const numPins = 0; //make dynamic in bonus phase
     const channelTopic = "Welcome to my website" //make dynamic later on
     return (
-      <div>
+      <div className = "channel-show-header-information">
         <div className="channel-show-header-information-channel-name">
-          <p>{this.props.channel.name}</p>
+          <span>{this.props.channel.name}</span>
         </div> 
         <div className="channel-show-header-information-channel-info">
-          <p>👤 {numUsers} </p>
-          <p>📍 {numPins} </p>
-          <p>{channelTopic}</p>
+          <span>👤 {numUsers} </span>
+          <span>📍 {numPins} </span>
+          <span>{channelTopic}</span>
         </div>
       </div>
     )
