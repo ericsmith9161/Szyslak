@@ -53,6 +53,7 @@
   font-weight: 700;
   margin: 14px;
   border: 1px solid lightblue;
+  line-height: 2.5rem;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -60,6 +61,7 @@
 
 .splash-header button:hover{
   background-color: skyblue;
+  cursor: pointer;
 }
 
 .splash-header button span{
@@ -117,6 +119,7 @@
   margin-right: .5rem;
   display: flex;
   align-items: start;
+  cursor: pointer;
 }
 
 .splash-top-section-left p button{
@@ -134,6 +137,7 @@
 
 .button-color-one{
   background-color: lightblue;
+  color: lightgoldenrodyellow;
 }
 
 .button-color-one:hover{
@@ -143,6 +147,7 @@
 .button-color-two{
   background-color: lightgoldenrodyellow;
   box-sizing: border-box;
+  color: lightblue;
 }
 
 .button-color-two:hover{
@@ -225,10 +230,12 @@
 .splash-header button a{
   text-decoration: none;
   color: lightgoldenrodyellow;
+  font-size: .95rem;
 }
 
 .splash-header button{
   margin-right: 100px;
+  padding: 0px 15px;
 }
 
 .dont-leave{
@@ -285,4 +292,25 @@
   font-size: 1.68rem;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
+}
+
+.splash-header-right{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.splash-header-right > a:hover{
+  color: skyblue;
+  text-decoration: underline;
+}
+
+.full-border {
+  margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.025rem 9999rem;
+
+  background: skyblue
 }

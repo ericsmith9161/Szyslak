@@ -61,6 +61,10 @@ class Splash extends React.Component{
 
             </div>
           </div>
+          <div className="full-border">
+            
+          </div>
+
           <div className="dont-leave">
             <div className="dont-leave-content">
               <h1>Before you go, be sure to give it a test run</h1>

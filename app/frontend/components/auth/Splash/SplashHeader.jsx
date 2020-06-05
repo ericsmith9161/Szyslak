@@ -20,8 +20,12 @@ const SplashHeader = () => {
 
         </label>
       </div>
-      {/* button links to user page, will drop modal with workspaces if workspaces eventually added */}
-      <button><Link to="/login">LAUNCH SZYLACK    <span>   ⧪</span></Link></button>
+      <div className = "splash-header-right">
+        <Link to="/login">Sign in</Link>
+        <button><Link to="/signup">GET STARTED</Link></button>
+      </div>
+      
+      
     </div>
   )
 }
