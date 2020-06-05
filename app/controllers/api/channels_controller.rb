@@ -27,8 +27,9 @@ class Api::ChannelsController < ApplicationController
 
   def destroy
     @channel = Channel.find_by(id: params[:id])
+    id = @channel.id
     if (@channel.creator_id == current_user.id) && @channel.destroy
-      render `/api/channels/#{Channel.find_by(name: `Main`).id}`
+      render json: id 
     else
       render json: @channel.errors.full_messages, status: 422
     end

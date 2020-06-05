@@ -2,11 +2,14 @@ import React from 'react';
 
 import About from './header_details/DetailsAbout';
 import MemberList from './header_details/DetailsMemberList'
+import {withRouter} from 'react-router-dom';
 
 class HeaderDetails extends React.Component {
   constructor(props){
     super(props);
     this.handleClose = this.handleClose.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.state = this.props.channel
   }
 
   handleClose(e){
@@ -17,6 +20,12 @@ class HeaderDetails extends React.Component {
     headerDetails.classList.toggle("hidden");
     channelShow.classList.add(".full");
     channelShow.classList.remove(".part");
+  }
+
+  handleDelete(e){
+    e.preventDefault();
+    console.log(this.props)
+    this.props.deleteChannel(this.props.channel.id).then(this.props.history.push('/channels/1'))
   }
 
   render() {
@@ -71,7 +80,7 @@ class HeaderDetails extends React.Component {
           <li> <span><b>Shortcuts</b></span> <span>></span></li>
           <li> <span><b>Pinned Items</b></span> <span>></span></li>
           <li> <span><b>Shared Files</b></span> <span>></span></li>
-          <li> <span><b>Delete Channel</b></span> <span>></span></li>
+          <li> <button onClick={this.handleDelete}><span><b>Delete Channel</b></span><span>></span></button></li>
         </ul>
         
 
@@ -81,4 +90,4 @@ class HeaderDetails extends React.Component {
   }
 }
 
-export default HeaderDetails;
+export default withRouter(HeaderDetails);
