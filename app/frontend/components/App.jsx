@@ -3,6 +3,7 @@ import React from "react";
 import LoginFormContainer from "./auth/LoginFormContainer";
 import SignupFormContainer from "./auth/SignupFormContainer";
 import GreetingContainer from "./auth/GreetingContainer";
+import Modal from "./Modal"
 
 import SidebarContainer from "./sidebar/SidebarContainer";
 
@@ -22,6 +23,7 @@ const App = () => (
       <ProtectedRoute exact path="/channels/new" component={ChannelFormContainer} />
       <ProtectedRoute path="/channels/:channelId" component={ChannelShowContainer} />
       <ProtectedRoute path="/" component={SidebarContainer} />
+      <Route path="/" component={Modal} />
   </div>
 );
 

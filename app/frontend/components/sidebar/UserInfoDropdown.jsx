@@ -6,8 +6,7 @@ class UserInfoDropdown extends React.Component{
   constructor(props){
     super(props);
     this.state =  
-      {user: this.props.user,
-       displayed: false};
+      {user: this.props.user};
     this.changeStatus = this.changeStatus.bind(this);
     this.handleSignout = this.handleSignout.bind(this);
   }
@@ -29,7 +28,7 @@ class UserInfoDropdown extends React.Component{
 
   render(){
     return(
-        <div id="user-info-dropdown" className="user-info-dropdown hidden">
+        <div id="user-info-dropdown" className="user-info-dropdown">
           <div className="user-info-dropdown-head">
             {/* avatar here */}
             <div>

@@ -12,7 +12,6 @@ class ChannelShow extends React.Component {
 
   componentDidMount(){
     this.props.fetchChannel(this.props.match.params.channelId)
-    console.log(this.props.channel)
   }
 
   render() {
@@ -20,12 +19,11 @@ class ChannelShow extends React.Component {
       return null;
     }else{
       return (
-        <div className="channel-show">
-          <ChannelShowHeader channel = {this.props.channel}/>
-          <ChannelForm />
-          <MessageList />
-          <MessageForm />
-        </div>
+          <div className="channel-show full">
+            <ChannelShowHeader channel={this.props.channel} />
+            <MessageList />
+            <MessageForm />
+          </div>
       )
     }
   }

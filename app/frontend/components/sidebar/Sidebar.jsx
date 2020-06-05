@@ -12,10 +12,10 @@ class Sidebar extends React.Component{
           <LoggedInHeader />
         </div>
         <div>
-          <WorkSpaceHeader user={this.props.currentUser} logout={this.props.logout} />
+          <WorkSpaceHeader user={this.props.currentUser} logout={this.props.logout} userInfoDropdown = {this.props.userInfoDropdown} closeModal = {this.props.closeModal} />
         </div>
         <div className="sidebar"> 
-          <UserNavigationMenu user = {this.props.currentUser} channels = {this.props.channels}/>
+          <UserNavigationMenu user = {this.props.currentUser} channels = {this.props.channels} fetchUserChannels = {this.props.fetchUserChannels}/>
         </div>
       </div>
     )

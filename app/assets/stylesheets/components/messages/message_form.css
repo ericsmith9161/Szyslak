@@ -1,8 +1,18 @@
 .message-form{
   height: 88px;
   box-sizing: border-box;
-  margin: 21px;
   border: 1px solid black;
-  position: fixed;
   bottom: 0px;
+  width: 96%
+}
+
+.message-form-part{
+  width: calc(100vw - 25vw - 260px - 42px);
+  position: fixed;
+  left: 260px;
+  height: calc(100vh - 37px);
+  top: 37px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: lightgoldenrodyellow;
 }
