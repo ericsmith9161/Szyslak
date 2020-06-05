@@ -12,7 +12,6 @@ class ChannelShow extends React.Component {
 
   componentDidMount(){
     this.props.fetchChannel(this.props.match.params.channelId)
-    console.log(this.props.channel)
   }
 
   render() {

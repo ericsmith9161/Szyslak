@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
     this.setState({"username": un});
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(() => {
-      this.props.history.push('/')
+      this.props.history.push('/channels/1')
     });
 
   }

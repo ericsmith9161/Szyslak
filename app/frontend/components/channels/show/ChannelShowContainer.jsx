@@ -5,8 +5,6 @@ import {fetchChannel} from '../../../actions/channel_actions';
 import ChannelShow from './ChannelShow';
 
 const mSTP = (state, ownProps) => {
-
-  console.log(state.entities.channels[ownProps.match.params.channelId])
   return {
     channel: state.entities.channels[ownProps.match.params.channelId]
   }
