@@ -38,7 +38,7 @@ const removeChannel = (channelId) => {
 }
 
 export const deleteChannel = (channelId) => (dispatch) => {
-  return APIUtil.deleteChannel(channelId).then(channel => dispatch(removeChannel(channel.id)))
+  return APIUtil.deleteChannel(channelId).then(channelId => dispatch(removeChannel(channelId)))
 }
 
 export const fetchUserChannels = (userId) => (dispatch) => {

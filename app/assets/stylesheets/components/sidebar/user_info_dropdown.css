@@ -15,10 +15,6 @@
 
 }
 
-.hidden{
-  display: none;
-}
-
 .user-info-dropdown-head{
   display: flex;
   padding-bottom: 20px;

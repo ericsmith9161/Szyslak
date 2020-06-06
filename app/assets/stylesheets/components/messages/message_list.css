@@ -1,0 +1,6 @@
+.message-list{
+  height: 75%;
+  width: 96%;
+  box-sizing: border-box;
+  border: 1px solid black;
+}

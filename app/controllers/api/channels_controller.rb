@@ -2,7 +2,7 @@ class Api::ChannelsController < ApplicationController
 
   def index
     if params.has_key?(:user_id)
-      @channels = Channel.includes(:subscribed_users).where(user_id: params[:user_id])
+      @channels = Channel.includes(:subscribed_users)
     else
       @channels = Channel.includes(:subscribed_users).all
     end
@@ -15,8 +15,8 @@ class Api::ChannelsController < ApplicationController
   end
 
   def create
-    @channel = Channel.new(user_params)
-    @channel.creator_id = current_user
+    @channel = Channel.new(channel_params)
+    @channel.creator_id = current_user.id
     if @channel.save
       Subscription.create!({user_id: @channel.creator_id, subscribeable: @channel})
       render :show
@@ -27,8 +27,9 @@ class Api::ChannelsController < ApplicationController
 
   def destroy
     @channel = Channel.find_by(id: params[:id])
+    id = @channel.id
     if (@channel.creator_id == current_user.id) && @channel.destroy
-      render `/api/channels/#{Channel.find_by(name: `Main`).id}`
+      render json: id 
     else
       render json: @channel.errors.full_messages, status: 422
     end
@@ -37,7 +38,7 @@ class Api::ChannelsController < ApplicationController
   private
 
   def channel_params
-    params.require(:channel).permit(:name, :details)
+    params.require(:channel).permit(:name, :details, :private, :creator_id)
   end
 
 end

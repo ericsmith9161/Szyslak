@@ -1,0 +1,13 @@
+.channel-index{
+  position: fixed;
+  left: 260px;
+  height: calc(100vh - 37px);
+  top: 37px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}

@@ -11,21 +11,42 @@ class ChannelDropdown extends React.Component{
 
   channelDropdownClick(e) {
     e.preventDefault();
-    // document.getElementById("channel-dropdown").classList.toggle("show");
+    document.getElementById("channel-dropdown").classList.toggle("hidden");
   }
 
+  componentDidMount(){
+    console.log(this.props);
+    this.props.fetchUser(this.props.sessionid);
+    this.props.fetchUserChannels(this.props.user.id);
+    // this.props.fetchChannels()
+  }
+
+  //this.setstate
+  //is this . state hidden or not
+  //render null or render lis
+
   render(){
-      return(
-        <button onClick={this.channelDropdownClick} className="channel-drop-btn">▼ Channels</button>
+    if (this.props.channels === undefined){
+      return (
+        <div>
+          <span><button onClick={this.channelDropdownClick} className="channel-drop-btn">► Channels</button></span>
+          <span>{this.props.createChannel}</span>
+        </div>
       )
-    //   return(
-    //   <div className="channel-dropdown">
-    //     <button onClick={this.channelDropdownClick} className="channel-drop-btn">▼ Channels</button>
-    //     <div id="channel-dropdown" className="channel-dropdown-content">
-    //       {this.props.channels.map((channel) => <Link to={`/channels/${channel.id}`}>{channel.name}</Link> )}
-    //     </div>
-    //   </div>
-    // )
+    }
+    else{
+      return (
+        <div className="channel-dropdown">
+          <div>
+            <span><button onClick={this.channelDropdownClick} className="channel-drop-btn">► Channels</button></span>
+            <span>{this.props.createChannel}</span>
+          </div>
+          <ul id="channel-dropdown" className="channel-dropdown-content">
+            {this.props.channels.map((channel, idx) => <li key={idx}> <Link to={`/channels/${channel.id}`}>{channel.name}</Link> </li>)}
+          </ul>
+        </div>
+      )
+    }
   }
 
 }

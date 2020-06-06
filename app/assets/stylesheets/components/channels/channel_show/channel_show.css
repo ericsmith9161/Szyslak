@@ -1,5 +1,4 @@
 .channel-show{
-  width: calc(100vw - 260px);
   position: fixed;
   left: 260px;
   height: calc(100vh - 37px);
@@ -7,25 +6,30 @@
   border: 1px solid black;
   box-sizing: border-box;
   background-color: lightgoldenrodyellow;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.channel-show-part{
-  width: calc(100vw - 25vw - 260px);
-  position: fixed;
-  left: 260px;
-  height: calc(100vh - 37px - 68px);
-  top: 37px;
-  border: 1px solid black;
-  box-sizing: border-box;
-  background-color: lightgoldenrodyellow;
+.full{
+  width: calc(100vw - 260px);
+}
+.part{
+  width: calc(75vw - 260px);
 }
 
 .channel-show-header{
   height: 68px;
   background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 2%;
+  box-sizing: border-box;
 }
 
-.details{
+.channel-header-details{
   width: 25vw;
   position: fixed;
   right: 0px;
@@ -34,4 +38,9 @@
   border: 1px solid black;
   box-sizing: border-box;
   background-color: lightgoldenrodyellow;
+}
+
+.pins{
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
 }

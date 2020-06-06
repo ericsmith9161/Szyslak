@@ -1,7 +1,7 @@
 import React from 'react';
 
 import UserNavigationMenuNavTable from './UserNavigationMenuNavTable';
-import ChannelDropdown from './ChannelDropdown';
+import ChannelDropdownContainer from './ChannelDropdownContainer';
 import DMDropdown from './DMDropdown';
 import AppDropdown from './AppDropdown';
 
@@ -11,7 +11,7 @@ class UserNavigationMenu extends React.Component{
     return (
       <div className = "user-navigation-menu">
         <UserNavigationMenuNavTable />
-        <ChannelDropdown/>
+        <ChannelDropdownContainer />
         <DMDropdown />
         <AppDropdown />
       </div>
