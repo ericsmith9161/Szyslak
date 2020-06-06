@@ -2,7 +2,8 @@ class Api::UsersController < ApplicationController
 
   def index
     if params.has_key?(:channel_id)
-      @users = User.includes(:subscribed_channels, :created_channels).where(channel_id: params[:channel_id])
+      puts("made it here")
+      @users = Channel.includes(:subscribed_users => [:subscribed_channels, :created_channels]).where(id: params[:channel_id]).first.subscribed_users
     else
       @users = User.includes(:subscribed_channels, :created_channels).all
     end
