@@ -5,8 +5,8 @@ class ChannelChatChannel < ApplicationCable::Channel
 
     def speak(data)
     message = Message.create(body: data['message'], user_id: data['user_id'], subscribeable_type: 'Channel', subscribeable_id: data['channel_id'])
-    socket = { message: message.body }
-    ChannelChatChannel.broadcast_to('chat_channel', socket)
+    socket = { `#{message.id}`: message }
+    ChannelChatChannel.broadcast_to('channel_chat_channel', socket)
   end
 
   def unsubscribed
