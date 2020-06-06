@@ -24,3 +24,7 @@ const receiveMessage = (message) => {
 export const fetchMessage = (messageId) => (dispatch) => {
   return APIUtil.fetchMessage(messageId).then(message => dispatch(receiveMessage(message)));
 }
+
+export const fetchChannelMessages = (channelId) => (dispatch) => {
+  return APIUtil.fetchChannelMessages(channelId).then(messages => dispatch(receiveMessages(messages)))
+}

@@ -11,3 +11,10 @@ export const fetchMessage = (messageId) => {
     method: 'GET',
   })
 }
+
+export const fetchChannelMessages = (channelId) => {
+  return $.ajax({
+    url: `api/channels/${channelId}/messages`,
+    method: 'GET',
+  })
+}
