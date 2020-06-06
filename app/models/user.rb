@@ -18,6 +18,10 @@ class User < ApplicationRecord
   has_many :created_channels,
     foreign_key: :creator_id,
     class_name: 'Channel'
+
+  has_many :created_messages,
+    foreign_key: :user_id,
+    class_name: 'Message'
     
 
   def self.find_by_credentials(email, password)
