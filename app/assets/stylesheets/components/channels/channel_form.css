@@ -1,8 +1,10 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 52px;
+  height: 28px;
+  border: 1px solid slategray;
+  border-radius: 60px;
 }
 
 .switch input { 
@@ -18,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: whitesmoke;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -26,21 +28,21 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 20px;
+  width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: darkslategray;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: skyblue;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px skyblue;
 }
 
 input:checked + .slider:before {
@@ -51,9 +53,120 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 26px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.channel-form{
+  height: 522px;
+  width: 515px;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 30px 25px 30px 27px
+}
+
+.channel-form h1{
+  font-size: 28px;
+  font-weight: 700;
+  height: 54px;
+}
+
+.channel-form p{
+  color: darkgray;
+  line-height: 1.3rem;
+  font-size: .9rem;
+  height: 58px;
+}
+
+.channel-form label{
+  font-weight: 700;
+  font-size: .9rem;
+  line-height: 2rem;
+}
+
+.q{
+  font-weight: 400;
+  font-size: .75rem;
+  color: darkgray;
+}
+
+.channel-form label input::placeholder{
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.channel-form label span{
+  font-weight: 400;
+  color: gainsboro;
+}
+
+.channel-form-name{
+  box-sizing: border-box;
+  width: 468px;
+  height: 47px;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+
+.channel-form textarea{
+  box-sizing: border-box;
+  width: 468px;
+  height: 47px;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+
+.channel-form form{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.channel-form form > label{
+  height: 95px;
+}
+
+.private{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.private p{
+  width: 350px;
+  font-weight: 400;
+}
+
+.channel-form-options{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+}
+
+.channel-form-options span{
+  color: darkgray;
+  font-size: .9rem;
+  line-height: 2rem;
+}
+
+.channel-form-options button{
+  background-color: whitesmoke;
+  border: 1px solid darkgray;
+  line-height: 2rem;
+  padding: 0px 12px;
+  border-radius: 3px;
+  font-weight: 700px;
+  font-size: .9rem;
+}
+
+.channel-form-options button:hover{
+  cursor: pointer;
+  background-color: darkgray;
+  font-weight: 700;
 }

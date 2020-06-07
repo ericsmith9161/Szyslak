@@ -90,3 +90,19 @@
   border-left: 1px solid gainsboro;
   border-right: 1px solid gainsboro;
 }
+
+.channel-show-header-information-channel-info{
+  display:flex;
+  align-items: center;
+  line-height: 16px;
+}
+
+.channel-show-header-information-channel-info span{
+  display:inline-block;
+  margin-bottom: 2px;
+}
+
+.user-svg{
+  display: inline-block;
+  
+}

@@ -16,8 +16,9 @@ class HeaderInformation extends React.Component {
           <span>{this.props.channel.name}</span><span className="star">&nbsp;&nbsp;☆</span>
         </div> 
         <div className="channel-show-header-information-channel-info">
-          <span>👤{numUsers}&nbsp;&nbsp;</span>
-          <span className="pins">&nbsp;📍{numPins}&nbsp; </span>
+          <span><img className="user-svg" width="14" src={window.usersURL} />&nbsp;{numUsers}&nbsp;&nbsp;</span>
+          <span className="pins">&nbsp;<img className="pin-svg" width="14" src={window.pinsURL} />
+{numPins}&nbsp; </span>
           <span>&nbsp;&nbsp;{channelTopic}</span>
         </div>
       </div>

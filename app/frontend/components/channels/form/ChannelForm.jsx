@@ -49,11 +49,11 @@ class ChannelForm extends React.Component {
         </p>
         <form onSubmit={this.handleSubmit}>
           <label>Name
-            <input 
+            <input className="channel-form-name"
               type="text"
               value={this.state.name}
               onChange={this.handleChange("name")}
-              placeholder="# e.g. karaoke-thursdays"
+              placeholder="   # e.g. karaoke-thursdays"
             />
           </label>
           <label>Description <span>(optional)</span>
@@ -61,10 +61,9 @@ class ChannelForm extends React.Component {
               value={this.state.details}
               onChange={this.handleChange("details")}
             />
-            <p>What's this channel about?</p>
           </label>
-
-          <div>
+          <span className="q">What's this channel about?</span>
+          <div className="private">
               <label><b>Make private</b>
                 <p>When a channel is set to private, it can only
                   be viewed or joined by invitation.
@@ -79,8 +78,8 @@ class ChannelForm extends React.Component {
                   <span className="slider round"></span>
               </label>
           </div>
-          <div>
-            <span>ⓘ Learn More</span>
+          <div className="channel-form-options">
+            <span>ⓘ &nbsp; Learn More</span>
             <button>Create</button>
           </div>
         </form>

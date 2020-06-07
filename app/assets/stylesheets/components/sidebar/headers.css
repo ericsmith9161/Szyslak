@@ -24,6 +24,10 @@
   font-size: .92rem;
 }
 
+
+.work-space-header button:hover{
+  cursor: pointer;
+}
 .work-space-header p{
   color: lightgoldenrodyellow;
   font-size: .80rem;

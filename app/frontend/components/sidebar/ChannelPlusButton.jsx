@@ -20,8 +20,8 @@ class ChannelPlusButton extends React.Component {
   render() {
     return (
       <div className="channel-plus-button">
-          <Link to='/channels'>Browse Channels</Link>
-          {this.props.createChannel}
+        <Link to='/channels'>Browse Channels</Link>
+        {this.props.createChannel}
       </div>
     )
   }
