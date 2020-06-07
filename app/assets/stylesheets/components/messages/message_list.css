@@ -4,3 +4,8 @@
   box-sizing: border-box;
   border: 1px solid black;
 }
+
+.message-list-list{
+  height: 80%;
+  width: 100%;
+}

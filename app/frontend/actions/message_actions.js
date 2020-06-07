@@ -14,9 +14,9 @@ export const fetchMessages = () => (dispatch) => {
   return APIUtil.fetchMessages().then(messages => dispatch(receiveMessages(messages)));
 }
 
-const receiveMessage = (message) => {
+export const receiveMessage = (message) => {
   return {
-    type: RECEIVE_CHANNEL,
+    type: RECEIVE_MESSAGE,
     message
   }
 }
