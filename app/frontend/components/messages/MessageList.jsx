@@ -8,24 +8,24 @@ class MessageList extends React.Component{
 
   componentDidMount(){
     this.props.fetchChannelMessages(this.props.channelId)
-    App.cable.subscriptions.create(
-      {channel: "ChannelChatChannel", channelId: this.props.channelId},
+    App.currentSubscription = App.cable.subscriptions.create(
+      { channel: "ChannelChatChannel" },
       {
         received: data => {
-          switch(data.type){
-            case "message":
-              this.props.receiveMessage(data.message);
-              break;
-          }
+          this.props.receiveMessage(data.message);
         },
-        speak: function(data){
+        speak: function (data) {
           return this.perform("speak", data);
         },
       }
-    );
+    )
   }
 
-  componentDidUpdate(){
+  componentDidUpdate(prevProps){
+    if (this.props.channelId !== prevProps.channelId){
+      this.props.fetchChannelMessages(this.props.channelId)
+    }
+
     if(this.props.messages.length !== 0){
       this.bottom.current.scrollIntoView();
     }
