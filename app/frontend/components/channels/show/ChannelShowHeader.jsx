@@ -23,7 +23,7 @@ class ChannelShowHeader extends React.Component {
     return (
       <div className = "channel-show-header">
         <Information channel={this.props.channel}/>
-        <button onClick={this.handleDetails}><span>ⓘ</span> Details</button>
+        <button onClick={this.handleDetails}><span>ⓘ</span> &nbsp;&nbsp;Details</button>
         <Details channel = {this.props.channel} deleteChannel = {this.props.deleteChannel}/>
       </div>
     )

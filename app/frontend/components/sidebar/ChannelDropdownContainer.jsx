@@ -35,9 +35,6 @@ const mDTP = (dispatch) => {
     closeModal: () => dispatch(closeModal()),
     fetchUserChannels: (user) => dispatch(fetchUserChannels(user)),
     fetchUser: (userId) => dispatch(fetchUser(userId)),
-    fetchChannels: () => dispatch(fetchChannels()),
-
-
 
   }
 }

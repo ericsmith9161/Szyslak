@@ -32,6 +32,7 @@ class ChannelDropdown extends React.Component{
       )
     }
     else{
+      const channels = this.props.channels.filter(channel => channel.subscribed_users.includes(this.props.sessionid));
       let caret;
       if (!this.state){
         caret = <img width="18" src={window.caretRightURL} />
@@ -45,7 +46,7 @@ class ChannelDropdown extends React.Component{
               {this.props.createChannel}
           </div>
           <ul id="channel-dropdown" className="channel-dropdown-content">
-            {this.props.channels.map((channel, idx) => <li key={idx}> <Link to={`/channels/${channel.id}`}>{channel.name}</Link> </li>)}
+            {channels.map((channel, idx) => <li key={idx}> <Link to={`/channels/${channel.id}`}>{channel.name}</Link> </li>)}
           </ul>
         </div>
       )

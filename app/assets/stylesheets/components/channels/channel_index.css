@@ -69,6 +69,10 @@
   justify-content: center;
 }
 
+.channel-list li a:hover{
+  background-color: rgb(235, 235, 197);
+}
+
 .channel-list li a p{
   line-height: 1.3rem;
   padding-left: 10px;
