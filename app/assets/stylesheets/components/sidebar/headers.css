@@ -17,11 +17,24 @@
   align-items: center;
 }
 
+.work-space-header-body{
+  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-space-header img{
+  padding-left: 10px;
+}
+
 .work-space-header button{
-  color: lightgoldenrodyellow;
+  color: black;
   background-color: skyblue;
   font-weight: 700;
-  font-size: .92rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 
 

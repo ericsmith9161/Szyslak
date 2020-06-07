@@ -2,20 +2,38 @@
   height: 88px;
   box-sizing: border-box;
   border: 1px solid skyblue;
-  border-radius: 5px;
+  border-radius: 8px;
   bottom: 88px;
   width: 96%;
   z-index: 3;
 }
 
-.message-form input{
-  background-color: #f8f8ff;
-  height: 44px;
+.message-form form{
+  width:100%;
+  height:100%;
+} 
+
+.message-form form textarea{
+  background-color: honeydew;
   width: 100%;
+  height: 100%;
+  text-align: start;
+  font-size: 1rem;
 }
 
-.options{
+.message-form button{
+  position: relative;
+  bottom: 35px;
+  left: 97%;
+
   background-color: honeydew;
-  height: 44px;
-  width: 100%;
+  font-size: 28px;
+  padding: 0px 2px;
+}
+
+.message-form button:hover{
+  border: 1px solid skyblue;
+  border-radius: 50px;
+  background-color: skyblue;
+
 }
