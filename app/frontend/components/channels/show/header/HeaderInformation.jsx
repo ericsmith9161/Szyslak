@@ -13,12 +13,12 @@ class HeaderInformation extends React.Component {
     return (
       <div className = "channel-show-header-information">
         <div className="channel-show-header-information-channel-name">
-          <span>{this.props.channel.name}</span>
+          <span>{this.props.channel.name}</span><span className="star">&nbsp;&nbsp;☆</span>
         </div> 
         <div className="channel-show-header-information-channel-info">
-          <span>👤{numUsers} </span>
-          <span className="pins">📍{numPins} </span>
-          <span>{channelTopic}</span>
+          <span>👤{numUsers}&nbsp;&nbsp;</span>
+          <span className="pins">&nbsp;📍{numPins}&nbsp; </span>
+          <span>&nbsp;&nbsp;{channelTopic}</span>
         </div>
       </div>
     )

@@ -9,7 +9,6 @@ class ChannelForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log(this.props.history)
     this.props.processForm(this.state).then(action => 
       this.props.history.push(`/channels/${action.channel.id}`))
   }

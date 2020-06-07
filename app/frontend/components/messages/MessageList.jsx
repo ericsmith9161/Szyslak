@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MessageShow from './MessageShow';
+
 class MessageList extends React.Component{
   constructor(props){
     super(props);
@@ -43,7 +45,7 @@ class MessageList extends React.Component{
           <ul className="message-list-list">
             {this.props.messages.map(message => (
               <li key = {message.id}>
-                {message.body}
+                <MessageShow message={message} fetchUser = {this.props.fetchUser} />
                 <div ref={this.bottom} />
               </li>
             ))}

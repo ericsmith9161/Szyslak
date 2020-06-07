@@ -6,7 +6,7 @@ const UserWithOnlineStatus = ({user}) => {
       <div className = "online-status-icon">
 
       </div>
-      <p>{user.username}</p>
+      <p>{user.username} </p>
     </div>
   )
 }

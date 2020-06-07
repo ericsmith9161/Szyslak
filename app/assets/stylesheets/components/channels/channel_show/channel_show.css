@@ -1,9 +1,9 @@
 .channel-show{
   position: fixed;
-  left: 260px;
+  left: 290px;
   height: calc(100vh - 37px);
   top: 37px;
-  border: 1px solid black;
+  border: 1px solid gainsboro;
   box-sizing: border-box;
   background-color: lightgoldenrodyellow;
   display: flex;
@@ -12,21 +12,67 @@
 }
 
 .full{
-  width: calc(100vw - 260px);
+  width: calc(100vw - 290px);
 }
 .part{
-  width: calc(75vw - 260px);
+  width: calc(75vw - 290px);
 }
 
 .channel-show-header{
-  height: 68px;
-  background-color: white;
+  height: 66px;
+  background-color: lightgoldenrodyellow;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0% 2%;
   box-sizing: border-box;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 17px;
+}
+
+.channel-show-header-information{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: .8rem;
+  height: 100%;
+  width: 100%;
+
+}
+
+.channel-show-header-information *{
+  color: gray;
+}
+
+.channel-show-header-information > *{
+  padding: 3px;
+}
+
+.channel-show-header-information-channel-name span{
+  font-weight: 700;
+  font-size: .9rem;
+  color: black;
+
+}
+
+.channel-show-header > button{
+  background-color: lightgoldenrodyellow;
+  color: gray;
+  font-size: .82rem;
+}
+
+.channel-show-header > button:hover{
+  background-color: lightgoldenrodyellow;
+  color: gray;
+  font-size: .82rem;
+}
+
+
+
+.channel-show-header > button span{
+  font-size: 1.1rem;
+  color: gray;
 }
 
 .channel-header-details{

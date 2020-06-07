@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchChannelMessages, receiveMessage } from '../../actions/message_actions';
 import { fetchChannel } from '../../actions/channel_actions';
 import {withRouter} from 'react-router-dom';
+import {fetchUser} from '../../actions/user_actions';
 
 import MessageList from './MessageList';
 
@@ -16,8 +17,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
   return {
     fetchChannelMessages: (channelId) => dispatch(fetchChannelMessages(channelId)),
-    receiveMessage: message => dispatch(receiveMessage(message))
-
+    receiveMessage: message => dispatch(receiveMessage(message)),
+    fetchUser: userId => dispatch(fetchUser(userId))
   }
 }
 

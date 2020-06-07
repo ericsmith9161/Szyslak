@@ -18,13 +18,12 @@ class HeaderDetails extends React.Component {
     const channelShow = document.querySelector(".channel-show");
 
     headerDetails.classList.toggle("hidden");
-    channelShow.classList.add(".full");
-    channelShow.classList.remove(".part");
+    channelShow.classList.toggle("full");
+    channelShow.classList.toggle("part");
   }
 
   handleDelete(e){
     e.preventDefault();
-    console.log(this.props)
     this.props.deleteChannel(this.props.channel.id).then(this.props.history.push('/channels/1'))
   }
 

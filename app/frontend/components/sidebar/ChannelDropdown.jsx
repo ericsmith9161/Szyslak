@@ -15,15 +15,10 @@ class ChannelDropdown extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.props);
     this.props.fetchUser(this.props.sessionid);
     this.props.fetchUserChannels(this.props.user.id);
-    // this.props.fetchChannels()
   }
 
-  //this.setstate
-  //is this . state hidden or not
-  //render null or render lis
 
   render(){
     if (this.props.channels === undefined){
