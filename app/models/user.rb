@@ -22,6 +22,8 @@ class User < ApplicationRecord
   has_many :created_messages,
     foreign_key: :user_id,
     class_name: 'Message'
+
+  has_one_attached :avatar
     
 
   def self.find_by_credentials(email, password)

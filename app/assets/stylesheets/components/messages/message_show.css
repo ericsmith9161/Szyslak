@@ -1,6 +1,7 @@
 .message{
   height: 60px;
   display: flex;
+  align-items: center;
 }
 
 .message:hover{
@@ -11,10 +12,15 @@
   display:flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .timestamps{
   color: gray;
   font-size: .75rem;
+}
+
+.message img{
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 3px;
 }
