@@ -1,16 +1,19 @@
 .app-drop-btn{
   background-color: skyblue;
   color: lightgoldenrodyellow;
+  padding-left: 10px;
 }
 
 .dm-drop-btn{
   background-color: skyblue;
   color: lightgoldenrodyellow;
+  padding-left: 10px;
 }
 
 .channel-drop-btn{
   background-color: skyblue;
   color: lightgoldenrodyellow;
+  padding-left: 10px;
 }
 
 .channel-drop-btn:hover{
