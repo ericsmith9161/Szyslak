@@ -12,9 +12,15 @@ class ChannelShowHeader extends React.Component {
     e.preventDefault();
     const headerDetails = document.querySelector(".channel-header-details");
     const channelShow = document.querySelector(".channel-show");
+    const channelIdx = document.querySelector(".channel-index")
     headerDetails.classList.toggle("hidden");
+    if (channelIdx !== null){
+      channelIdx.classList.toggle("full");
+      channelIdx.classList.toggle("part");
+    }
     channelShow.classList.toggle("full");
     channelShow.classList.toggle("part");
+
     // channelShow.classList.remove("full");
     // channelShow.classList.add("part");
   }

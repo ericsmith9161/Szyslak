@@ -1,6 +1,7 @@
 import React from 'react';
 
 import UserWithOnlineStatus from '../user/UserWithOnlineStatus';
+import ProfileFullContainer from '../../components/user/ProfileFullContainer';
 
 class WorkSpaceHeader extends React.Component{
   constructor(props){
@@ -16,6 +17,7 @@ class WorkSpaceHeader extends React.Component{
         <div className="work-space-header-body">
           {this.props.userInfoDropdown}
           <UserWithOnlineStatus user={this.props.user} />
+          <ProfileFullContainer />
         </div>
         <span>✎</span>
       </div>

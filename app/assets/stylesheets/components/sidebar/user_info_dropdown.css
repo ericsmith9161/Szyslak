@@ -1,42 +1,41 @@
 .user-info-dropdown{
   z-index: 2;
-  background-color: whitesmoke;
+  background-color: honeydew;
   position: relative;
   top: 32px;
   left: 20px;
   border: 1px solid lightgray;
   border-radius: 7px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 20px 25px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   width: 290px;
+  padding: 20px 0px;
 
 }
 
 .user-info-dropdown-head{
   display: flex;
-  padding-bottom: 20px;
-  
+  padding: 0px 20px 20px 20px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.user-info-dropdown *{
-  color: cornflowerblue;
+.user-info-dropdown-head div{
+  line-height: 1.2rem;
 }
 
-.user-info-dropdown b{
-  color: darkblue;
-}
-
-.user-info-dropdown div button{
-  color: darkblue;
-  font-size: .8rem;
+.user-info-dropdown img{
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
 }
 
 .user-info-dropdown p{
-  font-size: .85rem;
-  margin-top: 5px;
+  font-size: .8rem;
+  color: darkgray;
 }
 
 .user-info-dropdown ul{
@@ -45,35 +44,35 @@
 }
 
 .user-info-dropdown li{
-  padding: 12px 0px 12px 0px;
   font-size: .9rem;
+  line-height: 1.6rem;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.status-update-btn{
-  border: 1px solid lightgray;
-  border-radius: 3px;
+.user-info-popout a{
+  display: inline-block;
+  width:100%;
+  height: 100%;
+  padding: 0px 25px;
+}
+
+.user-info-popout a:hover{
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+.u-i-d-v-p button{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   text-align: left;
-  padding: 0px 4px 6px 4px ;
-  font-size: .9rem;
-  color: lightblue;
+  padding: 0px 25px;
+  background-color: honeydew;
 }
 
-.stat-but-emote{
-  font-size: 1.75rem;
-  color: lightblue
-}
-
-.stat-but-text{
-  font-size: .9rem;
-  color: lightblue
-}
-
-#add-workspaces-hover{
-  border-top: 1px solid lightblue;
-}
-
-#tools-hover{
-  border-top: 1px solid lightblue;
+.user-info-popout button:hover{
+  background-color: skyblue;
+  cursor: pointer;
 }
