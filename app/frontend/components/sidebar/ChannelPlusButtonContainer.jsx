@@ -21,9 +21,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
   return {
     createChannel: (
-      <button onClick={() => dispatch(openModal('createchannel'))}>
-        Create a channel
-      </button>
+      <button onClick={() => dispatch(openModal('createchannel'))}>Create a channel</button>
     ),
     closeModal: () => dispatch(closeModal()),
     fetchChannels: () => dispatch(fetchChannels()),

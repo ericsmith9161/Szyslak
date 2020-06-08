@@ -2,17 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import MessageForm from './MessageForm';
+import {withRouter} from 'react-router-dom';
+import {fetchChannel} from '../../actions/channel_actions';
 
-const mSTP = (state) => {
+
+const mSTP = (state, ownProps) => {
   return {
-
+    message: {body: "", user_id: state.session.id, messageable_type: 'Channel', messageable_id: ownProps.match.params.channelId},
+    channel: state.entities.channels[ownProps.match.params.channelId],
+    currentUser: state.entities.users[state.session.id]
   }
 }
 
 const mDTP = (dispatch) => {
-  return {
-
+  return{
+    fetchChannel: channelId => dispatch(fetchChannel(channelId)),
   }
 }
 
-export default connect(mSTP, mDTP)(MessageForm);
+export default withRouter(connect(mSTP, mDTP)(MessageForm));

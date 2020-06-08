@@ -17,15 +17,15 @@ class ChannelIndex extends React.Component{
         <div className = "channel-index-below-searchbar">
           <span>{this.props.channels.length} channels</span>
           <span>
-            {/* <span>Sort: A to Z</span> <span>filter</span>  */}
+            <span>Sort: A to Z</span> <span>filter</span> 
           </span>
         </div>
         <ul className="channel-list">
           {this.props.channels.map((channel, idx) => 
             <li key = {idx}>
               <Link to={`/channels/${channel.id}`}>
-                <p>{channel.name}</p>
-                <p>{channel.subscribed_users.length} members</p>
+                <p className="c-i-channel-name">{channel.name}</p>
+                <p className="c-i-num-members">{channel.subscribed_users.length} members</p>
               </Link>
             </li>
           )}

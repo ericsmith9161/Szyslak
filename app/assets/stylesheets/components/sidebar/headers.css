@@ -5,21 +5,107 @@
 }
 
 .work-space-header{
-  height: 68px;
+  height: 66px;
   box-sizing: border-box;
-  border: 1px solid black;
+  border-bottom: 1px solid gainsboro;
   background-color: skyblue;
-  width: 260px;
+  width: 290px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
 }
 
 .work-space-header-body{
-  position: absolute;
+  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-space-header img{
+  padding-left: 10px;
+}
+
+.work-space-header button{
+  color: black;
+  background-color: skyblue;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding-bottom: 3px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.work-space-header button:hover{
+  cursor: pointer;
+}
+.work-space-header p{
+  color: lightgoldenrodyellow;
+  font-size: .80rem;
 }
 
 .work-space-header-name{
   font-weight: 700;
   font-size: 1.2rem;
   color: lightgoldenrodyellow;
+}
+
+.work-space-header span{
+  background: lightgoldenrodyellow;
+  padding: 8px 9px;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 100px;
+  font-size: 1.25rem;
+}
+
+.logged-in-header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+.l-i-h-middle{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l-i-h-middle button{
+  width: 90%;
+  background-color: lightblue;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 6px;
+  color: lightgoldenrodyellow;
+  font-size: .9rem;
+  font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+  vertical-align: middle;
+
+}
+
+.l-i-h-middle button span{
+  display: inline-block;
+  transform: rotate(270deg);
+  color: lightgoldenrodyellow;
+  font-size: 1.5rem;
+  padding: 2px 6px 0px 0px;
+  font-family:Helvetica, Arial, sans-serif;
+  
+}
+
+.logged-in-header svg{
+  color: lightgoldenrodyellow;
+}
+
+.l-i-h-about{
+  color: lightgoldenrodyellow;
+  padding: 2px 5px 1px 5px;
+  margin-right: 20px;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: .9rem;
 }

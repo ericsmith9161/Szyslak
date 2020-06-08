@@ -18,13 +18,12 @@ class HeaderDetails extends React.Component {
     const channelShow = document.querySelector(".channel-show");
 
     headerDetails.classList.toggle("hidden");
-    channelShow.classList.add(".full");
-    channelShow.classList.remove(".part");
+    channelShow.classList.toggle("full");
+    channelShow.classList.toggle("part");
   }
 
   handleDelete(e){
     e.preventDefault();
-    console.log(this.props)
     this.props.deleteChannel(this.props.channel.id).then(this.props.history.push('/channels/1'))
   }
 
@@ -37,50 +36,50 @@ class HeaderDetails extends React.Component {
             <p>{this.props.channel.name}</p>
           </div>
           <div>
-            <button onClick={this.handleClose}>X</button>
+            <button onClick={this.handleClose}><img src={window.xURL} width="13"/></button>
           </div>
         </div>
         <div className="channel-header-details-options">
           <div className="channel-header-details-option">
-            <span>
-               +
+            <span className="c-h-d-o-img">
+              <img src={window.usersURL} width="25" height="25"/>
             </span>
             <span>
               Add
             </span>
           </div>
-          <div>
-            <span>
-              🔍
+          <div className="channel-header-details-option">
+            <span className="c-h-d-o-img">
+              <img src={window.searchURL} width="17"  />
             </span>
             <span>
               Find
             </span>
           </div>
-          <div>
-            <span>
-               ☎
+          <div className="channel-header-details-option">
+            <span className="c-h-d-o-img">
+              <img src={window.phoneURL} width="15" height="15"/>
             </span>
             <span>
               Call
             </span>
           </div>
-          <div>
-            <span>
-              ...
+          <div className="channel-header-details-option">
+            <span className="c-h-d-o-img">
+              <img src={window.threedotsURL} width="17" height="17"/>
             </span>
             <span>
               More
             </span>
           </div>
         </div>
-        <ul>
-          <li> <span><b>About</b></span><About channel={this.props.channel} /> <span>></span></li>
-          <li> <span><b>Members</b> </span><MemberList channel={this.props.channel} /> <span>></span></li>
-          <li> <span><b>Shortcuts</b></span> <span>></span></li>
-          <li> <span><b>Pinned Items</b></span> <span>></span></li>
-          <li> <span><b>Shared Files</b></span> <span>></span></li>
-          <li> <button onClick={this.handleDelete}><span><b>Delete Channel</b></span><span>></span></button></li>
+        <ul className="c-h-d-items">
+          <li className="c-h-d-item"> <span><b>About</b></span><About channel={this.props.channel} /> <span>></span></li>
+          <li className="c-h-d-item"> <span><b>Members</b> </span><MemberList channel={this.props.channel} /> <span>></span></li>
+          <li className="c-h-d-item"> <span><b>Shortcuts</b></span> <span>></span></li>
+          <li className="c-h-d-item"> <span><b>Pinned Items</b></span> <span>></span></li>
+          <li className="c-h-d-item"> <span><b>Shared Files</b></span> <span>></span></li>
+          <li className="c-h-d-button"> <button onClick={this.handleDelete}><b>Delete Channel</b></button></li>
         </ul>
         
 

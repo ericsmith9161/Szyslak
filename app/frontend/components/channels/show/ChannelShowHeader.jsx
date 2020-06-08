@@ -13,15 +13,17 @@ class ChannelShowHeader extends React.Component {
     const headerDetails = document.querySelector(".channel-header-details");
     const channelShow = document.querySelector(".channel-show");
     headerDetails.classList.toggle("hidden");
-    channelShow.classList.remove(".full");
-    channelShow.classList.add(".part");
+    channelShow.classList.toggle("full");
+    channelShow.classList.toggle("part");
+    // channelShow.classList.remove("full");
+    // channelShow.classList.add("part");
   }
 
   render() {
     return (
       <div className = "channel-show-header">
-        <Information channel = {this.props.channel}/>
-        <button onClick={this.handleDetails}>ⓘ Details</button>
+        <Information channel={this.props.channel} openChannelTopic = {this.props.openChannelTopic}/>
+        <button onClick={this.handleDetails}><span>ⓘ</span> &nbsp;&nbsp;Details</button>
         <Details channel = {this.props.channel} deleteChannel = {this.props.deleteChannel}/>
       </div>
     )

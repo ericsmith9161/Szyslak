@@ -2,7 +2,7 @@ class Api::ChannelsController < ApplicationController
 
   def index
     if params.has_key?(:user_id)
-      @channels = Channel.includes(:subscribed_users)
+      @channels = User.includes(:subscribed_channels => [:subscribed_users]).where(id: params[:user_id]).first.subscribed_channels
     else
       @channels = Channel.includes(:subscribed_users).all
     end
@@ -11,7 +11,11 @@ class Api::ChannelsController < ApplicationController
 
   def show
     @channel = Channel.includes(:subscribed_users).find_by(id: params[:id])
+    if !@channel.subscribed_users.include?(current_user)
+      Subscription.create!({user_id: current_user.id, subscribeable: @channel})
+    end
     render :show
+
   end
 
   def create

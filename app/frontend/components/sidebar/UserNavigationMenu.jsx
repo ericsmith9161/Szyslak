@@ -11,9 +11,12 @@ class UserNavigationMenu extends React.Component{
     return (
       <div className = "user-navigation-menu">
         <UserNavigationMenuNavTable />
-        <ChannelDropdownContainer />
-        <DMDropdown />
-        <AppDropdown />
+        <div className="feature-dropdowns">
+          <ChannelDropdownContainer />
+          <DMDropdown />
+          <AppDropdown />
+        </div>
+
       </div>
     )
   }

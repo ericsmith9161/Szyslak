@@ -1,9 +1,10 @@
 import React from 'react';
-
+import { ProtectedRoute } from "../../../util/route_util";
 import ChannelShowHeader from './ChannelShowHeader';
-import ChannelForm from '../form/ChannelForm';
-import MessageList from '../../messages/MessageList'
-import MessageForm from '../../messages/MessageForm'
+import MessageListContainer from '../../messages/MessageListContainer';
+import MessageFormContainer from '../../messages/MessageFormContainer';
+import MessageList from '../../messages/MessageListContainer';
+import MessageForm from '../../messages/MessageFormContainer';
 
 class ChannelShow extends React.Component {
   constructor(props){
@@ -19,11 +20,11 @@ class ChannelShow extends React.Component {
       return null;
     }else{
       return (
-          <div className="channel-show full">
-            <ChannelShowHeader channel={this.props.channel} deleteChannel={this.props.deleteChannel}/>
-            <MessageList />
-            <MessageForm />
-          </div>
+        <div className="channel-show full">
+          <ChannelShowHeader channel={this.props.channel} deleteChannel={this.props.deleteChannel} openChannelTopic={this.props.openChannelTopic}/>
+          <MessageListContainer />
+          <MessageFormContainer />
+        </div>
       )
     }
   }

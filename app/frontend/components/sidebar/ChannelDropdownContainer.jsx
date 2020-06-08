@@ -28,16 +28,13 @@ const mDTP = (dispatch) => {
     editUser: user => dispatch(editUser(user)),
     logout: () => dispatch(logout()),
     createChannel: (
-      <button onClick={() => dispatch(openModal('channelplusbutton'))}>
+      <button className="channel-dropdown-plus-btn" onClick={() => dispatch(openModal('channelplusbutton'))}>
         +
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
     fetchUserChannels: (user) => dispatch(fetchUserChannels(user)),
     fetchUser: (userId) => dispatch(fetchUser(userId)),
-    fetchChannels: () => dispatch(fetchChannels()),
-
-
 
   }
 }

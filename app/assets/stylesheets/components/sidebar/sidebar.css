@@ -1,17 +1,22 @@
 .sidebar li{
-  font-size: 1rem;
-  line-height: 1.5rem;
+  width: 100%;
+  font-size: .95rem;
+  box-sizing: border-box;
 }
 
 .sidebar {
-  width: 260px;
-  height: calc(100vh - 37px - 68px);
+  width: 290px;
+  height: calc(100vh - 37px - 66px);
   box-sizing: inherit;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: skyblue;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.sidebar *{
+  color: lightgoldenrodyellow;
 }
 
 .hidden{
