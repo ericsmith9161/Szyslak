@@ -22,14 +22,12 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
-      {/* <ProtectedRoute path="/channels/:channelId/messages" component={MessageListContainer} />
-      <ProtectedRoute path="/channels/:channelId/messages" component={MessageFormContainer} /> */}
-
       <ProtectedRoute exact path="/channels" component={ChannelIndexContainer} />
       <ProtectedRoute exact path="/channels/new" component={ChannelFormContainer} />
-      <ProtectedRoute path="/channels/:channelId" component={ChannelShowContainer} />
-      <ProtectedRoute path="/" component={SidebarContainer} />
       <Route path="/" component={Modal} />
+      <ProtectedRoute path="/" component={SidebarContainer} />
+
+      <ProtectedRoute path="/channels/:channelId" component={ChannelShowContainer} />
   </div>
 );
 

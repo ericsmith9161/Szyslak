@@ -32,11 +32,11 @@
   color: black;
   background-color: skyblue;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding-bottom: 3px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
-
 
 .work-space-header button:hover{
   cursor: pointer;

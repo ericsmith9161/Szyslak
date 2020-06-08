@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import UserInfoDropdownContainer from './sidebar/UserInfoDropdownContainer';
 import ChannelFormContainer from './channels/form/ChannelFormContainer';
 import ProfileFormContainer from './user/UserEditFormContainer';
-import ChannelPlusButtonContainer from './sidebar/ChannelPlusButtonContainer'
+import ChannelPlusButtonContainer from './sidebar/ChannelPlusButtonContainer';
+import ChannelTopicContainer from './channels/show/header/ChannelTopicContainer';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -44,6 +45,15 @@ function Modal({ modal, closeModal }) {
       return (
         <div className="modal-background-profile" onClick={closeModal}>
           <div className="modal-child-profile" onClick={e => e.stopPropagation()}>
+            {component}
+          </div>
+        </div>
+      )
+    case 'channeltopic':
+      component = <ChannelTopicContainer />;
+      return (
+        <div className="modal-background-channel-topic" onClick={closeModal}>
+          <div className="modal-child-channel-topic" onClick={e => e.stopPropagation()}>
             {component}
           </div>
         </div>

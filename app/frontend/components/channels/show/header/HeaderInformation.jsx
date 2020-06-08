@@ -9,7 +9,7 @@ class HeaderInformation extends React.Component {
   render() {
     const numUsers = this.props.channel.subscribed_users.length;
     const numPins = 0; //make dynamic in bonus phase
-    const channelTopic = this.props.channel.details //make dynamic later on
+    const topic = this.props.channel.topic;
     return (
       <div className = "channel-show-header-information">
         <div className="channel-show-header-information-channel-name">
@@ -19,7 +19,7 @@ class HeaderInformation extends React.Component {
           <span><img className="user-svg" width="14" src={window.usersURL} />&nbsp;{numUsers}&nbsp;&nbsp;</span>
           <span className="pins">&nbsp;<img className="pin-svg" width="14" src={window.pinsURL} />
 {numPins}&nbsp; </span>
-          <span>&nbsp;&nbsp;{channelTopic}</span>
+          <span>&nbsp;&nbsp;<button onClick = {() => this.props.openChannelTopic()}>{topic}</button></span>
         </div>
       </div>
     )

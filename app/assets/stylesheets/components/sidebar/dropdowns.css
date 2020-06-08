@@ -13,6 +13,10 @@
   color: lightgoldenrodyellow;
 }
 
+.channel-drop-btn:hover{
+  cursor: pointer;
+}
+
 .channel-dropdown-plus-btn{
   background-color: skyblue;
   color: #fafad2;
@@ -44,6 +48,7 @@
 .flex-dammit button{
   display: inline-block;
 }
+
 .flex-dammit button:first-of-type{
   font-size: .9rem;
 }
@@ -60,12 +65,16 @@
 }
 
 .channel-dropdown ul li a{
-  display: inline-flex;
+  display: inline-block;
   width:100%;
   box-sizing: border-box;
   line-height: 1.6rem;
   font-size: .9rem;
-  padding-left: 15px;
+  padding-left: 30px;
+}
+
+.channel-dropdown ul li:hover{
+  background-color: lightblue;
 }
 
 
@@ -74,10 +83,6 @@
 }
 .channel-dropdown-content a:focus{
   background-color: turquoise;
-}
-
-.feature-dropdowns{
-  width:100%;
 }
 
 

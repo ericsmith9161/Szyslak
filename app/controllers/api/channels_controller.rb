@@ -11,7 +11,11 @@ class Api::ChannelsController < ApplicationController
 
   def show
     @channel = Channel.includes(:subscribed_users).find_by(id: params[:id])
+    if !@channel.subscribed_users.include?(current_user)
+      Subscription.create!({user_id: current_user.id, subscribeable: @channel})
+    end
     render :show
+
   end
 
   def create

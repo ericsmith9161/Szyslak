@@ -4,6 +4,8 @@ import {fetchChannel, deleteChannel} from '../../../actions/channel_actions';
 
 import ChannelShow from './ChannelShow';
 import {withRouter} from 'react-router-dom';
+import { openModal, closeModal } from '../../../actions/modal_actions';
+
 
 const mSTP = (state, ownProps) => {
   return {
@@ -17,9 +19,12 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => {
   return {
+    openChannelTopic: () => dispatch(openModal('channeltopic')),
     fetchChannel: (channelId) => dispatch(fetchChannel(channelId)),
     deleteChannel: (channelId) => dispatch(deleteChannel(channelId)),
     fetchChannelMessages: (channelId) => dispatch(fetchChannelMessages(channelId)),
+    closeModal: () => dispatch(closeModal()),
+
 
   }
 }
