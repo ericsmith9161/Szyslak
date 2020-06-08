@@ -20,6 +20,9 @@
   border: 1px solid skyblue;
   border-radius: 3px;
   padding: 0px 6px;
+  margin-right: 20px;
+  padding-right: 8px;
+
 }
 
 .channel-dropdown-plus-btn:hover{
@@ -38,6 +41,9 @@
   line-height: 2rem;
 }
 
+.flex-dammit button{
+  display: inline-block;
+}
 .flex-dammit button:first-of-type{
   font-size: .9rem;
 }
@@ -54,10 +60,12 @@
 }
 
 .channel-dropdown ul li a{
-  width:290px;
+  display: inline-flex;
+  width:100%;
   box-sizing: border-box;
   line-height: 1.6rem;
   font-size: .9rem;
+  padding-left: 15px;
 }
 
 
