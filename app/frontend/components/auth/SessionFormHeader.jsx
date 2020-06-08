@@ -13,7 +13,7 @@ class SessionFormHeader extends React.Component{
 
   handleDemoLogin(e){
     e.preventDefault();
-    this.props.login({username: "demo user", email: "demo@demo.demo", password: "password"});
+    this.props.login({email: 'demo@demo.demo', username: 'Demo User', password: 'password'})
   }
 
   render(){
