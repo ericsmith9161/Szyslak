@@ -8,7 +8,7 @@ import {fetchUser} from '../../actions/user_actions';
 const mSTP = (state, ownProps) =>{
   return{
     currentUserId: state.session.id,
-    viewedUser: state.entities.users[state.session.id]
+    viewedUser: ownProps.viewedUser
   }
 }
 

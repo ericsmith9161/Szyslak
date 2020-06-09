@@ -8,7 +8,8 @@ const SplashHeader = () => {
       <div className = "splash-header-resources">
         <div className = "logo-and-home-link">
           <img className="logo" src={window.moegoURL} width="30" />
-          <span>szyslak</span>
+          <img src={window.szyslakblackURL} height="30" />
+
         </div>
         <label> Eric Smith
 

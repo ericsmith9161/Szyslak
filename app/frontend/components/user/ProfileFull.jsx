@@ -6,32 +6,32 @@ class ProfileFull extends React.Component{
     this.closeProfile = this.closeProfile.bind(this);
   }
 
-  componentDidMount(){
-    console.log(this.props)
-    this.props.fetchUser(this.props.currentUserId)
-  }
-
-  closeProfile(e){
+  closeProfile(e) {
     e.preventDefault();
     const profile = document.querySelector(".user-profile-full");
     const channelShow = document.querySelector(".channel-show");
-    const channelIdx = document.querySelector(".channel-index")
+    const channelIdx = document.querySelector(".channel-index");
+    const userIdx = document.querySelector(".user-index")
 
-    profile.classList.toggle("hidden");
-    if (channelShow !== null){
+    profile.classList.add("hidden");
+    if (channelShow !== null) {
       channelShow.classList.toggle("full");
       channelShow.classList.toggle("part");
     }
-    if (channelIdx !== null){
+    if (channelIdx !== null) {
       channelIdx.classList.toggle("full");
       channelIdx.classList.toggle("part");
+    }
+    if (userIdx !== null) {
+      userIdx.classList.toggle("full");
+      userIdx.classList.toggle("part");
     }
   }
 
   render(){
+    console.log(this.props.viewedUser)
     let time = new Date();
     let avatar;
-    console.log(this.props)
     if (this.props.viewedUser === undefined){
       return null;
     }
@@ -45,7 +45,7 @@ class ProfileFull extends React.Component{
       <div className="user-profile-full hidden">
         <div className="user-profile-header">
           <h1> Profile</h1>
-          <button onClick = {this.closeProfile}><img src={window.xURL} width="13"/></button>
+          <button onClick = {this.closeProfile}><img src={window.xURL} width="13" height="13"/></button>
         </div>
         <div className = "user-profile-body">
           <img src={avatar} />

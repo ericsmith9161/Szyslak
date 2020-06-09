@@ -33,9 +33,10 @@ class UserInfoDropdown extends React.Component{
       channelIdx.classList.toggle("full");
       channelIdx.classList.toggle("part");
     }
-    console.log(channelShow)
-    channelShow.classList.toggle("full");
-    channelShow.classList.toggle("part");
+    if (channelShow !== null){
+      channelShow.classList.toggle("full");
+      channelShow.classList.toggle("part");
+    }
     this.props.closeModal()
   }
 

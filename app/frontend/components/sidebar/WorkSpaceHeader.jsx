@@ -17,7 +17,7 @@ class WorkSpaceHeader extends React.Component{
         <div className="work-space-header-body">
           {this.props.userInfoDropdown}
           <UserWithOnlineStatus user={this.props.user} />
-          <ProfileFullContainer />
+          <ProfileFullContainer viewedUser={this.props.user}/>
         </div>
         <span>✎</span>
       </div>

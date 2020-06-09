@@ -1,10 +1,7 @@
 import React from 'react';
-import { ProtectedRoute } from "../../../util/route_util";
 import ChannelShowHeader from './ChannelShowHeader';
 import MessageListContainer from '../../messages/MessageListContainer';
 import MessageFormContainer from '../../messages/MessageFormContainer';
-import MessageList from '../../messages/MessageListContainer';
-import MessageForm from '../../messages/MessageFormContainer';
 
 class ChannelShow extends React.Component {
   constructor(props){

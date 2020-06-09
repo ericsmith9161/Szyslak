@@ -24,7 +24,7 @@
   justify-content: space-between;
 }
 
-.work-space-header img{
+.work-space-header img:first-of-type{
   padding-left: 10px;
 }
 

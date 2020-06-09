@@ -28,7 +28,7 @@ const mDTP = (dispatch) => {
     logout: () => dispatch(logout()),  
     userInfoDropdown: (
       <button onClick={() => dispatch(openModal('userinfodropdown'))}>
-        Szyslak
+        <img src={window.szyslakURL} height="24" />
       </button>
     ),
     closeModal: () => dispatch(closeModal()),

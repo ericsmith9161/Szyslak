@@ -1,0 +1,96 @@
+.user-index{
+  position: fixed;
+  left: 290px;
+  height: calc(100vh - 37px);
+  top:37px;
+  background-color: lightgoldenrodyellow;
+  box-sizing: border-box;
+}
+
+.user-index-header{
+  height: 66px;
+  top: 39px;
+  display:flex;
+  justify-content: space-between;
+  background-color: lightgoldenrodyellow;
+  box-sizing: border-box;
+  border-bottom: 1px solid lightblue;
+  width: 100%;
+}
+
+.user-index-header button{
+  padding: 5px 3px;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  margin: 15px 20px;
+}
+
+.user-index-header button:hover{
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+
+.user-index-body{
+  position: fixed;
+  left: 290px;
+  height: calc(100vh - 37px - 66px);
+  top: 103px;
+  box-sizing: border-box;
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+}
+
+
+.u-i-av{
+  width: 200px;
+  height: 200px;
+}
+
+.user-index-list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+}
+
+.user-index li{
+  width: 200px;
+  height: 285px;
+  margin: 4px;
+  box-sizing: border-box;
+  
+}
+
+.user-profile-btn{
+  box-sizing: border-box;
+  width: 200px;
+  height: 285px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.user-profile-btn{
+  cursor: pointer;
+}
+
+.u-i-stat-circ{
+  width: 12px;
+  height: 12px;
+}
+
+.user-index-below-searchbar{
+  width: calc(100% - 44px);
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 22px;
+  padding: 17px 0px;
+  box-sizing: border-box;
+}
+
+.user-index-below-searchbar span{
+  font-size: .8rem;
+  color: darkgray;
+}

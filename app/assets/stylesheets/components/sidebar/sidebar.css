@@ -7,7 +7,7 @@
 .sidebar {
   width: 290px;
   height: calc(100vh - 37px - 66px);
-  box-sizing: inherit;
+  box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: skyblue;
   display: flex;

@@ -12,7 +12,7 @@
 }
 
 .channel-index h4{
-  line-height: 66px;
+  line-height: 65px;
   width: 100%;
   font-size: .9rem;
   font-weight: 700;
@@ -28,6 +28,7 @@
   margin: 0px 22px;
   border-bottom: 1px solid lightblue;
   padding: 17px 0px;
+  box-sizing: border-box;
 }
 
 .channel-index-below-searchbar span{
@@ -41,6 +42,7 @@
   display:flex;
   flex-direction: column;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 
 .channel-list li{
