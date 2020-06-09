@@ -170,3 +170,12 @@ input:checked + .slider:before {
   background-color: darkgray;
   font-weight: 700;
 }
+
+textarea{
+  font-size: .9rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+textarea::placeholder{
+  color: darkgray;
+}

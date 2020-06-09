@@ -12,8 +12,8 @@ class ChannelDropdown extends React.Component{
 
   channelDropdownClick(e) {
     e.preventDefault();
-    this.setState({dropped_down: !this.state.dropped_down});
     document.getElementById("channel-dropdown").classList.toggle("hidden");
+    this.setState({dropped_down: !this.state.dropped_down});
   }
 
   componentDidMount(){

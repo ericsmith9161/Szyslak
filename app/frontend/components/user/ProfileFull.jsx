@@ -18,8 +18,10 @@ class ProfileFull extends React.Component{
     const channelIdx = document.querySelector(".channel-index")
 
     profile.classList.toggle("hidden");
-    channelShow.classList.toggle("full");
-    channelShow.classList.toggle("part");
+    if (channelShow !== null){
+      channelShow.classList.toggle("full");
+      channelShow.classList.toggle("part");
+    }
     if (channelIdx !== null){
       channelIdx.classList.toggle("full");
       channelIdx.classList.toggle("part");

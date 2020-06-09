@@ -3,7 +3,7 @@
   left: 290px;
   height: calc(100vh - 37px);
   top: 37px;
-  border: 1px solid gainsboro;
+  border: 0px 1px 1px 1px solid gainsboro;
   box-sizing: border-box;
   background-color: lightgoldenrodyellow;
   display: flex;
@@ -92,6 +92,7 @@
   background-color: honeydew;
   display: flex;
   flex-direction: column;
+  border-left: 1px solid lightgray;
 }
 
 .header-details-header{
@@ -100,7 +101,7 @@
   width:100%;
   box-sizing: border-box;
   border-bottom: 1px solid gainsboro;
-  height: 67px;
+  height: 66px;
   align-items: center;
   padding-right: 13px;
   padding-left: 10px;
@@ -239,8 +240,31 @@
 .channel-show-header-information-channel-info{
   display:flex;
   align-items: center;
-  line-height: 18px;
+  line-height: 20px;
 }
+
+.channel-show-header-information-channel-info button{
+  background-color: lightgoldenrodyellow;
+  padding: 0px 6px 0px 6px;
+  border: 1px solid lightgoldenrodyellow;
+}
+
+.channel-show-header-information-channel-info button:hover{
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.channel-show-header-information-channel-name{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.channel-show-header-information-channel-name span:first-of-type{
+  padding-bottom: 2px;
+}
+
 
 .channel-show-header-information-channel-name img:hover{
   cursor: pointer;

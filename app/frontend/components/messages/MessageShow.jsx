@@ -3,6 +3,21 @@ import React from 'react';
 const MessageShow = ({message}) =>{
   let avatar;
   console.log(message.user_avatar)
+
+  let suffix, timeStr;
+  let time = message.created_at.slice(11, 16);
+  let h = parseInt(time.slice(0,2));
+  if(h > 12){
+    h -= 12;
+    suffix = " PM";
+    timeStr = `${h}`.concat(":",time.slice(3,5),suffix)
+  }else{
+    suffix = " AM";
+    timeStr = time.concat(suffix)
+  }
+
+  
+
   if (message.user_avatar === undefined){
     avatar = window.defaultavURL;
   }else{
@@ -16,7 +31,7 @@ const MessageShow = ({message}) =>{
       <div className = "message-content">
         <div>
           <b>{message.username}</b>&nbsp;
-          <span className="timestamps">{message.created_at.slice(11, 16)}</span>
+          <span className="timestamps">{timeStr}</span>
         </div>
         <div>
           {message.body}
