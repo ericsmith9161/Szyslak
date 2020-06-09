@@ -64,7 +64,7 @@ class UserInfoDropdown extends React.Component{
             </div>
           </div>
           <ul id="user-info-popout" className="user-info-popout">
-            <li className="u-i-d-v-p"><button onClick={this.handleShow}>View profile</button></li>
+            {/* <li className="u-i-d-v-p"><button onClick={this.handleShow}>View profile</button></li> */}
             <li onClick={this.handleSignout}><Link to="/greeting">Sign out of Szyslak</Link></li>
           </ul>
         </div>

@@ -3,7 +3,6 @@ import React from 'react';
 import UserNavigationMenuNavTable from './UserNavigationMenuNavTable';
 import ChannelDropdownContainer from './ChannelDropdownContainer';
 import DMDropdown from './DMDropdown';
-import AppDropdown from './AppDropdown';
 
 class UserNavigationMenu extends React.Component{
 
@@ -14,7 +13,6 @@ class UserNavigationMenu extends React.Component{
         <div className="feature-dropdowns">
           <ChannelDropdownContainer />
           <DMDropdown />
-          <AppDropdown />
         </div>
 
       </div>
