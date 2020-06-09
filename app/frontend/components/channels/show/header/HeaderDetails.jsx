@@ -16,7 +16,9 @@ class HeaderDetails extends React.Component {
     e.preventDefault();
     const headerDetails = document.querySelector(".channel-header-details");
     const channelShow = document.querySelector(".channel-show");
-    const channelIdx = document.querySelector(".channel-index")
+    const channelIdx = document.querySelector(".channel-index");
+    const detailsText = document.querySelector(".details-text");
+    const detailsBtn = document.querySelector(".details-button");
     headerDetails.classList.toggle("hidden");
     if (channelIdx !== null){
       channelIdx.classList.toggle("full");
@@ -24,6 +26,8 @@ class HeaderDetails extends React.Component {
     }
     channelShow.classList.toggle("full");
     channelShow.classList.toggle("part");
+    detailsText.classList.toggle("hidden");
+    detailsBtn.classList.toggle("selected");
     e.stopPropagation();
   }
 

@@ -5,10 +5,9 @@ import React from 'react';
 import ProfileFull from './ProfileFull';
 import {fetchUser} from '../../actions/user_actions';
 
-const mSTP = (state, ownProps) =>{
+const mSTP = (state) =>{
   return{
     currentUserId: state.session.id,
-    viewedUser: ownProps.viewedUser
   }
 }
 

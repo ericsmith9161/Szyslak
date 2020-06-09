@@ -12,7 +12,9 @@ class ChannelShowHeader extends React.Component {
     e.preventDefault();
     const headerDetails = document.querySelector(".channel-header-details");
     const channelShow = document.querySelector(".channel-show");
-    const channelIdx = document.querySelector(".channel-index")
+    const channelIdx = document.querySelector(".channel-index");
+    const detailsText = document.querySelector(".details-text");
+    const detailsBtn = document.querySelector(".details-button");
     headerDetails.classList.toggle("hidden");
     if (channelIdx !== null){
       channelIdx.classList.toggle("full");
@@ -20,6 +22,9 @@ class ChannelShowHeader extends React.Component {
     }
     channelShow.classList.toggle("full");
     channelShow.classList.toggle("part");
+    detailsText.classList.toggle("hidden");
+    detailsBtn.classList.toggle("selected");
+
 
     // channelShow.classList.remove("full");
     // channelShow.classList.add("part");
@@ -29,7 +34,7 @@ class ChannelShowHeader extends React.Component {
     return (
       <div className = "channel-show-header">
         <Information channel={this.props.channel} openChannelTopic = {this.props.openChannelTopic}/>
-        <button onClick={this.handleDetails}><span>ⓘ</span> &nbsp;&nbsp;Details</button>
+        <button className="details-button" onClick={this.handleDetails}><span className="i-btn">ⓘ</span> <span className="details-text">&nbsp;&nbsp;Details</span></button>
         <Details channel = {this.props.channel} deleteChannel = {this.props.deleteChannel}/>
       </div>
     )

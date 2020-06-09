@@ -1,6 +1,6 @@
 .channel-show{
   position: fixed;
-  left: 290px;
+  left: 300px;
   height: calc(100vh - 37px);
   top: 37px;
   border: 0px 1px 1px 1px solid gainsboro;
@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: whitesmoke;
 }
 
 .channel-show > img{
@@ -18,11 +19,11 @@
 }
 
 .full{
-  width: calc(100vw - 290px);
+  width: calc(100vw - 300px);
   box-sizing: border-box;
 }
 .part{
-  width: calc(75vw - 290px);
+  width: calc(100vw - 330px - 300px);
   box-sizing: border-box;
 }
 
@@ -34,7 +35,6 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  border-bottom: 1px solid gainsboro;
   padding: 10px 17px;
 }
 
@@ -64,14 +64,20 @@
 
 }
 
-.channel-show-header > button{
+.details-button{
   background-color: lightgoldenrodyellow;
-  color: gray;
   font-size: .82rem;
   display: inline-flex;
-  align-items: center;
+  align-items: space-between;
   line-height: 2rem;
-  padding: 0px 5px
+  padding: 0px 7px;
+  box-sizing: border-box;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 5px;
+}
+
+.details-text{
+  color: gray
 }
 
 .channel-show-header > button:hover{
@@ -79,19 +85,36 @@
   color: black;
   font-size: .82rem;
   border: 1px solid rgb(206, 206, 170);
-  border-radius: 5px;
   cursor: pointer;
 }
 
 
 
-.channel-show-header > button span{
+.i-btn{
   font-size: 1.1rem;
   color: gray;
 }
 
+.channel-show-header > button:hover span{
+  color: black;
+}
+
+.selected .i-btn{
+  color: black;
+}
+
+.selected .details-button{
+  color: black;
+}
+
+.selected{
+  background-color: rgb(206, 206, 170);
+  border: 1px solid rgb(206, 206, 170);
+  cursor: pointer;
+}
+
 .channel-header-details{
-  width: 25vw;
+  width: 330px;
   position: fixed;
   right: 0px;
   height: calc(100vh - 37px);
@@ -109,7 +132,7 @@
   width:100%;
   box-sizing: border-box;
   border-bottom: 1px solid gainsboro;
-  height: 66px;
+  height: 67px;
   align-items: center;
   padding-right: 13px;
   padding-left: 10px;

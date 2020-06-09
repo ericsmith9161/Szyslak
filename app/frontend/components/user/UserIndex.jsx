@@ -1,11 +1,10 @@
 import React from 'react';
 
-import ProfileFullContainer from './ProfileFullContainer';
+import ProfileFull from './ProfileFull';
 
 class UserIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.bottom = React.createRef();
     this.openProfile = this.openProfile.bind(this);
     this.state = {clickedUser: this.props.currentUser}
   }
@@ -22,8 +21,6 @@ class UserIndex extends React.Component {
     const channelShow = document.querySelector(".channel-show");
     const channelIdx = document.querySelector(".channel-index");
     const userIdx = document.querySelector(".user-index")
-
-    console.log(userIdx)
 
     profile.classList.remove("hidden");
     if (channelShow !== null) {
@@ -49,7 +46,6 @@ class UserIndex extends React.Component {
       } else {
         avatar = user.avatarURL
       }
-      console.log(user.username)
       return (
         <li key={user.id}>
           <button className="user-profile-btn" onClick={(e) => this.openProfile(user)}>
@@ -68,15 +64,13 @@ class UserIndex extends React.Component {
       </div>
     }
     else {
-      console.log(this.state.clickedUser)
       return (
-
           <div className="user-index full">
             <div className="user-index-header">
               <span>People</span>
               <button>Invite People</button>
             </div>
-            < ProfileFullContainer viewedUser={this.state.clickedUser} />
+            < ProfileFull viewedUser={this.state.clickedUser} currentUserId = {this.props.currentUserId} />
             <div className="user-index-below-searchbar">
               <span>{this.props.users.length} members</span>
               <span>
@@ -87,7 +81,6 @@ class UserIndex extends React.Component {
               {userProfilePieces}
             </ul>
           </div>
-        // </div>
       )
     }
   }

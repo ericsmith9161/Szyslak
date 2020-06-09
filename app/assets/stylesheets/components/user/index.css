@@ -1,6 +1,6 @@
 .user-index{
   position: fixed;
-  left: 290px;
+  left: 300px;
   height: calc(100vh - 37px);
   top:37px;
   background-color: lightgoldenrodyellow;
@@ -34,7 +34,7 @@
 
 .user-index-body{
   position: fixed;
-  left: 290px;
+  left: 300px;
   height: calc(100vh - 37px - 66px);
   top: 103px;
   box-sizing: border-box;

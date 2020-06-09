@@ -1,7 +1,6 @@
 .logged-in-header{
   height: 37px;
   background-color: skyblue;
-  border: 1px solid black;
 }
 
 .work-space-header{
@@ -9,7 +8,7 @@
   box-sizing: border-box;
   border-bottom: 1px solid gainsboro;
   background-color: skyblue;
-  width: 290px;
+  width: 300px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
   justify-content: space-between;

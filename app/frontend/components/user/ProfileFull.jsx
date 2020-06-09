@@ -28,6 +28,12 @@ class ProfileFull extends React.Component{
     }
   }
 
+  // componentDidUpdate(prevProps){
+  //   if (prevProps.viewedUser !== this.props.viewedUser){
+
+  //   }
+  // }
+
   render(){
     console.log(this.props.viewedUser)
     let time = new Date();
@@ -39,8 +45,9 @@ class ProfileFull extends React.Component{
       avatar = window.defaultavURL;
     }else{
       avatar = this.props.viewedUser.avatarURL
-      console.log("made it here ok")
     }
+    window.kidprops = this.props.viewedUser;
+    window.props = this.props;
     return(
       <div className="user-profile-full hidden">
         <div className="user-profile-header">

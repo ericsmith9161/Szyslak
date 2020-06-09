@@ -1,6 +1,6 @@
 .channel-index{
   position: fixed;
-  left: 290px;
+  left: 300px;
   height: calc(100vh - 37px);
   top: 37px;
   box-sizing: border-box;

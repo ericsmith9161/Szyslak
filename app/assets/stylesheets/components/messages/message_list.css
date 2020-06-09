@@ -4,7 +4,9 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: 96%;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 20px 0px 0px 0px;
 }
 
 .message-list-list{
