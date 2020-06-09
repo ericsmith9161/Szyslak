@@ -30,6 +30,10 @@ export const createChannel = (channel) => (dispatch) => {
   return APIUtil.createChannel(channel).then(channel => dispatch(receiveChannel(channel)));
 }
 
+export const editChannel = (channel) => (dispatch) => {
+  return APIUtil.editChannel(channel).then(channel => dispatch(receiveChannel(channel)));
+}
+
 const removeChannel = (channelId) => {
   return {
     type: DELETE_CHANNEL,

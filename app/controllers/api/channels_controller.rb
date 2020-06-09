@@ -18,6 +18,15 @@ class Api::ChannelsController < ApplicationController
 
   end
 
+  def update
+    @channel = Channel.find_by(id: params[:id])
+    if @channel.update(channel_params)
+      render :show 
+    else
+      render json: @channel.errors.full_messages, status: 401
+    end
+  end
+
   def create
     @channel = Channel.new(channel_params)
     @channel.creator_id = current_user.id
@@ -42,7 +51,7 @@ class Api::ChannelsController < ApplicationController
   private
 
   def channel_params
-    params.require(:channel).permit(:name, :details, :private, :creator_id)
+    params.require(:channel).permit(:name, :details, :private, :creator_id, :topic)
   end
 
 end

@@ -239,7 +239,11 @@
 .channel-show-header-information-channel-info{
   display:flex;
   align-items: center;
-  line-height: 16px;
+  line-height: 18px;
+}
+
+.channel-show-header-information-channel-name img:hover{
+  cursor: pointer;
 }
 
 .channel-show-header-information-channel-info span{

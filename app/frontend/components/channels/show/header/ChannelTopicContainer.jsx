@@ -7,7 +7,7 @@ import React from 'react';
 import ChannelTopic from './ChannelTopic';
 import {withRouter} from 'react-router-dom';
 
-import { fetchChannel } from '../../../../actions/channel_actions';
+import { fetchChannel, editChannel } from '../../../../actions/channel_actions';
 import { openModal, closeModal } from '../../../../actions/modal_actions';
 
 
@@ -26,7 +26,7 @@ const mDTP = (dispatch) => {
   return {
     closeModal: () => dispatch(closeModal()),
     fetchChannel: (channelId) => dispatch(fetchChannel(channelId)),
-
+    editChannel: (channel) => dispatch(editChannel(channel))
   }
 }
 

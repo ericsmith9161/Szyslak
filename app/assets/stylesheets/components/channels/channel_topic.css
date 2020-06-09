@@ -1,0 +1,88 @@
+.channel-topic-form{
+  height: 232px;
+  width: 522px;
+  box-sizing: border-box;
+  background-color: honeydew;
+  border: 1px solid honeydew;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.channel-topic-form h1{
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 700;
+  padding: 0px 15px 0px 0px;
+  margin-bottom: 15px;
+}
+
+.c-t-f-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-t-f-head button{
+  background-color: honeydew;
+  box-sizing: border-box;
+  height: 28px;
+  width: 28px;
+}
+
+.c-t-f-head button:hover{
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.channel-topic-form textarea{
+  height: 90px;
+  background-color: whitesmoke;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  width: 470px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: .9rem;
+}
+
+.c-t-f-buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c-t-f-buttons button{
+  display: inline-flex;
+  width: 82px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 10px 3px 0px 12px;
+}
+
+.c-t-f-buttons button:first-of-type{
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  color: skyblue;
+}
+
+.c-t-f-buttons button:last-of-type{
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  background-color: skyblue;
+  color: lightgoldenrodyellow;
+}
+
+.c-t-f-buttons button:first-of-type:hover{
+  background-color: lightgoldenrodyellow;
+  cursor: pointer;
+}
+
+.c-t-f-buttons button:last-of-type:hover{
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  background-color: lightblue;
+  cursor: pointer;
+}
