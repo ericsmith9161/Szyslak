@@ -42,8 +42,3 @@ class ChannelShowHeader extends React.Component {
 }
 
 export default ChannelShowHeader;
-
-//needs to keep track of details click state
-//onclick remove class from details hide
-//onclick remove class from channel-show channel-show
-//onclick add class to channel-show channel-show-part

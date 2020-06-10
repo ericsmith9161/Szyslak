@@ -11,7 +11,8 @@ class ProfileFull extends React.Component{
     const profile = document.querySelector(".user-profile-full");
     const channelShow = document.querySelector(".channel-show");
     const channelIdx = document.querySelector(".channel-index");
-    const userIdx = document.querySelector(".user-index")
+    const userIdx = document.querySelector(".user-index");
+    const dmShow = document.querySelector(".dm-show")
 
     profile.classList.add("hidden");
     if (channelShow !== null) {
@@ -26,10 +27,13 @@ class ProfileFull extends React.Component{
       userIdx.classList.toggle("full");
       userIdx.classList.toggle("part");
     }
+    if (dmShow !== null){
+      dmShow.classList.toggle("full");
+      dmShow.classList.toggle("part");
+    }
   }
 
   render(){
-    console.log(this.props.viewedUser)
     let time = new Date();
     let avatar;
     if (this.props.viewedUser === undefined){

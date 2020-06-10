@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchDirectMessage} from '../../../actions/direct_message_actions';
 import { fetchDirectMessageMessages} from '../../../actions/message_actions';
+import { fetchUser } from '../../../actions/user_actions';
 
 import DMShow from './DMShow';
 import { withRouter } from 'react-router-dom';
@@ -20,6 +21,7 @@ const mDTP = (dispatch) => {
   return {
     fetchDirectMessage: (directMessageId) => dispatch(fetchDirectMessage(directMessageId)),
     fetchDirectMessageMessages: (directMessageId) => dispatch(fetchDirectMessageMessages(directMessageId)),
+    fetchUser: (userId) => dispatch(fetchUser(userId)),
   }
 }
 

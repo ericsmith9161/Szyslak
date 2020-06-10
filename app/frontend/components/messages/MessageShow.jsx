@@ -2,7 +2,6 @@ import React from 'react';
 
 const MessageShow = ({message}) =>{
   let avatar;
-  console.log(message.user_avatar)
 
   let suffix, timeStr;
   let time = message.created_at.slice(11, 16);
