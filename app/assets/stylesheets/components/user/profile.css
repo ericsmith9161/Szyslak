@@ -31,28 +31,40 @@
   font-weight: 700;
 }
 
-.user-profile-header button{
-  display: inline-flex;
-  width: 30px;
-  height: 30px;
+.header-details-header{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid gainsboro;
+  height: 67px;
   align-items: center;
-  justify-content: flex-start;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.user-profile-header button{
   background-color: honeydew;
   margin-right: 13px;
+  border: 1px solid honeydew;
+  box-sizing: border-box;
+
 }
 
 .user-profile-header button img{
-  display: inline-block;
-  padding-right: 5px;
-  text-align: left;
-  
+  padding: 7px;
+  background-color: honeydew;
+
+}
+
+.user-profile-header button img:hover{
+  background-color: lightblue;
 }
 
 .user-profile-header button:hover{
-  background-color: skyblue;
+  background-color: lightblue;
   cursor: pointer;
-  border: 1px solid skyblue;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .user-profile-body{
@@ -100,4 +112,17 @@
   line-height: 1rem;
   box-sizing: border-box;
   padding: 15px 0px;
+}
+
+.user-profile-header div{
+  line-height: 1.3rem;
+}
+
+.user-profile-header div h1{
+  font-weight: 700;
+}
+
+.user-profile-header div p{
+  color: darkgray;
+  font-size: .85rem;
 }

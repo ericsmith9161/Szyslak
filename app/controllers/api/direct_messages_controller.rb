@@ -13,10 +13,10 @@ class Api::DirectMessagesController < ApplicationController
     render :show
   end
 
-  def post
-    @direct_message = DirectMessage.new()
-    Subscription.create!({user_id: params[:current_user_id], subscribeable: @direct_message})
-    params[:messagee_ids].each do |messagee_id|
+  def create
+    @direct_message = DirectMessage.create!
+    Subscription.create!({user_id: current_user.id, subscribeable: @direct_message})
+    params[:directMessage][:messagee_ids].each do |messagee_id|
       Subscription.create!({user_id: messagee_id, subscribeable: @direct_message})
     end
 

@@ -8,9 +8,10 @@
 }
 
 .user-index-header{
-  height: 66px;
+  height: 67px;
   top: 39px;
   display:flex;
+  align-items: center;
   justify-content: space-between;
   background-color: lightgoldenrodyellow;
   box-sizing: border-box;
@@ -19,16 +20,27 @@
 }
 
 .user-index-header button{
-  padding: 5px 3px;
+  padding: 10px 12px;
   box-sizing: border-box;
   border: 1px solid lightblue;
   border-radius: 3px;
-  margin: 15px 20px;
+  margin: 0px 18px;
+  background-color: whitesmoke;
+  font-weight: 700;
+  color: rgb(63, 63, 63);
+  font-size: .9rem;
+
 }
 
 .user-index-header button:hover{
   cursor: pointer;
   background-color: lightblue;
+}
+
+.user-index-header span{
+  font-size: .9rem;
+  padding-left: 18px;
+  font-weight: 700;
 }
 
 
@@ -44,8 +56,17 @@
 
 
 .u-i-av{
-  width: 200px;
-  height: 200px;
+  width: 198px;
+  height: 198px;
+  position: relative;
+  top: -33px;
+  box-sizing: border-box;
+  border-top: 0px solid whitesmoke;
+  border-left: 0px solid whitesmoke;
+  border-right: 0px solid whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
 }
 
 .user-index-list{
@@ -54,6 +75,7 @@
   display: flex;
   flex-flow: row wrap;
   padding: 10px;
+  position: absolute;
 }
 
 .user-index li{
@@ -61,6 +83,10 @@
   height: 285px;
   margin: 4px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: whitesmoke;
   
 }
 
@@ -82,11 +108,11 @@
 }
 
 .user-index-below-searchbar{
-  width: calc(100% - 44px);
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 0px 22px;
-  padding: 17px 0px;
+  /* margin: 0px 22px; */
+  padding: 17px 22px;
   box-sizing: border-box;
 }
 

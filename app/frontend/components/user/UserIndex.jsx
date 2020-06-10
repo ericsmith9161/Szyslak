@@ -51,8 +51,8 @@ class UserIndex extends React.Component {
           <button className="user-profile-btn" onClick={(e) => this.openProfile(user)}>
             <img className = "u-i-av" src = {avatar} />
             <div>
-              <span>{user.username}</span>
-              <img className = "u-i-stat-circ" src={window.emptycircleURL} />
+              <span>{user.username}&nbsp;</span>
+              {/* <img className = "u-i-stat-circ" src={window.emptycircleURL} /> */}
             </div>
           </button>
         </li>

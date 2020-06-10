@@ -96,7 +96,7 @@
   color: gray;
 }
 
-.channel-show-header > button:hover span{
+.dm-show-header > button:hover span{
   color: black;
 }
 
@@ -118,12 +118,6 @@
   display:flex;
   align-items: center;
   line-height: 20px;
-}
-
-.dmshow-header-information-user-info button{
-  background-color: lightgoldenrodyellow;
-  padding: 0px 6px 0px 6px;
-  border: 1px solid lightgoldenrodyellow;
 }
 
 .dm-show-header-information-user-info button:hover{

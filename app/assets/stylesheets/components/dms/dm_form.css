@@ -1,0 +1,75 @@
+.dm-form{
+  width: 500px; 
+  height: 75vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.dm-form-head{
+  display:flex;
+  justify-content: space-between;
+}
+
+.dm-form-head h1{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.dm-form-head button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+.dm-form-head button:hover{
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dm-form-user-list{
+  overflow-y: scroll;
+}
+
+.user-search-dm-form{
+  border: 1px solid rgb(161, 161, 161);
+  background-color: whitesmoke;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.dm-form-user-list li{
+  display: flex;
+  justify-content: flex-start;
+  height: 70px;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.dm-form-user-list li:first-of-type{
+  border-top: 1px solid rgb(161, 161, 161);
+}
+
+.dm-form-user-list li img{
+  margin: 0px 15px;
+}
+
+.dm-form-user-list li:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}

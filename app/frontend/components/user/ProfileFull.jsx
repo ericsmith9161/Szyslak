@@ -13,6 +13,9 @@ class ProfileFull extends React.Component{
     const channelIdx = document.querySelector(".channel-index");
     const userIdx = document.querySelector(".user-index");
     const dmShow = document.querySelector(".dm-show")
+    const detailsBtn = document.querySelector(".details-button")
+    const detailsText = document.querySelector(".details-text");
+
 
     profile.classList.add("hidden");
     if (channelShow !== null) {
@@ -30,6 +33,8 @@ class ProfileFull extends React.Component{
     if (dmShow !== null){
       dmShow.classList.toggle("full");
       dmShow.classList.toggle("part");
+      detailsText.classList.toggle("hidden");
+      detailsBtn.classList.toggle("selected");
     }
   }
 
@@ -49,8 +54,11 @@ class ProfileFull extends React.Component{
     return(
       <div className="user-profile-full hidden">
         <div className="user-profile-header">
-          <h1> Profile</h1>
-          <button onClick = {this.closeProfile}><img src={window.xURL} width="13" height="13"/></button>
+          <div>
+            <h1>Details</h1>
+            <p>{this.props.viewedUser.username}</p>
+          </div>
+          <button onClick = {this.closeProfile}><img src={window.xURL} width="10" height="10"/></button>
         </div>
         <div className = "user-profile-body">
           <img src={avatar} />
