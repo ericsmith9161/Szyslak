@@ -2,9 +2,9 @@ class Api::UsersController < ApplicationController
 
   def index
     if params.has_key?(:channel_id)
-      @users = Channel.includes(:subscribed_users => [:subscribed_channels, :created_channels]).where(id: params[:channel_id]).first.subscribed_users
+      @users = Channel.includes(:subscribed_users => [:subscribed_channels, :created_channels, :subscribed_dms]).where(id: params[:channel_id]).first.subscribed_users
     else
-      @users = User.includes(:subscribed_channels, :created_channels).all
+      @users = User.includes(:subscribed_channels, :created_channels, :subscribed_dms).all
     end
       render :index
   end
@@ -23,7 +23,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.includes(:subscribed_channels, :created_channels).find_by(id: params[:id])
+    @user = User.includes(:subscribed_channels, :created_channels, :subscribed_dms).find_by(id: params[:id])
     render :show
   end
 

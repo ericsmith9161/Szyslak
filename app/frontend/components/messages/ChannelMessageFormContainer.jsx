@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import MessageForm from './MessageForm';
+import ChannelMessageForm from './ChannelMessageForm';
 import {withRouter} from 'react-router-dom';
 import {fetchChannel} from '../../actions/channel_actions';
 
@@ -20,4 +20,4 @@ const mDTP = (dispatch) => {
   }
 }
 
-export default withRouter(connect(mSTP, mDTP)(MessageForm));
+export default withRouter(connect(mSTP, mDTP)(ChannelMessageForm));

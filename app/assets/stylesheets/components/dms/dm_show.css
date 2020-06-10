@@ -1,0 +1,158 @@
+.dm-show{
+  position: fixed;
+  left: 300px;
+  height: calc(100vh - 37px);
+  width: 800px;
+  top: 37px;
+  border: 0px 1px 1px 1px solid gainsboro;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.dm-show > img{
+  position: relative;
+  width: 80%;
+  height: 80%;
+  z-index: -1;
+}
+
+.full{
+  width: calc(100vw - 300px);
+  box-sizing: border-box;
+}
+.part{
+  width: calc(100vw - 330px - 300px);
+  box-sizing: border-box;
+}
+
+.dm-show-header{
+  height: 66px;
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 17px;
+}
+
+.dm-show-header-information{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: .8rem;
+  height: 100%;
+  width: 100%;
+
+}
+
+.dm-show-header-information *{
+  color: gray;
+}
+
+.dm-show-header-information > *{
+  padding: 3px;
+}
+
+.dm-show-header-information-user-name span{
+  font-weight: 700;
+  font-size: .9rem;
+  color: black;
+
+}
+
+.details-button{
+  background-color: lightgoldenrodyellow;
+  font-size: .82rem;
+  display: inline-flex;
+  align-items: space-between;
+  line-height: 2rem;
+  padding: 0px 7px;
+  box-sizing: border-box;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 5px;
+}
+
+.details-text{
+  color: gray
+}
+
+.dm-show-header > button:hover{
+  background-color: rgb(206, 206, 170);
+  color: black;
+  font-size: .82rem;
+  border: 1px solid rgb(206, 206, 170);
+  cursor: pointer;
+}
+
+
+
+.i-btn{
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.channel-show-header > button:hover span{
+  color: black;
+}
+
+.selected .i-btn{
+  color: black;
+}
+
+.selected .details-button{
+  color: black;
+}
+
+.selected{
+  background-color: rgb(206, 206, 170);
+  border: 1px solid rgb(206, 206, 170);
+  cursor: pointer;
+}
+
+.dm-show-header-information-user-info{
+  display:flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+.dmshow-header-information-user-info button{
+  background-color: lightgoldenrodyellow;
+  padding: 0px 6px 0px 6px;
+  border: 1px solid lightgoldenrodyellow;
+}
+
+.dm-show-header-information-user-info button:hover{
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.channel-show-header-information-user-name{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.channel-show-header-information-user-name span:first-of-type{
+  padding-bottom: 2px;
+}
+
+
+.channel-show-header-information-user-name img:hover{
+  cursor: pointer;
+}
+
+.channel-show-header-information-user-info span{
+  display:inline-block;
+  margin-bottom: 2px;
+}
+
+.user-svg{
+  display: inline-block;
+  
+}

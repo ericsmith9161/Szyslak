@@ -6,6 +6,7 @@ import ChannelFormContainer from './channels/form/ChannelFormContainer';
 import ProfileFormContainer from './user/UserEditFormContainer';
 import ChannelPlusButtonContainer from './sidebar/ChannelPlusButtonContainer';
 import ChannelTopicContainer from './channels/show/header/ChannelTopicContainer';
+import DMPlusButtonContainer from './sidebar/DMPlusButtonContainer';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -54,6 +55,15 @@ function Modal({ modal, closeModal }) {
       return (
         <div className="modal-background-channel-topic" onClick={closeModal}>
           <div className="modal-child-channel-topic" onClick={e => e.stopPropagation()}>
+            {component}
+          </div>
+        </div>
+      )
+    case 'directmessageplusbutton':
+      component = <DMPlusButtonContainer />;
+      return (
+        <div className="modal-background-dm-plus-button" onClick={closeModal}>
+          <div className="modal-child-dm-plus-button" onClick={e => e.stopPropagation()}>
             {component}
           </div>
         </div>

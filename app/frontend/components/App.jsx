@@ -10,6 +10,9 @@ import SidebarContainer from "./sidebar/SidebarContainer";
 import ChannelFormContainer from "./channels/form/ChannelFormContainer";
 import ChannelShowContainer from "./channels/show/ChannelShowContainer";
 
+import DMFormContainer from "./direct_messages/form/DMFormContainer";
+import DMShowContainer from "./direct_messages/show/DMShowContainer";
+
 import UserIndexContainer from './user/UserIndexContainer';
 
 import {Route} from "react-router-dom";
@@ -28,12 +31,13 @@ const App = () => (
       <ProtectedRoute exact path="/channels/new" component={ChannelFormContainer} />
       <Route path="/" component={Modal} />
       <ProtectedRoute path="/" component={SidebarContainer} />
-
+      
       <ProtectedRoute path="/channels/:channelId" component={ChannelShowContainer} />
       <ProtectedRoute path="/users" component={UserIndexContainer} />
+      <ProtectedRoute exact path="/direct_messages/new" component={DMFormContainer} />
+      <ProtectedRoute path="/direct_messages/:directMessageId" component={DMShowContainer} />
+
   </div>
 );
 
 export default App;
-
-//how to structure routes?

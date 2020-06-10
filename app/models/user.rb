@@ -15,6 +15,11 @@ class User < ApplicationRecord
     source: :subscribeable,
     source_type: 'Channel'
 
+  has_many :subscribed_dms,
+    through: :subscriptions,
+    source: :subscribeable,
+    source_type: 'DirectMessage'
+
   has_many :created_channels,
     foreign_key: :creator_id,
     class_name: 'Channel'

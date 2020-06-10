@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-//needs to take in channels from props
 
 class ChannelDropdown extends React.Component{
   constructor(props){
@@ -56,5 +55,3 @@ class ChannelDropdown extends React.Component{
 }
 
 export default ChannelDropdown;
-
-// plus mark to add channels ??

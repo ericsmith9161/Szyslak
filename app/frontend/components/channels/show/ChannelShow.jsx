@@ -1,7 +1,7 @@
 import React from 'react';
 import ChannelShowHeader from './ChannelShowHeader';
-import MessageListContainer from '../../messages/MessageListContainer';
-import MessageFormContainer from '../../messages/MessageFormContainer';
+import ChannelMessageListContainer from '../../messages/ChannelMessageListContainer';
+import ChannelMessageFormContainer from '../../messages/ChannelMessageFormContainer';
 
 class ChannelShow extends React.Component {
   constructor(props){
@@ -19,8 +19,8 @@ class ChannelShow extends React.Component {
       return (
         <div className="channel-show full">
           <ChannelShowHeader channel={this.props.channel} deleteChannel={this.props.deleteChannel} openChannelTopic={this.props.openChannelTopic}/>
-          <MessageListContainer />
-          <MessageFormContainer />
+          <ChannelMessageListContainer />
+          <ChannelMessageFormContainer />
         </div>
       )
     }

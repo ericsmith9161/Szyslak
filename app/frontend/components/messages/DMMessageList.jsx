@@ -2,14 +2,14 @@ import React from 'react';
 
 import MessageShow from './MessageShow';
 
-class MessageList extends React.Component{
-  constructor(props){
+class DMMessageList extends React.Component {
+  constructor(props) {
     super(props);
     this.bottom = React.createRef();
   }
 
-  componentDidMount(){
-    this.props.fetchChannelMessages(this.props.channelId)
+  componentDidMount() {
+    this.props.fetchDirectMessageMessages(this.props.directMessageId)
     App.currentSubscription = App.cable.subscriptions.create(
       { channel: "ChannelChatChannel" },
       {
@@ -23,29 +23,29 @@ class MessageList extends React.Component{
     )
   }
 
-  componentDidUpdate(prevProps){
-    if (this.props.channelId !== prevProps.channelId){
-      this.props.fetchChannelMessages(this.props.channelId)
+  componentDidUpdate(prevProps) {
+    if (this.props.directMessageId !== prevProps.directMessageId) {
+      this.props.fetchDirectMessageMessages(this.props.directMessageId)
     }
 
-    if(this.props.messages.length !== 0){
+    if (this.props.messages.length !== 0) {
       this.bottom.current.scrollIntoView();
     }
   }
 
-  render(){
+  render() {
 
-    if(this.props.messages.length === 0){
+    if (this.props.messages.length === 0) {
       return <div className="message-list">
       </div>
     }
-    else{
+    else {
       return (
         <div className="message-list">
           <ul className="message-list-list">
             {this.props.messages.map(message => (
-              <li key = {message.id}>
-                <MessageShow message={message} fetchUser = {this.props.fetchUser} />
+              <li key={message.id}>
+                <MessageShow message={message} fetchUser={this.props.fetchUser} />
                 <div ref={this.bottom} />
               </li>
             ))}
@@ -56,4 +56,4 @@ class MessageList extends React.Component{
   }
 }
 
-export default MessageList;
+export default DMMessageList;

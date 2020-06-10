@@ -28,12 +28,6 @@ class ProfileFull extends React.Component{
     }
   }
 
-  // componentDidUpdate(prevProps){
-  //   if (prevProps.viewedUser !== this.props.viewedUser){
-
-  //   }
-  // }
-
   render(){
     console.log(this.props.viewedUser)
     let time = new Date();

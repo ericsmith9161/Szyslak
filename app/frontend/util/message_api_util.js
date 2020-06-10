@@ -18,3 +18,10 @@ export const fetchChannelMessages = (channelId) => {
     method: 'GET',
   })
 }
+
+export const fetchDirectMessageMessages = (directMessageId) => {
+  return $.ajax({
+    url: `api/direct_messages/${directMessageId}/messages`,
+    method: 'GET',
+  })
+}

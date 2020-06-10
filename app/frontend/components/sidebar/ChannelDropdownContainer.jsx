@@ -1,19 +1,11 @@
-//only user? do i get channels from my user 
-//or do i need to pull them in as well?
-//fetchuser, user
 import { connect } from 'react-redux';
 import React from 'react';
 
 import ChannelDropdown from './ChannelDropdown';
 
-import { fetchUserChannels, fetchChannels } from '../../actions/channel_actions';
-import { editUser, fetchUser } from '../../actions/user_actions';
-import { logout } from '../../actions/session_actions';
+import { fetchUserChannels } from '../../actions/channel_actions';
+import { fetchUser } from '../../actions/user_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-
-
-
-
 
 const mSTP = (state) => {
   return {

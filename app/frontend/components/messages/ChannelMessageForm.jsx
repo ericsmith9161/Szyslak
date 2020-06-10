@@ -1,7 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 
-class MessageForm extends React.Component {
+class ChannelMessageForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {body: this.props.message.body};
@@ -47,4 +47,4 @@ class MessageForm extends React.Component {
   }
 }
 
-export default MessageForm;
+export default ChannelMessageForm;
