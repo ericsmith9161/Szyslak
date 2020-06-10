@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 
   namespace :api, defaults: { format: :json } do
-    resources :users, only: [:index, :create, :show] do 
+    resources :users, only: [:index, :create, :show, :update] do 
       resources :channels, only: [:index]
       resources :direct_messages, only: [:index]
     end

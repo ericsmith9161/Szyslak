@@ -72,13 +72,13 @@ class DMForm extends React.Component{
       <div className="dm-form">
         <div className="dm-form-head">
           <h1>Direct Messages</h1>
-          <button><img src={window.xURL} width="11"/></button>
+          <button onClick={() => this.props.closeModal()}><img src={window.xURL} width="11"/></button>
         </div>
         <input 
           type="text"
           className="user-search-dm-form"
           value={this.state.searchQuery}
-          placeholder="Find or start a conversation"
+          placeholder="   Find or start a conversation"
           onChange={this.handleSearch}
         />
 

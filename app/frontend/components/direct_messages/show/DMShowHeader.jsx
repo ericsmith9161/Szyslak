@@ -35,12 +35,6 @@ class DMShowHeader extends React.Component {
   }
 
   render() {
-    let otherUser;
-    for(let i = 0; i < this.props.directMessage.subscribed_users.length; i++){
-      if (this.props.directMessage.subscribed_users[i] != this.props.currentUserId){
-        otherUser = this.props.directMessage.subscribed_users[i];
-      }
-    }
     return (
       <div className="dm-show-header">
         <Information directMessage={this.props.directMessage} />

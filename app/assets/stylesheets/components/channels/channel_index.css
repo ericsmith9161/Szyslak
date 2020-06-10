@@ -12,13 +12,15 @@
 }
 
 .channel-index h4{
-  line-height: 65px;
+  line-height: 64px;
+  height: 66px;
   width: 100%;
   font-size: .9rem;
   font-weight: 700;
   padding-left: 20px;
   box-sizing: border-box;
   border-bottom: 1px solid lightblue;
+  background-color: lightgoldenrodyellow;
 }
 
 .channel-index-below-searchbar{

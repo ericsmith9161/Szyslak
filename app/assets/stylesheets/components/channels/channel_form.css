@@ -63,8 +63,8 @@ input:checked + .slider:before {
 .channel-form{
   height: 522px;
   width: 515px;
-  background-color: whitesmoke;
-  border: 1px solid whitesmoke;
+  background-color: honeydew;
+  border: 1px solid honeydew;
   border-radius: 8px;
   box-sizing: border-box;
   padding: 30px 25px 30px 27px

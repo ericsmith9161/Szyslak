@@ -31,6 +31,14 @@ const mDTP = (dispatch) => {
         Szyslak
       </button>
     ),
+    changeAvatar: (
+      <button onClick={() => {
+        closeModal()
+        dispatch(openModal('addavatar'))
+      }}>
+        Add an avatar
+      </button>
+    ),
     closeModal: () => dispatch(closeModal()),
     fetchUserChannels: (user) => dispatch(fetchUserChannels(user)),
 

@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: lightgoldenrodyellow;
 }
 
 .channel-show > img{
@@ -36,6 +36,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 10px 17px;
+  border-bottom: 1px solid lightblue;
 }
 
 .channel-show-header-information{

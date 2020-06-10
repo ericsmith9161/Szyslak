@@ -1,11 +1,11 @@
 .dm-form{
   width: 500px; 
   height: 75vh;
-  background-color: whitesmoke;
+  background-color: honeydew;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid whitesmoke;
+  border: 1px solid honeydew;
   border-radius: 10px;
 }
 
@@ -25,13 +25,13 @@
   align-items: center;
   padding: 5px 5px;
   box-sizing: border-box;
-  background-color: whitesmoke;
-  border: 1px solid whitesmoke;
+  background-color: honeydew;
+  border: 1px solid honeydew;
 }
 
 .dm-form-head button:hover{
-  border: 1px solid lightgray;
-  background-color: lightgray;
+  border: 1px solid lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -67,9 +67,11 @@
 
 .dm-form-user-list li img{
   margin: 0px 15px;
+  border: 0px solid honeydew;
+  border-radius: 4px;
 }
 
 .dm-form-user-list li:hover{
   cursor: pointer;
-  background-color: lightgray;
+  background-color: lightgoldenrodyellow;
 }

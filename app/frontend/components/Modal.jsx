@@ -7,6 +7,7 @@ import ProfileFormContainer from './user/UserEditFormContainer';
 import ChannelPlusButtonContainer from './sidebar/ChannelPlusButtonContainer';
 import ChannelTopicContainer from './channels/show/header/ChannelTopicContainer';
 import DMFormContainer from '../components/direct_messages/form/DMFormContainer';
+import UploadImageContainer from '../components/user/UploadImageContainer';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -64,6 +65,15 @@ function Modal({ modal, closeModal }) {
       return (
         <div className="modal-background-dm-plus-button" onClick={closeModal}>
           <div className="modal-child-dm-plus-button" onClick={e => e.stopPropagation()}>
+            {component}
+          </div>
+        </div>
+      )
+    case 'addavatar':
+      component = <UploadImageContainer />;
+      return (
+        <div className="modal-background-add-avatar" onClick={closeModal}>
+          <div className="modal-child-add-avatar" onClick={e => e.stopPropagation()}>
             {component}
           </div>
         </div>

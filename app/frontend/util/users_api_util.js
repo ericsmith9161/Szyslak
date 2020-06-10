@@ -12,12 +12,15 @@ export const fetchUser = userId => {
   })
 };
 
-export const editUser = user => {
+export const editUser = (user)=> {
+  debugger
   return $.ajax({
-    url :`/api/users/${user.id}`,
+    url: `/api/users/${user.get("user[id]")}`,
     method: 'PATCH',
-    data: {user}
-  })
+    data: user,
+    contentType: false,
+    processData: false
+  });
 }
 
 export const deleteUser = userId => {

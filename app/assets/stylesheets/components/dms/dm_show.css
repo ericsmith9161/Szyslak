@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: lightgoldenrodyellow;
 }
 
 .dm-show > img{
@@ -37,6 +37,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 10px 17px;
+  border-bottom: 1px solid lightblue;
 }
 
 .dm-show-header-information{
@@ -54,15 +55,14 @@
   color: gray;
 }
 
-.dm-show-header-information > *{
-  padding: 3px;
+.dm-show-header-information h1{
+  color: black;
+  font-weight: 700;
+  font-size: .95rem;
 }
 
-.dm-show-header-information-user-name span{
-  font-weight: 700;
-  font-size: .9rem;
-  color: black;
-
+.dm-show-header-information > *{
+  padding: 3px;
 }
 
 .details-button{

@@ -1,0 +1,67 @@
+.avatar-change{
+  width: 500px; 
+  height: 25vh;
+  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid honeydew;
+  border-radius: 10px;
+}
+
+.avatar-change-head{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 22px 0px;
+}
+
+.avatar-change-head h1{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.avatar-change-head button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  background-color: honeydew;
+  border: 1px solid honeydew;
+}
+
+.avatar-change-head button:hover{
+  border: 1px solid lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.avatar-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-form input{
+  height: 70px;
+}
+
+.avatar-form button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 7px;
+  box-sizing: border-box;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 5px;
+}
+
+.avatar-form button:hover{
+  border: 1px solid rgb(216, 216, 175);
+  background-color: rgb(216, 216, 175);
+  cursor: pointer;
+}
