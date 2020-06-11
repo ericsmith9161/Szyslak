@@ -42,7 +42,7 @@ class DMDropdown extends React.Component {
             {this.props.createDirectMessage}
           </div>
           <ul id="dm-dropdown" className="dm-dropdown-content">
-            {this.props.directMessages.map((directMessage, idx) => <li key={idx}><Link to={`/direct_messages/${directMessage.id}`}>{directMessage.other_user_usernames[0]}</Link></li> )}
+            {this.props.directMessages.map((directMessage, idx) => <li key={idx}><Link to={`/direct_messages/${directMessage.id}`}>{directMessage.other_user_usernames.join(", ")}</Link></li> )}
           </ul>
         </div>
       )

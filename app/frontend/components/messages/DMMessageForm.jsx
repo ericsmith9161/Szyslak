@@ -37,7 +37,7 @@ class DMMessageForm extends React.Component {
               type="text"
               value={this.state.body}
               onChange={this.update("body")}
-              placeholder={`  Message ${this.props.directMessage.other_user_usernames[0]}`}
+              placeholder={`Message #${this.props.directMessage.other_user_usernames.join(', ')}`}
             />
           </form>
           <button onClick={this.handleSubmit}>➲</button>

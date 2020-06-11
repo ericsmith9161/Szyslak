@@ -12,7 +12,8 @@ const mSTP = (state) => {
   return {
     currentUserId: state.session.id,
     users: Object.values(state.entities.users),
-    directMessages: Object.values(state.entities.directMessages)
+    directMessages: Object.values(state.entities.directMessages),
+    usersPOJO: state.entities.users
   }
 }
 

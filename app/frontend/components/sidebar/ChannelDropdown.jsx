@@ -45,7 +45,7 @@ class ChannelDropdown extends React.Component{
               {this.props.createChannel}
           </div>
           <ul id="channel-dropdown" className="channel-dropdown-content">
-            {channels.map((channel, idx) => <li key={idx}> <Link to={`/channels/${channel.id}`}>{channel.name}</Link> </li>)}
+            {channels.map((channel, idx) => <li key={idx}> <Link to={`/channels/${channel.id}`}># {channel.name}</Link> </li>)}
           </ul>
         </div>
       )

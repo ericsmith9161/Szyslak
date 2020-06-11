@@ -1,5 +1,5 @@
 .message-list{
-  height: 72vh;
+  max-height: 72vh;
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
@@ -7,9 +7,6 @@
   width: 100%;
   background-color: lightgoldenrodyellow;
   padding: 20px 0px 0px 0px;
-  /* background: url("images/moe.jpg") */
-
-
 
 }
 

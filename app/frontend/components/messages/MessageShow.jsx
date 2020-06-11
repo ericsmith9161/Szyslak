@@ -26,7 +26,7 @@ const MessageShow = ({message, lastMessageUser}) =>{
   if (lastMessageUser === message.user_id){
     return(
         <div className="trunc-message-content">
-            {message.body}
+          {message.body}
         </div>
     )
   }else{

@@ -37,7 +37,7 @@ class ChannelMessageForm extends React.Component {
               type="text"
               value={this.state.body}
               onChange={this.update("body")}
-              placeholder={`  Message ${this.props.channel.name}`}
+              placeholder={`Message #${this.props.channel.name}`}
             />
           </form>
           <button onClick={this.handleSubmit}>➲</button>

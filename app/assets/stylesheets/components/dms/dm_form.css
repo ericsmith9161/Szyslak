@@ -1,5 +1,5 @@
 .dm-form{
-  width: 500px; 
+  width: 600px; 
   height: 75vh;
   background-color: honeydew;
   display: flex;
@@ -41,15 +41,15 @@
 }
 
 .user-search-dm-form{
-  border: 1px solid rgb(161, 161, 161);
   background-color: whitesmoke;
-  border-radius: 3px;
-  width: 100%;
   box-sizing: border-box;
   display: inline-block;
-  height: 30px;
-  margin-top: 15px;
-  margin-bottom: 25px;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 6px;
+  font-size: .9rem;
+  min-width: 185px;
+
 }
 
 .dm-form-user-list li{
@@ -74,4 +74,83 @@
 .dm-form-user-list li:hover{
   cursor: pointer;
   background-color: lightgoldenrodyellow;
+}
+
+.recipient-list{
+  display: flex;
+  float:left;
+  flex-flow: row wrap;
+}
+
+.recipient-list-item{
+  min-width: 105px;
+  box-sizing: border-box;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  background-color: honeydew;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 26px;
+  margin: 6px;
+}
+
+.recipient-list-item:focus{
+  background-color: turquoise;
+  border: 1px solid turquoise;
+  background-color: turquoise;
+
+}
+
+.remove-recipient-btn{
+  background-color: inherit;
+  padding: 0px 2px;
+  box-sizing: border-box;
+  border: 1px solid inherit;
+  border-radius: 3px;
+}
+
+.remove-recipient-btn:hover{
+  background-color: blue;
+}
+
+.submit-btn{
+  margin: 14px 14px;
+  width: 80px;
+  box-sizing: border-box;
+  line-height: 38px;
+  border: 1px solid honeydew;
+  border-radius: 8px;
+  background-color: whitesmoke;
+}
+
+.submitable{
+  cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid turquoise;
+}
+
+.weirdo-input{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  border: 1px solid rgb(161, 161, 161);
+  background-color: whitesmoke;
+  border-radius: 3px;
+  width: 75%;
+  box-sizing: border-box;
+  display: inline-block;
+  min-height: 38px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.no-placeholder::placeholder{
+  display: none;
+}
+
+.flexible-top{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
