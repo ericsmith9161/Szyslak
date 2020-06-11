@@ -40,15 +40,18 @@ class ChannelMessageList extends React.Component{
       </div>
     }
     else{
+      let lastMessageUserIds = [];
       return (
         <div className="message-list">
           <ul className="message-list-list">
-            {this.props.messages.map(message => (
-              <li key = {message.id}>
-                <MessageShow message={message} fetchUser = {this.props.fetchUser} />
+            {this.props.messages.map(message => {
+              lastMessageUserIds.unshift(message.user_id);
+              return(<li key={message.id}>
+                <MessageShow message={message} fetchUser={this.props.fetchUser} lastMessageUser={lastMessageUserIds[1]} />
                 <div ref={this.bottom} />
-              </li>
-            ))}
+              </li>)
+            }
+            )}
           </ul>
         </div>
       )

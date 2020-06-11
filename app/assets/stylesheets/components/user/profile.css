@@ -44,18 +44,17 @@
 }
 
 .user-profile-header button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
   background-color: honeydew;
-  margin-right: 13px;
   border: 1px solid honeydew;
-  box-sizing: border-box;
-
-}
-
-.user-profile-header button img{
   padding: 7px;
-  background-color: honeydew;
+  box-sizing: border-box;
+  margin-right: 13px;
 
 }
+
 
 .user-profile-header button img:hover{
   background-color: lightblue;

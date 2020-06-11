@@ -11,7 +11,6 @@ class ChannelTopic extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.props);
     this.props.fetchChannel(this.props.location.pathname.split("/")[2])
   }
 

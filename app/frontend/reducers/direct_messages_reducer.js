@@ -7,7 +7,6 @@ const directMessagesReducer = (state = {}, action) => {
     case RECEIVE_DIRECT_MESSAGES:
       return action.direct_messages
     case RECEIVE_DIRECT_MESSAGE:
-      console.log(action)
       return Object.assign({}, state, { [action.directMessage.id]: action.directMessage })
     default:
       return state;

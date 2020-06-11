@@ -21,7 +21,7 @@ class SessionFormHeader extends React.Component{
       <div className="session-form-header">
         <div className="session-form-header-logo">
           <Link to="/greeting"><img className="logo" src={window.moegoURL} width="30" /></Link>
-          <span><Link to="/greeting">szylack</Link></span>
+          <span><Link to="/greeting"><img src={window.szyslakblackURL} height="30" /></Link></span>
         </div>
         <div className="session-form-header-links">
           <a className="normal-link" target="_blank" href="https://github.com/ericsmith9161">Github</a>

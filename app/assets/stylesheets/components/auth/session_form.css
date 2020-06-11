@@ -46,7 +46,7 @@
 .session-form-header{
   display: flex;
   justify-content: space-between;
-  padding-left: 40px;
+  padding-left: 25px;
   padding-right: 40px;
   border-top: 1px solid lightblue;
   border-bottom: 1px solid lightblue;
@@ -54,6 +54,8 @@
   position: fixed;
   width: 100vw;
   color: lightblue;
+  height: 74px;
+  box-sizing: border-box;
 }
 
 .session-form-body input{

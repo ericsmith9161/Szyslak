@@ -30,9 +30,8 @@ class DMForm extends React.Component{
      // if DM doesn't already exist make it
 
     if (changedPath === false){
-      console.log(e.currentTarget.value)
       this.props.createDirectMessage({messagee_ids:[e.currentTarget.value]}).then(action =>
-        this.props.history.push(`/direct_messages/${action.direct_message.id}`));
+        this.props.history.push(`/direct_messages/${action.directMessage.id}`));
       this.props.closeModal();
     }
   }

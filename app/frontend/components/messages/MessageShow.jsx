@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessageShow = ({message}) =>{
+const MessageShow = ({message, lastMessageUser}) =>{
   let avatar;
 
   let suffix, timeStr;
@@ -22,22 +22,33 @@ const MessageShow = ({message}) =>{
   }else{
     avatar = message.user_avatar;
   }
-  return(
-    <div className = "message">
-      <div>
-        <img src={avatar} width="40" height="40"/>
-      </div>
-      <div className = "message-content">
+
+  if (lastMessageUser === message.user_id){
+    return(
+        <div className="trunc-message-content">
+            {message.body}
+        </div>
+    )
+  }else{
+    return (
+      <div className="message">
         <div>
-          <b>{message.username}</b>&nbsp;
+          <img src={avatar} width="40" height="40" />
+        </div>
+        <div className="message-content">
+          <div>
+            <b>{message.username}</b>&nbsp;
           <span className="timestamps">{timeStr}</span>
-        </div>
-        <div>
-          {message.body}
+          </div>
+          <div>
+            {message.body}
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+  
+
 }
 
 export default MessageShow;
