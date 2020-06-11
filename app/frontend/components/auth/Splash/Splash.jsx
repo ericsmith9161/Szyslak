@@ -31,7 +31,7 @@ class Splash extends React.Component{
                 Conversations, organized</p>
               <p className = "splash-bottom-section-subsection-body">
                 Instead of a single overstuffed inbox, conversations
-                in Szylack happen in spaces called channels
+                in Szyslak happen in spaces called channels
               </p> 
 
             </div>
@@ -42,7 +42,7 @@ class Splash extends React.Component{
               <p className="splash-bottom-section-subsection-title">
                 Get looped in, not out</p>
               <p className="splash-bottom-section-subsection-body">
-                Szylack makes it simple to follow conversations or find
+                Szyslak makes it simple to follow conversations or find
                 important information in an easily searchable archive.
               </p>
 
@@ -55,7 +55,7 @@ class Splash extends React.Component{
               <p className="splash-bottom-section-subsection-title">
                 Give focus a chance</p>
               <p className="splash-bottom-section-subsection-body">
-                Unlike email, Szylack lets you choose which conversations
+                Unlike email, Szyslak lets you choose which conversations
                 are most important — and which can wait.
               </p>
 

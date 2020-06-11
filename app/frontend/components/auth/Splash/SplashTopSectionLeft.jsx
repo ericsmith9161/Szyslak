@@ -16,14 +16,14 @@ class SplashTopSectionLeft extends React.Component{
     return (
       <div className = "splash-top-section-left">
         <h6>WORK FROM HOME</h6>
-        <h1>Szylack brings the team together, wherever you are</h1>
+        <h1>Szyslak brings the team together, wherever you are</h1>
         <p className = "splash-top-section-left-body">
           With all of your communications and tools in one place,
           remote teams will stay productive no matter where you're
           working from.
         </p>
         <div className="button-flex-splash">
-          <Link to="/login"><button className="button-color-one">TRY SZYLACK FOR FREE</button></Link>
+          <Link to="/login"><button className="button-color-one">TRY SZYSLAK FOR FREE</button></Link>
           <a href="https://github.com/ericsmith9161" target="_blank"><button className="button-color-two">LEARN MORE</button></a>
         </div>
         <p className="get-started">Want to give it a try? <button onClick={this.handleDemoUser}>Login as a demo user</button></p>

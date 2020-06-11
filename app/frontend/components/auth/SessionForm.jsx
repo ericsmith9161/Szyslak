@@ -42,12 +42,12 @@ class SessionForm extends React.Component {
       otherPath = '/login';
       otherPathName = "login to an existing account";
       pathName = "Create Account";
-      formTitle = "Sign up for Szylack";
+      formTitle = "Sign up for Szyslak";
     } else {
       otherPath = '/signup';
       otherPathName = "create an account";
       pathName = "Sign In";
-      formTitle = "Sign in to Szylack";
+      formTitle = "Sign in to Szyslak";
     };
     return (
       <div className = "session-form">
