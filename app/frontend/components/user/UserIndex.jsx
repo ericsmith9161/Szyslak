@@ -77,9 +77,12 @@ class UserIndex extends React.Component {
                 <span>Sort: A to Z</span> <span>filter</span>
               </span>
             </div>
-            <ul className="user-index-list">
-              {userProfilePieces}
-            </ul>
+            <div className="user-index-body">
+              <ul className="user-index-list">
+                {userProfilePieces}
+              </ul>
+            </div>
+
           </div>
       )
     }
