@@ -2,11 +2,10 @@
   height: 88px;
   box-sizing: border-box;
   width: 100%;
-  /* z-index: 3; */
+  z-index: 3;
   padding: 0px 20px 0px 20px;
   background-color: lightgoldenrodyellow;
   margin-bottom: 20px;
-  bottom: 88px;
 }
 
 .message-form form{

@@ -17,13 +17,12 @@ class ChannelShow extends React.Component {
       return null;
     }else{
       return (
-        <div className="channel-show full">
-          <div>
+          <div className="channel-show full">
             <ChannelShowHeader channel={this.props.channel} deleteChannel={this.props.deleteChannel} openChannelTopic={this.props.openChannelTopic} />
             <ChannelMessageListContainer />
+            <ChannelMessageFormContainer />
           </div>
-          <ChannelMessageFormContainer />
-        </div>
+
       )
     }
   }

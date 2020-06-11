@@ -32,7 +32,7 @@ class DMShow extends React.Component {
       return (
         <div className="dm-show full">
           <ProfileFull viewedUser={this.state.partner} currentUserId={this.props.currentUserId} />
-          <DMShowHeader directMessage={this.props.directMessage}/>
+          <DMShowHeader directMessage={this.props.directMessage} />
           <DMMessageListContainer />
           <DMMessageFormContainer />
         </div>

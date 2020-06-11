@@ -2,13 +2,13 @@
   position: fixed;
   left: 300px;
   height: calc(100vh - 37px);
-  width: 800px;
   top: 37px;
   border: 0px 1px 1px 1px solid gainsboro;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   background-color: lightgoldenrodyellow;
 }
 

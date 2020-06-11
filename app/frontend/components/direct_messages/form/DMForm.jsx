@@ -50,7 +50,7 @@ class DMForm extends React.Component{
      // if DM doesn't already exist add user to recipients
 
     if (changedPath === false){
-      this.setState({searchQuery: ""})
+      this.setState({searchQuery: "", filteredUsers: this.props.users})
       if (!this.state.DMRecipientIDs.includes(e.currentTarget.value)){
         this.setState({DMRecipientNames: this.state.DMRecipientNames.concat([this.props.usersPOJO[e.currentTarget.value].username]),
           DMRecipientIDs: this.state.DMRecipientIDs.concat(e.currentTarget.value)})
@@ -90,6 +90,7 @@ class DMForm extends React.Component{
 
   render(){
     let searchList, searchListWithAvs, avatar;
+    console.log(this.state.filteredUsers)
 
     if (this.state.filteredUsers !== undefined){
       searchList = this.state.filteredUsers;
@@ -103,13 +104,17 @@ class DMForm extends React.Component{
       }else{
         avatar = user.avatarURL;
       }
-
-      return(
-        <li key={user.id} value={user.id} onClick={this.handleDM}>
-          <img src={avatar} width="40"/>
-          <h1>{user.username}</h1>
-        </li>
-      )});
+      if(user.id === this.props.currentUserId){
+        return null;
+      }else{
+        return (
+          <li key={user.id} value={user.id} onClick={this.handleDM}>
+            <img src={avatar} width="40" />
+            <h1>{user.username}</h1>
+          </li>
+        )
+      }
+    });
 
     return(
       <div className="dm-form">
