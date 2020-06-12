@@ -3,7 +3,7 @@ import React from 'react';
 class DMForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = { DMRecipientIDs: [], DMRecipientNames: []};
+    this.state = { DMRecipientIDs: [], DMRecipientNames: [], DMRecipientAvs: []};
     this.handleDM = this.handleDM.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,9 +51,17 @@ class DMForm extends React.Component{
 
     if (changedPath === false){
       this.setState({searchQuery: "", filteredUsers: this.props.users})
+      let avatar;
+      if (this.props.usersPOJO[e.currentTarget.value].avatarURL === undefined) {
+        avatar = window.defaultavURL;
+      } else {
+        avatar = this.props.usersPOJO[e.currentTarget.value].avatarURL;
+      }
       if (!this.state.DMRecipientIDs.includes(e.currentTarget.value)){
         this.setState({DMRecipientNames: this.state.DMRecipientNames.concat([this.props.usersPOJO[e.currentTarget.value].username]),
-          DMRecipientIDs: this.state.DMRecipientIDs.concat(e.currentTarget.value)})
+          DMRecipientIDs: this.state.DMRecipientIDs.concat(e.currentTarget.value),
+          DMRecipientAvs: this.state.DMRecipientAvs.concat([avatar])
+        })
       }
       // this.props.createDirectMessage({messagee_ids:[e.currentTarget.value]}).then(action =>
       //   this.props.history.push(`/direct_messages/${action.directMessage.id}`));
@@ -85,6 +93,9 @@ class DMForm extends React.Component{
     this.setState({
       DMRecipientNames: this.state.DMRecipientNames.slice(0, idx).concat(this.state.DMRecipientNames.slice(idx+1)),
       DMRecipientIDs: this.state.DMRecipientIDs.slice(0, idx).concat(this.state.DMRecipientIDs.slice(idx + 1)),
+      DMRecipientAvs: this.state.DMRecipientAvs.slice(0, idx).concat(this.state.DMRecipientAvs.slice(idx + 1)),
+
+
     })
   }
 
@@ -128,7 +139,7 @@ class DMForm extends React.Component{
               {this.state.DMRecipientNames.map((name, idx) => {
                 return (
                   <li key={idx} tabIndex="0" className="recipient-list-item">
-                    <span className="recipient-name">{name}</span><button className= "remove-recipient-btn" onClick={() => this.removeUserFromRecipients(idx)}><img src={window.xURL} width="10" /></button>
+                    <span><img className="recipient-av" src={this.state.DMRecipientAvs[idx]} width="28"/></span><span className="recipient-name">{name}</span><button className= "remove-recipient-btn" onClick={() => this.removeUserFromRecipients(idx)}><img src={window.xURL} width="10" /></button>
                   </li>
                 )
               })}
@@ -157,4 +168,3 @@ class DMForm extends React.Component{
 export default DMForm;
 
 //add avatars when users are clicked on
-//toggle placeholder not working

@@ -86,13 +86,13 @@
   min-width: 105px;
   box-sizing: border-box;
   border: 1px solid gainsboro;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: honeydew;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 26px;
-  margin: 6px;
+  height: 28px;
+  margin: 4px 4px 0px 2px;
 }
 
 .recipient-list-item:focus{
@@ -111,7 +111,8 @@
 }
 
 .remove-recipient-btn:hover{
-  background-color: blue;
+  background-color: rgb(89, 148, 168);
+  cursor: pointer;
 }
 
 .submit-btn{
@@ -153,4 +154,11 @@
   display:flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.recipient-av{
+  height: 100%;
+  border-left: 0px solid honeydew;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }

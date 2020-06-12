@@ -31,7 +31,6 @@ const App = () => (
       <ProtectedRoute exact path="/channels/new" component={ChannelFormContainer} />
       <Route path="/" component={Modal} />
       <ProtectedRoute path="/" component={SidebarContainer} />
-      
       <ProtectedRoute path="/channels/:channelId" component={ChannelShowContainer} />
       <ProtectedRoute path="/users" component={UserIndexContainer} />
       <ProtectedRoute exact path="/direct_messages/new" component={DMFormContainer} />
