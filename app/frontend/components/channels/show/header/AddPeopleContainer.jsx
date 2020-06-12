@@ -8,7 +8,6 @@ import {editChannel, fetchChannel} from '../../../../actions/channel_actions';
 import AddPeople from './AddPeople';
 
 const mSTP = (state, ownProps) => {
-  console.log(ownProps)
   return {
     currentUserId: state.session.id,
     users: Object.values(state.entities.users),

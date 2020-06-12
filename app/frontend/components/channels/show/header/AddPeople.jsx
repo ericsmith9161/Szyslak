@@ -5,7 +5,6 @@ import {withRouter} from 'react-router-dom';
 class AddPeople extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
     this.state = { ChannelAddIDs: [], ChannelAddNames: [], ChannelAddAvs: [], channelUsers: [] };
     this.handleAdd = this.handleAdd.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -15,9 +14,7 @@ class AddPeople extends React.Component {
     this.props.fetchChannel(this.props.currentChannelId);
     this.props.fetchChannelUsers(this.props.currentChannelId).then((action) => 
     this.setState({channelUsers: Object.values(action.users).map((user) => user.id)}));
-    console.log(this.state);
     this.props.fetchUsers();
-    console.log(this.state);
 
   }
 
@@ -70,10 +67,7 @@ class AddPeople extends React.Component {
     //figure out how to create subscriptions
 
     e.preventDefault();
-    console.log(this.state)
-    console.log(this.state.ChannelAddIDs.length)
     if (this.state.ChannelAddIDs.length !== 0) {
-      console.log("made it here")
       this.props.editChannel(Object.assign({}, this.props.currentChannel, { new_subs: this.state.ChannelAddIDs }));
       this.props.closeModal();
     }
@@ -90,10 +84,7 @@ class AddPeople extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-    console.log(this.props);
     let searchList, searchListWithAvs, avatar;
-    console.log(this.state.filteredUsers)
 
     if (this.state.filteredUsers !== undefined) {
       searchList = this.state.filteredUsers;

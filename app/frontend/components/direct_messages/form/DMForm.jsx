@@ -79,10 +79,7 @@ class DMForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    console.log(this.state)
-    console.log(this.state.DMRecipientIDs.length)
     if (this.state.DMRecipientIDs.length !== 0){
-      console.log("made it here")
       this.props.createDirectMessage({ messagee_ids: this.state.DMRecipientIDs }).then(action =>
         this.props.history.push(`/direct_messages/${action.directMessage.id}`));
       this.props.closeModal();
@@ -101,7 +98,6 @@ class DMForm extends React.Component{
 
   render(){
     let searchList, searchListWithAvs, avatar;
-    console.log(this.state.filteredUsers)
 
     if (this.state.filteredUsers !== undefined){
       searchList = this.state.filteredUsers;
