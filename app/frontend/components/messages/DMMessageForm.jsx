@@ -21,7 +21,9 @@ class DMMessageForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.body !== "") {
-      let theRightDM = App.cable.subscriptions.subscriptions.filter((subscription) => subscription.identifier.direct_message_id === this.props.directMessageId)[0]
+      let theRightDM = App.cable.subscriptions.subscriptions[0];
+
+      // let theRightDM = App.cable.subscriptions.subscriptions.filter((subscription) => subscription.identifier.direct_message_id === this.props.directMessageId)[0]
       theRightDM.speak({ body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'DirectMessage', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username });
       this.setState({ body: "" });
     }
