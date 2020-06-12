@@ -20,7 +20,15 @@ class Api::ChannelsController < ApplicationController
 
   def update
     @channel = Channel.find_by(id: params[:id])
-    if @channel.update(channel_params)
+    debugger
+    if @channel.update(channel_params.except(:new_subs, :id, :subscribed_users))
+      debugger
+      if params[:channel][:new_subs]
+        debugger
+        params[:channel][:new_subs].each do |sub|
+          Subscription.create!({user_id: sub, subscribeable: @channel})
+        end
+      end
       render :show 
     else
       render json: @channel.errors.full_messages, status: 401

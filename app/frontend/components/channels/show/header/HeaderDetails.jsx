@@ -1,7 +1,8 @@
 import React from 'react';
 
 import About from './header_details/DetailsAbout';
-import MemberList from './header_details/DetailsMemberList'
+import MemberList from './header_details/DetailsMemberList';
+import AddPeopleContainer from './AddPeopleContainer';
 import {withRouter} from 'react-router-dom';
 
 class HeaderDetails extends React.Component {
@@ -51,7 +52,7 @@ class HeaderDetails extends React.Component {
         <div className="channel-header-details-options">
           <div className="channel-header-details-option">
             <span className="c-h-d-o-img">
-              <img src={window.usersURL} width="25" height="25"/>
+              <button onClick={() => this.props.addPeople()}><img className="c-h-d-o-img" src={window.usersURL} width="17" height="17" /></button>
             </span>
             <span>
               Add

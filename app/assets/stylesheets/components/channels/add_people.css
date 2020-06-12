@@ -1,0 +1,169 @@
+.add-people-form{
+  width: 522px; 
+  height: 50vh;
+  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid honeydew;
+  border-radius: 10px;
+}
+
+.add-people-form-head{
+  display:flex;
+  justify-content: space-between;
+}
+
+.add-people-form-head h1{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.add-people-form-head p{
+  font-size: .85rem;
+  color: darkgray;
+}
+
+.add-people-form-head button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  background-color: honeydew;
+  border: 1px solid honeydew;
+}
+
+.add-people-form-head button:hover{
+  border: 1px solid lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dm-form-user-list{
+  overflow-y: scroll;
+}
+
+.user-search-dm-form{
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 6px;
+  font-size: .9rem;
+  min-width: 185px;
+
+}
+
+.dm-form-user-list li{
+  display: flex;
+  justify-content: flex-start;
+  height: 70px;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.dm-form-user-list li:first-of-type{
+  border-top: 1px solid rgb(161, 161, 161);
+}
+
+.dm-form-user-list li img{
+  margin: 0px 15px;
+  border: 0px solid honeydew;
+  border-radius: 4px;
+}
+
+.dm-form-user-list li:hover{
+  cursor: pointer;
+  background-color: lightgoldenrodyellow;
+}
+
+.recipient-list{
+  display: flex;
+  float:left;
+  flex-flow: row wrap;
+}
+
+.recipient-list-item{
+  min-width: 105px;
+  box-sizing: border-box;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  background-color: honeydew;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+  margin: 4px 4px 0px 2px;
+}
+
+.recipient-list-item:focus{
+  background-color: turquoise;
+  border: 1px solid turquoise;
+  background-color: turquoise;
+
+}
+
+.remove-recipient-btn{
+  background-color: inherit;
+  padding: 0px 2px;
+  box-sizing: border-box;
+  border: 1px solid inherit;
+  border-radius: 3px;
+}
+
+.remove-recipient-btn:hover{
+  background-color: rgb(89, 148, 168);
+  cursor: pointer;
+}
+
+.submit-btn-add-ppl{
+  margin: 14px 14px 14px 440px;
+  width: 80px;
+  box-sizing: border-box;
+  line-height: 38px;
+  border: 1px solid honeydew;
+  border-radius: 8px;
+  background-color: whitesmoke;
+}
+
+.submitable{
+  cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid turquoise;
+}
+
+.weirdo-input{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  border: 1px solid rgb(161, 161, 161);
+  background-color: whitesmoke;
+  border-radius: 3px;
+  width: 75%;
+  box-sizing: border-box;
+  display: inline-block;
+  min-height: 38px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.no-placeholder::placeholder{
+  display: none;
+}
+
+.flexible-top{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.recipient-av{
+  height: 100%;
+  border-left: 0px solid honeydew;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}

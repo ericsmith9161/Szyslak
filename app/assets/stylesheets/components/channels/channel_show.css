@@ -145,6 +145,10 @@
   background-color: honeydew;
 }
 
+.header-details-header button{
+  background-color: honeydew;
+}
+
 .header-details-header img:hover{
   background-color: lightblue;
   cursor: pointer;
@@ -199,6 +203,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.c-h-d-o-img button{
+  background-color: honeydew;
+}
+
+.c-h-d-o-img button:hover{
+  cursor:pointer;
 }
 
 .c-h-d-o-img:hover{

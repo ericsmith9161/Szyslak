@@ -20,6 +20,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
   return {
     openChannelTopic: () => dispatch(openModal('channeltopic')),
+    addPeople: () => dispatch(openModal('addpeople')),
+
     fetchChannel: (channelId) => dispatch(fetchChannel(channelId)),
     deleteChannel: (channelId) => dispatch(deleteChannel(channelId)),
     fetchChannelMessages: (channelId) => dispatch(fetchChannelMessages(channelId)),

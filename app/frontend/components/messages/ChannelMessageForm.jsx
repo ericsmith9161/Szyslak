@@ -21,7 +21,9 @@ class ChannelMessageForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     if (this.state.body !== ""){
-      App.cable.subscriptions.subscriptions[0].speak({body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'Channel', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username});
+      let theRightChannel = App.cable.subscriptions.subscriptions.filter((subscription) => subscription.identifier.channel_id === this.props.channelId)[0]
+      console.log(theRightChannel)
+      theRightChannel.speak({body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'Channel', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username});
       this.setState({ body: "" });
     }
   }

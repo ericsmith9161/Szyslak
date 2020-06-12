@@ -8,6 +8,7 @@ import ChannelPlusButtonContainer from './sidebar/ChannelPlusButtonContainer';
 import ChannelTopicContainer from './channels/show/header/ChannelTopicContainer';
 import DMFormContainer from '../components/direct_messages/form/DMFormContainer';
 import UploadImageContainer from '../components/user/UploadImageContainer';
+import AddPeopleContainer from '../components/channels/show/header/AddPeopleContainer';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -74,6 +75,15 @@ function Modal({ modal, closeModal }) {
       return (
         <div className="modal-background-add-avatar" onClick={closeModal}>
           <div className="modal-child-add-avatar" onClick={e => e.stopPropagation()}>
+            {component}
+          </div>
+        </div>
+      )
+    case 'addpeople':
+      component = <AddPeopleContainer />;
+      return (
+        <div className="modal-background-add-people" onClick={closeModal}>
+          <div className="modal-child-add-people" onClick={e => e.stopPropagation()}>
             {component}
           </div>
         </div>
