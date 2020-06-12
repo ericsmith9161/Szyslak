@@ -11,7 +11,7 @@ class DMMessageList extends React.Component {
   componentDidMount() {
     this.props.fetchDirectMessageMessages(this.props.directMessageId)
     App.currentSubscription = App.cable.subscriptions.create(
-      { channel: "ChannelChatChannel" },
+      { channel: "ChannelChatChannel", direct_message_id: this.props.directMessageId },
       {
         received: data => {
           this.props.receiveMessage(data.message);

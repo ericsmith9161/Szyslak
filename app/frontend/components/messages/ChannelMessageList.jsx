@@ -9,9 +9,9 @@ class ChannelMessageList extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchChannelMessages(this.props.channelId)
+    this.props.fetchChannelMessages(this.props.channelId);
     App.currentSubscription = App.cable.subscriptions.create(
-      { channel: "ChannelChatChannel" },
+      { channel: "ChannelChatChannel", channel_id: this.props.channelId },
       {
         received: data => {
           this.props.receiveMessage(data.message);
