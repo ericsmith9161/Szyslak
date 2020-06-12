@@ -45,18 +45,6 @@
 }
 
 
-.user-index-body{
-  position:relative;
-  display: flex;
-  height: calc(100vh - 37px - 66px);
-  box-sizing: border-box;
-  background-color: lightgoldenrodyellow;
-  width: 100%;
-  overflow-y: scroll;
-
-}
-
-
 .u-i-av{
   width: 198px;
   height: 198px;
@@ -71,14 +59,24 @@
 
 }
 
+.user-index-body{
+  position:absolute;
+  display: flex;
+  height: calc(100vh - 37px - 66px);
+  box-sizing: border-box;
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+
+}
+
 .user-index-list{
   width: 100%;
-  height: 100%;
   padding: 10px;
-  margin-top: 10px;
-  position: absolute;
   display: flex;
   flex-flow: row wrap;
+  overflow-y: scroll;
 }
 
 .user-index li{
