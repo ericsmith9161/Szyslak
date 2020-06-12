@@ -111,6 +111,7 @@ input:checked + .slider:before {
   height: 47px;
   border: 1px solid gainsboro;
   border-radius: 3px;
+  padding-left: 20px;
 }
 
 .channel-form textarea{
@@ -119,6 +120,7 @@ input:checked + .slider:before {
   height: 47px;
   border: 1px solid gainsboro;
   border-radius: 3px;
+  padding: 5px 0px 0px 5px
 }
 
 .channel-form form{

@@ -54,7 +54,7 @@ class ChannelForm extends React.Component {
               type="text"
               value={this.state.name}
               onChange={this.handleChange("name")}
-              placeholder="   # e.g. karaoke-thursdays"
+              placeholder="# e.g. karaoke-thursdays"
             />
           </label>
           <label>Description <span>(optional)</span>
