@@ -66,29 +66,10 @@ class HeaderDetails extends React.Component {
               Find
             </span>
           </div>
-          <div className="channel-header-details-option">
-            <span className="c-h-d-o-img">
-              <img src={window.phoneURL} width="15" height="15"/>
-            </span>
-            <span>
-              Call
-            </span>
-          </div>
-          <div className="channel-header-details-option">
-            <span className="c-h-d-o-img">
-              <img src={window.threedotsURL} width="17" height="17"/>
-            </span>
-            <span>
-              More
-            </span>
-          </div>
         </div>
         <ul className="c-h-d-items">
           <li className="c-h-d-item"> <span><b>About</b></span><About channel={this.props.channel} /> <span>></span></li>
           <li className="c-h-d-item"> <span><b>Members</b> </span><MemberList channel={this.props.channel} /> <span>></span></li>
-          <li className="c-h-d-item"> <span><b>Shortcuts</b></span> <span>></span></li>
-          <li className="c-h-d-item"> <span><b>Pinned Items</b></span> <span>></span></li>
-          <li className="c-h-d-item"> <span><b>Shared Files</b></span> <span>></span></li>
           <li className="c-h-d-button"> <button onClick={this.handleDelete}><b>Delete Channel</b></button></li>
         </ul>
         
