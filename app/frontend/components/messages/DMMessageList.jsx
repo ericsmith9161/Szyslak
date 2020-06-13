@@ -21,6 +21,9 @@ class DMMessageList extends React.Component {
         },
       }
     )
+    if (App.cable.subscriptions.subscriptions.length > 1){
+      App.cable.subscriptions.subscriptions = App.cable.subscriptions.subscriptions.slice(1)
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -37,6 +40,8 @@ class DMMessageList extends React.Component {
           },
         }
       )
+      App.cable.subscriptions.subscriptions = App.cable.subscriptions.subscriptions.slice(1)
+
     }
 
     if (this.props.messages.length !== 0) {
