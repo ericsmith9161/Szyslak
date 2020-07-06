@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchChannel, deleteChannel} from '../../../actions/channel_actions';
+import {fetchChannelUsers} from '../../../actions/user_actions';
 
 import ChannelShow from './ChannelShow';
 import {withRouter} from 'react-router-dom';
@@ -13,7 +14,7 @@ const mSTP = (state, ownProps) => {
     messages: Object.values(state.entities.messages),
     channelId: ownProps.match.params.channelId,
     message: { body: "", user_id: state.session.id, messageable_type: 'Channel', messageable_id: ownProps.match.params.channelId },
-
+    users: Object.values(state.entities.users)
   }
 }
 
@@ -26,6 +27,8 @@ const mDTP = (dispatch) => {
     deleteChannel: (channelId) => dispatch(deleteChannel(channelId)),
     fetchChannelMessages: (channelId) => dispatch(fetchChannelMessages(channelId)),
     closeModal: () => dispatch(closeModal()),
+
+    fetchChannelUsers: (channelId) => dispatch(fetchChannelUsers(channelId))
 
 
   }

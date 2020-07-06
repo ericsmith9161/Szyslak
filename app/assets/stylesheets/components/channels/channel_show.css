@@ -244,14 +244,88 @@
 
 .c-h-d-item{
   display: flex;
-  height: 50px;
+  flex-direction: column;
+  min-height: 50px;
   width: 100%;
-  justify-content: space-between;
   border-bottom: 1px solid gainsboro;
   box-sizing: border-box;
   padding: 0px 20px 0px 10px;
   font-size: .9rem;
+  overflow-y: scroll;
+}
 
+.c-h-d-item div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.channel-members-list{
+  overflow-y: scroll;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.channel-members-list-li{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.channel-details-about{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.channel-details-about h3{
+  color: darkgray;
+  font-weight: 500;
+  font-size: .8rem;
+  height: 20px;
+}
+
+.channel-details-about p{
+  line-height: 22px;
+}
+
+.channel-details-about div{
+  box-sizing: border-box;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 3px;
+  margin: 1px;
+  padding: 10px;
+}
+
+.channel-details-about span{
+  color: darkgray;
+  font-size: .75rem;
+}
+
+.channel-details-dropdown-topic{
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  justify-content: space-evenly;
+}
+
+.channel-details-dropdown-description{
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  justify-content: flex-start;
+}
+
+.channel-details-dropdown-created-on{
+  line-height: 20px;
 }
 
 .c-h-d-button{
@@ -322,5 +396,5 @@
 
 .user-svg{
   display: inline-block;
-  
 }
+

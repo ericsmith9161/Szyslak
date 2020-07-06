@@ -3,16 +3,33 @@ import React from 'react';
 import Member from './details_member_list/MemberListMember';
 import BottomNav from './details_member_list/MemberListBottomNav';
 
-class DetailsMemberList extends React.Component {
-
-  render() {
+const DetailsMemberList = ({channel, users, fetchChannelUsers}) => {
+  let avatar;
+  console.log(users);
+  console.log(users.length)
+  let membersWithAvs = users.map(user => {
+    if (user.avatarURL === undefined) {
+      avatar = window.defaultavURL;
+    } else {
+      avatar = user.avatarURL;
+    }
     return (
-      <div>
-        <Member />
-        <BottomNav />
-      </div>
+      <li key={user.id} value={user.id} className="channel-members-list-li">
+        <img src={avatar} width="20" height="20" />
+        <span>&nbsp;&nbsp;</span>
+        <h1>{user.username}</h1>
+      </li>
     )
-  }
+  });
+  return (
+    <div id="channel-members" className="channel-members hidden">
+      <ul className="channel-members-list">
+        {membersWithAvs}
+      </ul>
+      <Member />
+      <BottomNav />
+    </div>
+  )
 }
 
 export default DetailsMemberList;

@@ -10,7 +10,25 @@ class HeaderDetails extends React.Component {
     super(props);
     this.handleClose = this.handleClose.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-    this.state = this.props.channel
+    this.aboutClick = this.aboutClick.bind(this);
+    this.membersClick = this.membersClick.bind(this);
+    this.state = {
+      channel: this.props.channel,
+      about_dropped_down: false,
+      members_dropped_down: false
+    }
+  }
+
+  aboutClick(e) {
+    e.preventDefault();
+    document.getElementById("channel-details-about").classList.toggle("hidden");
+    this.setState({ about_dropped_down: !this.state.about_dropped_down });
+  }
+
+  membersClick(e) {
+    e.preventDefault();
+    document.getElementById("channel-members").classList.toggle("hidden");
+    this.setState({ members_dropped_down: !this.state.members_dropped_down });
   }
 
   handleClose(e){
@@ -38,6 +56,17 @@ class HeaderDetails extends React.Component {
   }
 
   render() {
+    let aboutCaret, memberCaret;
+    if (this.state.about_dropped_down) {
+      aboutCaret = <svg aria-hidden="true" focusable="false" data-prefix="fas" height="16" width="16" data-icon="caret-down" className="svg-inline--fa fa-caret-down fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+    } else {
+      aboutCaret = <img width="16" src={window.caretRightURL} />
+    }
+    if (this.state.members_dropped_down) {
+      memberCaret = <svg aria-hidden="true" focusable="false" data-prefix="fas" height="16" width="16" data-icon="caret-down" className="svg-inline--fa fa-caret-down fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+    } else {
+      memberCaret = <img width="16" src={window.caretRightURL} />
+    }
     return (
       <div className="channel-header-details hidden">
         <div className="header-details-header">
@@ -68,11 +97,20 @@ class HeaderDetails extends React.Component {
           </div>
         </div>
         <ul className="c-h-d-items">
-          <li className="c-h-d-item"> <span><b>About</b></span><About channel={this.props.channel} /> <span>></span></li>
-          <li className="c-h-d-item"> <span><b>Members</b> </span><MemberList channel={this.props.channel} /> <span>></span></li>
+          <li className="c-h-d-item">
+            <div>
+              <span><b>About</b></span> <span onClick={this.aboutClick}>{aboutCaret}</span>
+            </div> 
+            <About channel={this.props.channel} />
+          </li>
+          <li className="c-h-d-item">
+            <div>
+              <span><b>Members</b> </span> <span onClick={this.membersClick}>{memberCaret}</span>
+            </div> 
+            <MemberList channel={this.props.channel} users={this.props.users} fetchChannelUsers={this.props.fetchChannelUsers} /></li>
           <li className="c-h-d-button"> <button onClick={this.handleDelete}><b>Delete Channel</b></button></li>
         </ul>
-        
+    
 
         
       </div>

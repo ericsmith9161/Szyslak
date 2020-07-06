@@ -9,7 +9,8 @@ class ChannelShow extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchChannel(this.props.match.params.channelId)
+    this.props.fetchChannel(this.props.match.params.channelId);
+    this.props.fetchChannelUsers(this.props.match.params.channelId);
   }
 
   render() {
@@ -18,7 +19,7 @@ class ChannelShow extends React.Component {
     }else{
       return (
           <div className="channel-show full">
-            <ChannelShowHeader channel={this.props.channel} deleteChannel={this.props.deleteChannel} openChannelTopic={this.props.openChannelTopic} addPeople={this.props.addPeople} />
+            <ChannelShowHeader channel={this.props.channel} deleteChannel={this.props.deleteChannel} openChannelTopic={this.props.openChannelTopic} addPeople={this.props.addPeople} users={this.props.users} fetchChannelUsers={this.props.fetchChannelUsers} />
             <ChannelMessageListContainer />
             <ChannelMessageFormContainer />
           </div>
