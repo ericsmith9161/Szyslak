@@ -17,7 +17,7 @@ class ChannelIndex extends React.Component{
         <div className = "channel-index-below-searchbar">
           <span>{this.props.channels.length} channels</span>
           <span>
-            <span>Sort: A to Z</span> <span>filter</span> 
+            {/* <span>Sort: A to Z</span> <span>filter</span>  */}
           </span>
         </div>
         <ul className="channel-list">

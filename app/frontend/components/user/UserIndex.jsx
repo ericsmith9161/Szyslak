@@ -74,7 +74,7 @@ class UserIndex extends React.Component {
             <div className="user-index-below-searchbar">
               <span>{this.props.users.length} members</span>
               <span>
-                <span>Sort: A to Z</span> <span>filter</span>
+                {/* <span>Sort: A to Z</span> <span>filter</span> */}
               </span>
             </div>
             <div className="user-index-body">
