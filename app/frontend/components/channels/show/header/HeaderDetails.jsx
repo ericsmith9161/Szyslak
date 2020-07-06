@@ -99,13 +99,13 @@ class HeaderDetails extends React.Component {
         <ul className="c-h-d-items">
           <li className="c-h-d-item">
             <div>
-              <span><b>About</b></span> <span onClick={this.aboutClick}>{aboutCaret}</span>
+              <span><b>About</b></span> <span className="caret" onClick={this.aboutClick}>{aboutCaret}</span>
             </div> 
             <About channel={this.props.channel} />
           </li>
           <li className="c-h-d-item">
             <div>
-              <span><b>Members</b> </span> <span onClick={this.membersClick}>{memberCaret}</span>
+              <span><b>Members</b> </span> <span className="caret" onClick={this.membersClick}>{memberCaret}</span>
             </div> 
             <MemberList channel={this.props.channel} users={this.props.users} fetchChannelUsers={this.props.fetchChannelUsers} /></li>
           <li className="c-h-d-button"> <button onClick={this.handleDelete}><b>Delete Channel</b></button></li>
