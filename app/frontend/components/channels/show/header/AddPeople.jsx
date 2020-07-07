@@ -20,6 +20,12 @@ class AddPeople extends React.Component {
 
   componentDidUpdate() {
     let submitBtn = document.querySelector(".submit-btn-add-ppl");
+    let userList = document.querySelector(".channel-form-user-list");
+    if (this.state.searchQuery !== "" && this.state.searchQuery !== undefined){
+      userList.classList.remove("hidden")
+    }else{
+      userList.classList.add("hidden")
+    }
     if (this.state.ChannelAddIDs.length !== 0) {
       if (!submitBtn.hasAttribute(".submitable")) {
         submitBtn.classList.add("submitable")
@@ -91,60 +97,65 @@ class AddPeople extends React.Component {
     } else {
       searchList = this.props.users;
     }
+    if (this.state.searchQuery === "" || this.state.searchQuery === undefined){
+      searchListWithAvs = null
+    }else{
+      searchListWithAvs =
+        searchList.map(user => {
+          if (user.avatarURL === undefined) {
+            avatar = window.defaultavURL;
+          } else {
+            avatar = user.avatarURL;
+          }
+          if ((this.state.channelUsers.length !== 0) && (this.state.channelUsers.includes(user.id))) {
+            return null;
+          } else {
+            return (
+              <li key={user.id} value={user.id} onClick={this.handleAdd}>
+                <img src={avatar} width="40" />
+                <h1>{user.username}</h1>
+              </li>
+            )
+          }
+        });
+    }
 
-    searchListWithAvs = searchList.map(user => {
-      if (user.avatarURL === undefined) {
-        avatar = window.defaultavURL;
-      } else {
-        avatar = user.avatarURL;
-      }
-      if ((this.state.channelUsers.length !== 0) &&(this.state.channelUsers.includes(user.id))){
-        return null;
-      } else {
-        return (
-          <li key={user.id} value={user.id} onClick={this.handleAdd}>
-            <img src={avatar} width="40" />
-            <h1>{user.username}</h1>
-          </li>
-        )
-      }
-    });
 
     return (
-      <div className="add-people-form">
-        <div className="add-people-form-head">
-          <div>
-            <h1>Add People</h1>
-            <p>{this.props.currentChannel.name}</p>
+      <div>
+        <div className="add-people-form">
+          <div className="add-people-form-head">
+            <div>
+              <h1>Add People</h1>
+              <p>{this.props.currentChannel.name}</p>
+            </div>
+            <button onClick={() => this.props.closeModal()}><img src={window.xURL} width="11" /></button>
           </div>
-          <button onClick={() => this.props.closeModal()}><img src={window.xURL} width="11" /></button>
-        </div>
-        <div className="flexible-top">
-          <div className="weirdo-input">
-            <ul className="recipient-list">
-              {this.state.ChannelAddNames.map((name, idx) => {
-                return (
-                  <li key={idx} tabIndex="0" className="recipient-list-item">
-                    <span><img className="recipient-av" src={this.state.ChannelAddAvs[idx]} width="28" /></span><span className="recipient-name">{name}</span><button className="remove-recipient-btn" onClick={() => this.removeUserFromRecipients(idx)}><img src={window.xURL} width="10" /></button>
-                  </li>
-                )
-              })}
-            </ul>
-            <input
-              type="text"
-              className="user-search-dm-form"
-              value={this.state.searchQuery}
-              placeholder={this.state.ChannelAddIDs.length === 0 ? "Dylan, Dylan, Dylan, Dylan": ""}
-              onChange={this.handleSearch}
-            />
+          <div className="channel-flexible-top">
+            <div className="channel-weirdo-input">
+              <ul className="recipient-list">
+                {this.state.ChannelAddNames.map((name, idx) => {
+                  return (
+                    <li key={idx} tabIndex="0" className="channel-recipient-list-item">
+                      <span><img className="recipient-av" src={this.state.ChannelAddAvs[idx]} width="40" /></span><span className="recipient-name">{name}</span><button className="remove-recipient-btn" onClick={() => this.removeUserFromRecipients(idx)}><img src={window.xURL} width="10" /></button>
+                    </li>
+                  )
+                })}
+              </ul>
+              <input
+                type="text"
+                className="user-search-channel-form"
+                value={this.state.searchQuery}
+                placeholder={this.state.ChannelAddIDs.length === 0 ? "Dylan, Dylan, Dylan, Dylan" : ""}
+                onChange={this.handleSearch}
+              />
+            </div>
           </div>
+          <button className="submit-btn-add-ppl" onClick={this.handleSubmit}>Go</button>
         </div>
-        <ul className="dm-form-user-list">
+        <ul className="channel-form-user-list hidden">
           {searchListWithAvs}
         </ul>
-        <button className="submit-btn-add-ppl" onClick={this.handleSubmit}>Go</button>
-
-
       </div>
     )
   }
