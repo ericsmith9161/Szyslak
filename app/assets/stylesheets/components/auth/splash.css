@@ -315,3 +315,26 @@
 
   background: skyblue
 }
+
+.splash-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  line-height: 150px;
+}
+
+.splash-links a{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.splash-links a i{
+  height: 50px;
+  width: 50px;
+}
+
+.splash-links a i:hover{
+  color: lightblue;
+}

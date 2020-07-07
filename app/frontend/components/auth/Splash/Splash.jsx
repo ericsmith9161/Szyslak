@@ -69,9 +69,20 @@ class Splash extends React.Component{
             <div className="dont-leave-content">
               <h1>Before you go, be sure to give it a test run</h1>
               <p>If you like what you saw, links to contact me can be found
-              in the navigation bar</p>
+              in the navigation bar or down below</p>
             </div>
             <img src={window.abeURL} width="600" />
+          </div>
+
+          <div className="full-border">
+
+          </div>
+          <div className="splash-links">
+            <a href="https://github.com/ericsmith9161" target="_blank"><i class="fab fa-github fa-6x"></i></a>
+            <a href="https://www.linkedin.com/in/eric-smith-8832b41aa/" target="_blank"><i class="fab fa-linkedin-in fa-6x"></i></a>
+            <a href="https://ericsmith9161.github.io/" target="_blank"> <i class="far fa-user-circle fa-6x"></i></a>
+            <a href="https://angel.co/u/eric-smith-105" target="_blank"><i class="fab fa-angellist fa-6x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100047966766811" target="_blank"><i class="fab fa-facebook-f fa-6x"></i></a>      
           </div>
             
           </div>

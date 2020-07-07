@@ -87,14 +87,14 @@ class HeaderDetails extends React.Component {
               Add
             </span>
           </div>
-          <div className="channel-header-details-option">
+          {/* <div className="channel-header-details-option">
             <span className="c-h-d-o-img">
               <img src={window.searchURL} width="17"  />
             </span>
             <span>
               Find
             </span>
-          </div>
+          </div> */}
         </div>
         <ul className="c-h-d-items">
           <li className="c-h-d-item">
