@@ -1,12 +1,12 @@
 .message-list{
-  height: 72vh;
+  height: calc(100vh - 37px - 68px - 128px);
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
   background-color: lightgoldenrodyellow;
-  padding: 20px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
 
 }
 
