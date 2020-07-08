@@ -21,7 +21,6 @@ class ChannelMessageForm extends React.Component {
   }
 
   handleSubmit(e){
-    console.log(this.props)
     e.preventDefault();
     if (this.state.body !== ""){
       let theRightChannel = App.cable.subscriptions.subscriptions[0];

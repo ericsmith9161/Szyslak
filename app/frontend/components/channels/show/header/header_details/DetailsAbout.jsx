@@ -1,7 +1,6 @@
 import React from 'react';
 
 const DetailsAbout = ({channel}) => {
-  console.log(channel)
   let description = channel.details || "Describe what this channel is so people can find it"
   let createdDate, createdTime;
   createdTime = new Date(parseFloat(channel.created_at)*1000)
