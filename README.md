@@ -1,6 +1,7 @@
 # README
-
-![Szyslak](https://i.imgur.com/x2azDEb.png)
+<p align="center">
+  <img src="https://i.imgur.com/x2azDEb.png" />
+</p>
 
 
 szyslak is a full stack Simpsons themed Slack clone allowing users to create accounts, join and create channels and single and multi-person direct message conversations, as well as maintain individual conversations for each channel and dm using web sockets.
@@ -33,8 +34,9 @@ szyslak is a full stack Simpsons themed Slack clone allowing users to create acc
 - `users` can add other `users` to `channels` that they are a part of by searching through a list
 of those not currently on the `channel`
 - `users` can join `channels` to see channel specific `messages`
-
-<img left="400" src="https://media2.giphy.com/media/J46MDVVjQC6xz5S2h7/giphy.gif" width="300" height="300" />
+<p align="center">
+  <img src="https://media2.giphy.com/media/J46MDVVjQC6xz5S2h7/giphy.gif" width="400" />
+</p>
 
 #### Live Chat ####
 
@@ -51,18 +53,23 @@ as one-on-one conversations or as a group chat
 - in the `direct_message` creation screen users can click on a user to go to an already existing conversation,
 or type in the search bar to create a multi-person conversation
 
-
-<img left="400" src="https://media1.giphy.com/media/fsWWdclJtFDnHdRIcr/giphy.gif" width="300" height="300" />
+<p align="center">
+  <img src="https://media1.giphy.com/media/fsWWdclJtFDnHdRIcr/giphy.gif" width="400" />
+</p>
 
 #### Tribulations ####
 
 * Slack has modals of all shapes and sizes, all over the screen. In order to accommodate this I created a modal function with a switch statement that rendered different modals depending on the call, allowing for reusability and simplicity of implementation
 
-<img left = "400" src="https://i.imgur.com/E5Iuq9u.png" width="300"/>
+<p align="center">
+  <img src="https://i.imgur.com/E5Iuq9u.png" width="400"/>
+</p>
 
 * In order to make sure live chat was only showing up on the desired `channel` or `direct message` rather than across all visited `direct_message` and `channel` channels for a given user, I needed to ensure `messages` were broadcast to the proper channel. This also required removing subscriptions when the user switched to another channel, and incorporating a check upon update of channel and direct message components to subscribe to different channels as users navigate the site 
 
-<img left="400" src="https://i.imgur.com/MfwL9WU.png" width="300"/>
+<p align="center">
+  <img left="200" src="https://i.imgur.com/MfwL9WU.png" width="400"/>
+</p>
 
 ### Installation ###
 
