@@ -9,6 +9,7 @@ class WorkSpaceHeader extends React.Component{
   }
 
   render(){
+    console.log(this.props)
     return (
       <div className = "work-space-header" >
         <div>

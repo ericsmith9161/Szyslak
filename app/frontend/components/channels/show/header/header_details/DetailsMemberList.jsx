@@ -5,8 +5,6 @@ import BottomNav from './details_member_list/MemberListBottomNav';
 
 const DetailsMemberList = ({channel, users, fetchChannelUsers}) => {
   let avatar;
-  console.log(users);
-  console.log(users.length)
   let membersWithAvs = users.map(user => {
     if (user.avatarURL === undefined) {
       avatar = window.defaultavURL;

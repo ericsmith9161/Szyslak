@@ -1,14 +1,19 @@
 import React from 'react';
 
 const UserWithOnlineStatus = ({user}) => {
-  return (
-    <div>
-      <div className = "online-status-icon">
+  if (user){
+    return (
+      <div>
+        <div className="online-status-icon">
 
+        </div>
+        <p>&nbsp;&nbsp;{user.username} </p>
       </div>
-      <p>&nbsp;&nbsp;{user.username} </p>
-    </div>
-  )
+    )
+  }else{
+    return null
+  }
+
 }
 
 export default UserWithOnlineStatus;
