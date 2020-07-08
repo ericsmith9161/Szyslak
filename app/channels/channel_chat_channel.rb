@@ -1,6 +1,5 @@
 class ChannelChatChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "some_channel"
     if params.has_key?(:channel_id)
       @channel = Channel.find_by(id: params[:channel_id])
       stream_for @channel if @channel
@@ -11,7 +10,12 @@ class ChannelChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    message = Message.create(body: data['body'], user_id: data['user_id'], messageable_type: data['messageable_type'], messageable_id: data['messageable_id'], username: data['username'])
+    message = Message.create(
+      body: data['body'],
+      user_id: data['user_id'],
+      messageable_type: data['messageable_type'],
+      messageable_id: data['messageable_id'], 
+      username: data['username'])
     socket = { message: message, type: 'message' }
     ChannelChatChannel.broadcast_to(@channel || @dm, socket)
   end
