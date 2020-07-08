@@ -6,7 +6,6 @@ export const DELETE_USER = 'DELETE_USER';
 
 
 const receiveUsers = (users) => {
-  console.log("im in here")
   return {
     type: RECEIVE_USERS,
     users
