@@ -10,6 +10,8 @@ class ChannelMessageForm extends React.Component {
 
   componentDidMount(){
     this.props.fetchChannel(this.props.match.params.channelId);
+    this.props.fetchChannelUsers(this.props.match.params.channelId);
+
   }
 
   update(field){
@@ -19,6 +21,7 @@ class ChannelMessageForm extends React.Component {
   }
 
   handleSubmit(e){
+    console.log(this.props)
     e.preventDefault();
     if (this.state.body !== ""){
       let theRightChannel = App.cable.subscriptions.subscriptions[0];

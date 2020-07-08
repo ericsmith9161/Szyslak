@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ChannelMessageForm from './ChannelMessageForm';
 import {withRouter} from 'react-router-dom';
 import {fetchChannel} from '../../actions/channel_actions';
+import { fetchChannelUsers } from '../../actions/user_actions';
 
 
 const mSTP = (state, ownProps) => {
@@ -17,6 +18,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
   return{
     fetchChannel: channelId => dispatch(fetchChannel(channelId)),
+    fetchChannelUsers: channelId => dispatch(fetchChannelUsers(channelId))
   }
 }
 
