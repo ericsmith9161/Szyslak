@@ -24,7 +24,8 @@ class DMMessageForm extends React.Component {
   handleSubmit() {
     if (this.props.edit && this.state.body !== ""){
       this.props.editMessage({ body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'DirectMessage', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username, id: this.props.editMessageId });
-      this.setState({ hidden: "hidden" })
+      let msgEditForm = document.getElementById(`${this.props.editMessageId}edit`)
+      msgEditForm.classList.toggle("hidden")
     }
     else if (!this.props.edit && this.state.body !== "") {
       let theRightDM = App.cable.subscriptions.subscriptions[0];
@@ -36,7 +37,8 @@ class DMMessageForm extends React.Component {
   }
 
   cancel() {
-    this.setState({hidden: "hidden"})
+    let msgEditForm = document.getElementById(`${this.props.editMessageId}edit`)
+    msgEditForm.classList.toggle("hidden")
   }
 
   render() {

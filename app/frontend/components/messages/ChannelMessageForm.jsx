@@ -26,18 +26,19 @@ class ChannelMessageForm extends React.Component {
   handleSubmit(){
     if (this.props.edit && this.state.body !== ""){
       this.props.editMessage({ body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'Channel', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username, id: this.props.editMessageId })
-      this.setState({hidden: "hidden"})
+      let msgEditForm = document.getElementById(`${this.props.editMessageId}edit`)
+      msgEditForm.classList.toggle("hidden")
     }
     else if (!this.props.edit && this.state.body !== ""){
       let theRightChannel = App.cable.subscriptions.subscriptions[0];
-      // let theRightChannel = App.cable.subscriptions.subscriptions.filter((subscription) => subscription.identifier.channel_id === this.props.channelId)[0]
       theRightChannel.speak({body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'Channel', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username});
       this.setState({ body: "" });
     }
   }
 
   cancel(){
-    this.setState({ hidden: "hidden" })
+    let msgEditForm = document.getElementById(`${this.props.editMessageId}edit`)
+    msgEditForm.classList.toggle("hidden")
   }
 
 

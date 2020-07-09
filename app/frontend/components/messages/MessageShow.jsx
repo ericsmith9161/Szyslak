@@ -10,14 +10,12 @@ class MessageShow extends React.Component{
   }
 
   mouseIn(){
-    debugger
     if (this.props.currentUserID === this.props.message.user_id){
       let msgEdit = document.getElementById(`${this.props.message.id}edit`);
       let msgOpts = document.getElementById(`${this.props.message.id}`);
       let msgEditForm = document.querySelector(`.edit-message-form`);
-      debugger
       if (msgEdit.classList.contains("hidden") || msgEditForm.classList.contains("hidden")){
-      msgOpts.classList.remove("hidden")
+        msgOpts.classList.remove("hidden")
       }
     }
   }
