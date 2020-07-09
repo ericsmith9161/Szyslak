@@ -1,7 +1,6 @@
 import {RECEIVE_MESSAGES, RECEIVE_MESSAGE, DELETE_MESSAGE} from '../actions/message_actions';
 
 const messagesReducer = (state = {}, action) => {
-  debugger
   Object.freeze(state);
 
   switch(action.type){

@@ -10,9 +10,15 @@ class MessageShow extends React.Component{
   }
 
   mouseIn(){
+    debugger
     if (this.props.currentUserID === this.props.message.user_id){
-      let msgOpts = document.getElementById(`${this.props.message.id}`)
+      let msgEdit = document.getElementById(`${this.props.message.id}edit`);
+      let msgOpts = document.getElementById(`${this.props.message.id}`);
+      let msgEditForm = document.querySelector(`.edit-message-form`);
+      debugger
+      if (msgEdit.classList.contains("hidden") || msgEditForm.classList.contains("hidden")){
       msgOpts.classList.remove("hidden")
+      }
     }
   }
 
@@ -29,7 +35,7 @@ class MessageShow extends React.Component{
   }
   
   render(){
-    let avatar, editType;
+    let avatar, editType, msgOpts;
 
     let suffix, timeStr;
     let time = this.props.message.created_at.slice(11, 16);
@@ -55,50 +61,52 @@ class MessageShow extends React.Component{
       editType = <DMMessageFormContainer editMessageBody={this.props.message.body} editMessageId={this.props.message.id} edit={true} />
     }
 
+    msgOpts = 
+    <div className="message-options hidden" id={`${this.props.message.id}`} >
+      <button onClick={() => {this.editToggle(); this.mouseOut();}}>
+        <img src={window.pencilURL}  />
+      </button>
+      <button onClick={() => this.props.deleteMessage(this.props.message.id)}>
+        <img src={window.deleteURL}  />
+      </button>
+    </div>
+
     if (this.props.lastMessageUser === this.props.message.user_id){
       return(
-          <div className="trunc-message-content" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
-            <div className="hidden" id={`${this.props.message.id}edit`}>
+        <div className="trunc-message" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
+          {msgOpts}
+          <div className="trunc-message-content" >
+            <div className='hidden' id={`${this.props.message.id}edit`}>
               {editType}
-            </div>
-            <div className="message-options hidden" id={`${this.props.message.id}`} >
-              <button onClick={() => this.editToggle()}>
-                <img src={window.pencilURL} height="16" />
-              </button>
-              <button onClick={() => this.props.deleteMessage(this.props.message.id)}>
-                <img src={window.deleteURL} height="16" />
-              </button>
             </div>
             {this.props.message.body}
           </div>
+        </div>
+
       )
     }else{
       return (
-        <div className="message" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
-          <div className="hidden" id={`${this.props.message.id}edit`}>
-            {editType}
-          </div>
-          <div className="message-options hidden" id={`${this.props.message.id}`}>
-            <button onClick={() => this.editToggle()}>
-              <img src={window.pencilURL} height="16" />
-            </button>
-            <button onClick={() => this.props.deleteMessage(this.props.message.id)}>
-              <img src={window.deleteURL} height="16" />
-            </button>
-          </div>
-          <div>
-            <img src={avatar} width="40" height="40" />
-          </div>
-          <div className="message-content">
-            <div>
-              <b>{this.props.message.username}</b>&nbsp;
-            <span className="timestamps">{timeStr}</span>
+        <div className="mess">
+          {msgOpts}
+          <div className="message" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
+            <div className="hidden" id={`${this.props.message.id}edit`}>
+              {editType}
             </div>
             <div>
-              {this.props.message.body}
+              <img src={avatar} width="40" height="40" />
+            </div>
+            <div className="message-content">
+              <div>
+                <b>{this.props.message.username}</b>&nbsp;
+              <span className="timestamps">{timeStr}</span>
+              </div>
+              <div>
+                {this.props.message.body}
+              </div>
             </div>
           </div>
         </div>
+
       )
     }
   }

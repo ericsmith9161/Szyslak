@@ -5,7 +5,8 @@ class DMMessageForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      body: this.props.editMessageBody || this.props.message.body 
+      body: this.props.editMessageBody || this.props.message.body,
+      hidden: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -20,10 +21,10 @@ class DMMessageForm extends React.Component {
     }
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit() {
     if (this.props.edit && this.state.body !== ""){
-      this.props.editMessage({ body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'DirectMessage', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username, id: this.props.editMessageId })
+      this.props.editMessage({ body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'DirectMessage', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username, id: this.props.editMessageId });
+      this.setState({ hidden: "hidden" })
     }
     else if (!this.props.edit && this.state.body !== "") {
       let theRightDM = App.cable.subscriptions.subscriptions[0];
@@ -34,13 +35,30 @@ class DMMessageForm extends React.Component {
     }
   }
 
+  cancel() {
+    this.setState({hidden: "hidden"})
+  }
+
   render() {
+    let formClass, formSubmit;
+    if (this.props.edit) {
+      formClass = `edit-message-form ${this.state.hidden}`;
+      formSubmit =
+        <div>
+          <button onClick={() => this.cancel()}>Cancel</button>
+          <button onClick={() => this.handleSubmit()}>Save Changes</button>
+        </div>
+    } else {
+      formClass = "message-form";
+      formSubmit = <button onClick={() => this.handleSubmit()}>➲</button>
+    }
+
     if (this.props.directMessage === undefined) {
       return null;
     } else {
       return (
-        <div className="message-form">
-          <form onSubmit={this.handleSubmit}>
+        <div className={formClass}>
+          <form onSubmit={() => this.handleSubmit()}>
             <input
               type="text"
               value={this.state.body}
@@ -48,7 +66,7 @@ class DMMessageForm extends React.Component {
               placeholder={`Message #${this.props.directMessage.other_user_usernames.join(', ')}`}
             />
           </form>
-          <button onClick={this.handleSubmit}>➲</button>
+          {formSubmit}
         </div>
       )
     }
