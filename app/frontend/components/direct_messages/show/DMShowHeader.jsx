@@ -22,16 +22,12 @@ class DMShowHeader extends React.Component {
       channelIdx.classList.toggle("full");
       channelIdx.classList.toggle("part");
     }
-    // channelShow.classList.toggle("full");
-    // channelShow.classList.toggle("part");
+
     dmShow.classList.toggle("full");
     dmShow.classList.toggle("part");
     detailsText.classList.toggle("hidden");
     detailsBtn.classList.toggle("selected");
 
-
-    // channelShow.classList.remove("full");
-    // channelShow.classList.add("part");
   }
 
   render() {
@@ -45,8 +41,3 @@ class DMShowHeader extends React.Component {
 }
 
 export default DMShowHeader;
-
-//needs to keep track of details click state
-//onclick remove class from details hide
-//onclick remove class from channel-show channel-show
-//onclick add class to channel-show channel-show-part

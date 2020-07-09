@@ -74,9 +74,3 @@ class UserInfoDropdown extends React.Component{
 }
 
 export default UserInfoDropdown;
-
-// workspace and total message stuff?
-// set status modal?
-
-
-//finish this trash later it stoinks

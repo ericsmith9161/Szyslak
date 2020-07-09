@@ -17,5 +17,3 @@ const LoggedInHeader = () => (
 )
 
 export default LoggedInHeader
-
-//add logic in bonus phase, implement search here
