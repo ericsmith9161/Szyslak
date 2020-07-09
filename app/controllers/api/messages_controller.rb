@@ -16,4 +16,28 @@ class Api::MessagesController < ApplicationController
     render :show
   end
 
+  def update
+    @message = Message.find_by(id: params[:id])
+    if (current_user.id == @message.user_id) && @message.update(message_params.except(:channel_id))
+      render :show 
+    else
+      render json: @message.errors.full_messages, status: 401
+    end
+  end
+
+  def destroy
+    @message = Message.find_by(id: params[:id])
+    id = @message.id
+    if (@message.user_id == current_user.id) && @message.destroy
+      render json: id 
+    else
+      render json: @message.errors.full_messages, status: 422
+    end
+  end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:body, :username, :messageable_type, :messageable_id, :channel_id, :user_id)
+  end
 end

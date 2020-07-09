@@ -1,5 +1,5 @@
 .message{
-  height: 55px;
+  min-height: 55px;
   display: flex;
   align-items: center;
   padding-left: 15px;
