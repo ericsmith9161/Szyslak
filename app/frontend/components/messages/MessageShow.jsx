@@ -36,6 +36,18 @@ class MessageShow extends React.Component{
     msgContent.classList.toggle("hidden");
     // this.setState({edit: !this.state.edit});
   }
+
+  iconInfo(type){
+    if (type === "edit"){
+      let msgEditHover = document.getElementById(`${this.props.message.id}edithover`);
+      console.log(msgEditHover)
+      msgEditHover.classList.toggle("hidden")
+    }else if (type === "delete"){
+      let msgDeleteHover = document.getElementById(`${this.props.message.id}deletehover`);
+      console.log(msgDeleteHover)
+      msgDeleteHover.classList.toggle("hidden")
+    }
+  }
   
   render(){
     let avatar, editType, msgOpts, msgOptsClass, hideMsg, hideEdit;
@@ -79,13 +91,21 @@ class MessageShow extends React.Component{
     }
 
     msgOpts = 
-    <div className={msgOptsClass} id={`${this.props.message.id}`} >
-      <button className="opts-btn" onClick={() => {this.editToggle(); this.mouseOut();}}>
-        <img src={window.pencilURL}  />
-      </button>
-      <button className="opts-btn" onClick={() => this.props.deleteMessage(this.props.message.id)}>
-        <img src={window.deleteURL}  />
-      </button>
+    <div>
+      <div className={msgOptsClass} id={`${this.props.message.id}`} >
+        <button className="opts-btn" onClick={() => { this.editToggle(); this.mouseOut(); }}>
+          <img onMouseEnter={() => this.iconInfo("edit")} onMouseLeave={() => this.iconInfo("edit")} src={window.pencilURL} />
+        </button>
+        <button  className="opts-btn" onClick={() => this.props.deleteMessage(this.props.message.id)}>
+          <img onMouseEnter={() => this.iconInfo("delete")} onMouseLeave={() => this.iconInfo("delete")} src={window.deleteURL} />
+        </button>
+      </div>
+      <div className="hidden edit-hover" id={`${this.props.message.id}edithover`}>
+        Edit Message
+      </div>
+      <div className="hidden delete-hover" id={`${this.props.message.id}deletehover`}>
+        Delete Message
+      </div>
     </div>
 
     if (this.props.lastMessageUser === this.props.message.user_id) {
