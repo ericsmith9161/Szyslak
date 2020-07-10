@@ -27,7 +27,7 @@
   position: relative;
   float: right;
   font-size: .8rem;
-  top:-45px;
+  top:-50px;
   left: 10px;
   z-index: 5;
   border: 1px solid skyblue;
@@ -36,20 +36,45 @@
   color: lightgoldenrodyellow;
 }
 
+.edit-hover-down-arrow{
+  z-index: 100;
+  width: 0; 
+  height: 0; 
+  position: relative;
+  bottom: 20px;
+  left: 70px;
+  float: right;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid skyblue;
+}
+
 .delete-hover{
   box-sizing: border-box;
   padding: 8px 5px;
   position: relative;
   float: right;
   font-size: .8rem;
-  top:-45px;
+  top:-50px;
   z-index: 5;
-  left: 65px;
+  left: 75px;
   border: 1px solid skyblue;
   border-radius: 3px;
   background-color: skyblue;
   color: lightgoldenrodyellow;
+}
 
+.delete-hover-down-arrow{
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid skyblue;
+  position: relative;
+  float: right;
+  bottom: 20px;
+  left: 120px;
+  
 }
 
 .message-options{
