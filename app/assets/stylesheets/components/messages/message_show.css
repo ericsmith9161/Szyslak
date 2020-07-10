@@ -11,6 +11,7 @@
   /* overflow: visible; */
   /* height: 55px; */
   position: relative;
+  /* overflow-y: hidden; */
 }
 
 .trunc-message{
@@ -53,7 +54,7 @@
   height: 0; 
   position: absolute;
   top: -20px;
-  right:100px;
+  right:110px;
   float: right;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -101,7 +102,7 @@
   background-color: lightblue;
   border: 1px solid lightblue;
   border-radius: 5px;
-  z-index: 3;
+  z-index: 3000;
   top: -15px;
 }
 
