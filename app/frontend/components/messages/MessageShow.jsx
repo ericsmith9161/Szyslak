@@ -131,12 +131,12 @@ class MessageShow extends React.Component{
       )
     } else {
       return (
-        <div className="mess" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
+        <div className="mess">
           {msgOpts}
           <div className={`msg-edit-boy ${hideEdit}`} id={`${this.props.message.id}edit`}>
             {editType}
           </div>
-          <div className="message" >
+          <div className="message" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
             <div>
               <img src={avatar} width="40" height="40" />
             </div>

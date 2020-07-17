@@ -1,24 +1,13 @@
 .message{
-  height: 55px;
+  min-height: 55px;
   display: flex;
   align-items: center;
   padding-left: 15px;
   width: 100%;
-  /* line-height: 33px; */
-}
-
-.mess{
-  /* overflow: visible; */
-  /* height: 55px; */
-  position: relative;
-}
-
-.trunc-message{
-  position: relative;
 }
 
 .trunc-message-options{
-  position: absolute;
+  position: relative;
   right: 5%;
   display: flex;
   float: right;
@@ -35,11 +24,11 @@
 .edit-hover{
   box-sizing: border-box;
   padding: 8px 5px;
-  position: absolute;
+  position: relative;
   float: right;
   font-size: .8rem;
   top:-50px;
-  right: 80px;
+  left: 10px;
   z-index: 5;
   border: 1px solid skyblue;
   border-radius: 3px;
@@ -51,9 +40,9 @@
   z-index: 100;
   width: 0; 
   height: 0; 
-  position: absolute;
-  top: -20px;
-  right:100px;
+  position: relative;
+  bottom: 20px;
+  left: 70px;
   float: right;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -63,12 +52,12 @@
 .delete-hover{
   box-sizing: border-box;
   padding: 8px 5px;
-  position: absolute;
+  position: relative;
   float: right;
   font-size: .8rem;
   top:-50px;
-  right: 40px;
   z-index: 5;
+  left: 75px;
   border: 1px solid skyblue;
   border-radius: 3px;
   background-color: skyblue;
@@ -81,16 +70,16 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid skyblue;
-  position: absolute;
+  position: relative;
   float: right;
-  top: -20px;
-  right: 70px;
+  bottom: 20px;
+  left: 120px;
   
 }
 
 .message-options{
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   right: 5%;
   display: flex;
   float: right;
@@ -102,7 +91,7 @@
   border: 1px solid lightblue;
   border-radius: 5px;
   z-index: 3;
-  top: -15px;
+  top: 15px;
 }
 
 .opts-btn{
