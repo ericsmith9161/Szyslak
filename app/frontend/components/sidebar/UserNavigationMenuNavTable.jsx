@@ -42,5 +42,3 @@ class UserNavigationMenuNavTable extends React.Component{
 }
 
 export default UserNavigationMenuNavTable;
-
-//change inner elements of li to links as functionality is built out

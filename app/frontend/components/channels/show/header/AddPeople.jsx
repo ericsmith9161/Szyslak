@@ -41,8 +41,6 @@ class AddPeople extends React.Component {
     let changedPath = false;
     e.preventDefault();
 
-    // add user to people to add
-
     if (changedPath === false) {
       this.setState({ searchQuery: "", filteredUsers: this.props.users })
       let avatar;
@@ -70,7 +68,6 @@ class AddPeople extends React.Component {
   }
 
   handleSubmit(e) {
-    //figure out how to create subscriptions
 
     e.preventDefault();
     if (this.state.ChannelAddIDs.length !== 0) {

@@ -32,4 +32,3 @@ const SplashHeader = () => {
 
 export default SplashHeader;
 
-//replace workspace links with guest user links??

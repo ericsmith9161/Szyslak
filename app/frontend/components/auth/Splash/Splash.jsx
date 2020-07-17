@@ -93,7 +93,3 @@ class Splash extends React.Component{
 }
 
 export default Splash;
-
-//images?
-//youtube???
-//personal links to replace header links?
