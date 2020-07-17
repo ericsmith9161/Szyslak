@@ -37,3 +37,7 @@ class SessionFormHeader extends React.Component{
 }
 
 export default SessionFormHeader;
+
+//logo???
+
+//demo user use onclick?

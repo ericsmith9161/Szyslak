@@ -63,6 +63,9 @@ class DMForm extends React.Component{
           DMRecipientAvs: this.state.DMRecipientAvs.concat([avatar])
         })
       }
+      // this.props.createDirectMessage({messagee_ids:[e.currentTarget.value]}).then(action =>
+      //   this.props.history.push(`/direct_messages/${action.directMessage.id}`));
+      // this.props.closeModal();
     }
   }
 
@@ -159,3 +162,5 @@ class DMForm extends React.Component{
 }
 
 export default DMForm;
+
+//add avatars when users are clicked on

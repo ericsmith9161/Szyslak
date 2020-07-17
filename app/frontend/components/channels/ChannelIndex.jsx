@@ -37,3 +37,4 @@ class ChannelIndex extends React.Component{
 
 export default ChannelIndex;
 
+//bonus: implement sort, implement filter, implement search

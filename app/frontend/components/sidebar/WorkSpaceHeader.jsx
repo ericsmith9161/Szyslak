@@ -26,3 +26,6 @@ class WorkSpaceHeader extends React.Component{
 }
 
 export default WorkSpaceHeader;
+
+//new message icon has greater z index?
+//modal handling

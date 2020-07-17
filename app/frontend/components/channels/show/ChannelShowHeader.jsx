@@ -24,6 +24,10 @@ class ChannelShowHeader extends React.Component {
     channelShow.classList.toggle("part");
     detailsText.classList.toggle("hidden");
     detailsBtn.classList.toggle("selected");
+
+
+    // channelShow.classList.remove("full");
+    // channelShow.classList.add("part");
   }
 
   render() {

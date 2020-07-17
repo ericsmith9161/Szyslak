@@ -12,8 +12,10 @@ const mSTP = (state, ownProps) => {
     currentUserId: state.session.id,
     users: Object.values(state.entities.users),
     currentChannelId: ownProps.location.pathname.split("/")[2],
+    // currentChannelId: ownProps.match.params.channelId,
     usersPOJO: state.entities.users,
     currentChannel: state.entities.channels[ownProps.location.pathname.split("/")[2]],
+    // currentChannel: state.entities.channels[ownProps.match.params.channelId],
 
   }
 }
