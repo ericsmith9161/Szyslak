@@ -49,9 +49,10 @@
   height: 88px;
   box-sizing: border-box;
   width: 100%;
-  padding: 0px 20px 0px 60px;
+  z-index: 3;
+  padding: 0px 20px 0px 20px;
   background-color: lightgoldenrodyellow;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 .edit-message-form form{
@@ -72,34 +73,6 @@
   padding-left: 10px;
 }
 
-.edit-message-form button{
-  border: 1px solid skyblue;
-  border-radius: 3px;
-  padding: 5px 12px;
-  height: 30px;
-  margin: 10px 5px;
-  font-size: .9rem;
-}
-
-.edit-message-form button:first-of-type{
-  background-color: honeydew;
-}
-
-.edit-message-form button:last-of-type{
-  background-color: whitesmoke;
-}
-
-.edit-message-form button:first-of-type:hover{
-  background-color: whitesmoke;
-}
-
-.edit-message-form button:last-of-type:hover{
-  background-color: honeydew;
-}
-
-.edit-message-form button:hover{
-  cursor: pointer;
-}
 .hidden{
   display: none;
 }

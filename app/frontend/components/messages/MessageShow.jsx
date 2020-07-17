@@ -7,7 +7,6 @@ class MessageShow extends React.Component{
     super(props);
     this.mouseOut = this.mouseOut.bind(this);
     this.mouseIn = this.mouseIn.bind(this);
-    this.state = {edit: false}
   }
 
   mouseIn(){
@@ -29,16 +28,12 @@ class MessageShow extends React.Component{
   }
 
   editToggle(){
-    let msgEditForm = document.getElementById(`${this.props.message.id}edit`);
-    let msgContent = document.getElementById(`${this.props.message.id}content`);
-
-    msgEditForm.classList.toggle("hidden");
-    msgContent.classList.toggle("hidden");
-    // this.setState({edit: !this.state.edit});
+    let msgEditForm = document.getElementById(`${this.props.message.id}edit`)
+    msgEditForm.classList.toggle("hidden")
   }
   
   render(){
-    let avatar, editType, msgOpts, msgOptsClass, hideMsg, hideEdit;
+    let avatar, editType, msgOpts;
 
     let suffix, timeStr;
     let time = this.props.message.created_at.slice(11, 16);
@@ -64,59 +59,46 @@ class MessageShow extends React.Component{
       editType = <DMMessageFormContainer editMessageBody={this.props.message.body} editMessageId={this.props.message.id} edit={true} />
     }
 
-    if (this.props.lastMessageUser === this.props.message.user_id) {
-      msgOptsClass = "trunc-message-options hidden";
-    }else{
-      msgOptsClass = "message-options hidden";
-    }
-
-    if (this.state.edit){
-      hideEdit = "";
-      hideMsg = "hidden";
-    }else{
-      hideEdit = "hidden";
-      hideMsg = "";
-    }
-
     msgOpts = 
-    <div className={msgOptsClass} id={`${this.props.message.id}`} >
-      <button className="opts-btn" onClick={() => {this.editToggle(); this.mouseOut();}}>
+    <div className="message-options hidden" id={`${this.props.message.id}`} >
+      <button onClick={() => {this.editToggle(); this.mouseOut();}}>
         <img src={window.pencilURL}  />
       </button>
-      <button className="opts-btn" onClick={() => this.props.deleteMessage(this.props.message.id)}>
+      <button onClick={() => this.props.deleteMessage(this.props.message.id)}>
         <img src={window.deleteURL}  />
       </button>
     </div>
 
-    if (this.props.lastMessageUser === this.props.message.user_id) {
-      return (
+    if (this.props.lastMessageUser === this.props.message.user_id){
+      return(
         <div className="trunc-message" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
           {msgOpts}
-          <div className={`msg-edit-boy ${hideEdit}`} id={`${this.props.message.id}edit`}>
-            {editType}
-          </div>
-          <div className={`trunc-message-content ${hideMsg}`} id={`${this.props.message.id}content`} >
+          <div className="trunc-message-content" >
+            <div className='hidden' id={`${this.props.message.id}edit`}>
+              {editType}
+            </div>
             {this.props.message.body}
           </div>
         </div>
+
       )
-    } else {
+    }else{
       return (
         <div className="mess">
           {msgOpts}
-          <div className={`msg-edit-boy ${hideEdit}`} id={`${this.props.message.id}edit`}>
-            {editType}
-          </div>
           <div className="message" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
+            <div className="hidden" id={`${this.props.message.id}edit`}>
+              {editType}
+            </div>
             <div>
               <img src={avatar} width="40" height="40" />
             </div>
             <div className="message-content">
               <div>
                 <b>{this.props.message.username}</b>&nbsp;
-            <span className="timestamps">{timeStr}</span>
+              <span className="timestamps">{timeStr}</span>
               </div>
-              <div className={`${hideMsg}`} id={`${this.props.message.id}content`}>
+              <div>
                 {this.props.message.body}
               </div>
             </div>
