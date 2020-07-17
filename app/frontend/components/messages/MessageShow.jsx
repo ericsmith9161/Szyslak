@@ -40,18 +40,12 @@ class MessageShow extends React.Component{
   iconInfo(type){
     if (type === "edit"){
       let msgEditHover = document.getElementById(`${this.props.message.id}edithover`);
-      let msgEditHoverDwnArr = document.getElementById(`${this.props.message.id}edithoverdownarrow`);
-
       console.log(msgEditHover)
       msgEditHover.classList.toggle("hidden")
-      msgEditHoverDwnArr.classList.toggle("hidden")
     }else if (type === "delete"){
       let msgDeleteHover = document.getElementById(`${this.props.message.id}deletehover`);
-      let msgDeleteHoverDwnArr = document.getElementById(`${this.props.message.id}deletehoverdownarrow`);
-
       console.log(msgDeleteHover)
       msgDeleteHover.classList.toggle("hidden")
-      msgDeleteHoverDwnArr.classList.toggle("hidden")
     }
   }
   
@@ -112,9 +106,6 @@ class MessageShow extends React.Component{
       <div className="hidden delete-hover" id={`${this.props.message.id}deletehover`}>
         Delete Message
       </div>
-      <div className="hidden edit-hover-down-arrow" id={`${this.props.message.id}edithoverdownarrow`}></div>
-      <div className="hidden delete-hover-down-arrow" id={`${this.props.message.id}deletehoverdownarrow`}></div>
-
     </div>
 
     if (this.props.lastMessageUser === this.props.message.user_id) {
