@@ -12,22 +12,6 @@ export const fetchMessage = (messageId) => {
   })
 }
 
-export const editMessage = message => {
-  return $.ajax({
-    url: `/api/messages/${message.id}`,
-    method: 'PATCH',
-    data: { message }
-  })
-}
-
-export const deleteMessage = messageId => {
-  return $.ajax({
-    url: `/api/messages/${messageId}`,
-    method: 'DELETE',
-    data: { messageId }
-  })
-}
-
 export const fetchChannelMessages = (channelId) => {
   return $.ajax({
     url: `api/channels/${channelId}/messages`,

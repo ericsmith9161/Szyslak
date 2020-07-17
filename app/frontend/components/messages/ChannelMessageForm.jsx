@@ -4,9 +4,7 @@ import {withRouter} from 'react-router-dom';
 class ChannelMessageForm extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      body: this.props.editMessageBody || this.props.message.body,
-    };
+    this.state = {body: this.props.message.body};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -24,11 +22,7 @@ class ChannelMessageForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    debugger
-    if (this.props.edit && this.state.body !== ""){
-      this.props.editMessage({ body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'Channel', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username, id: this.props.editMessageId })
-    }
-    else if (!this.props.edit && this.state.body !== ""){
+    if (this.state.body !== ""){
       let theRightChannel = App.cable.subscriptions.subscriptions[0];
       // let theRightChannel = App.cable.subscriptions.subscriptions.filter((subscription) => subscription.identifier.channel_id === this.props.channelId)[0]
       theRightChannel.speak({body: this.state.body, user_id: this.props.message.user_id, messageable_type: 'Channel', messageable_id: this.props.message.messageable_id, username: this.props.currentUser.username});

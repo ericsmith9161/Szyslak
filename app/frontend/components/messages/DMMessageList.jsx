@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MessageShowContainer from './MessageShowContainer';
+import MessageShow from './MessageShow';
 
 class DMMessageList extends React.Component {
   constructor(props) {
@@ -45,9 +45,7 @@ class DMMessageList extends React.Component {
     }
 
     if (this.props.messages.length !== 0) {
-      if (this.bottom.current !== null) {
-        this.bottom.current.scrollIntoView();
-      }
+      this.bottom.current.scrollIntoView();
     }
   }
 
@@ -66,7 +64,7 @@ class DMMessageList extends React.Component {
               lastMessageUserIds.unshift(message.user_id);
               return(
                 <li key={message.id}>
-                  <MessageShowContainer message={message} fetchUser={this.props.fetchUser} lastMessageUser={lastMessageUserIds[1]}/>
+                  <MessageShow message={message} fetchUser={this.props.fetchUser} lastMessageUser={lastMessageUserIds[1]}/>
                   <div ref={this.bottom} />
                 </li>
               )}

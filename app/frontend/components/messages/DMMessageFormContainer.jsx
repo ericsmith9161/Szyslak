@@ -5,7 +5,6 @@ import DMMessageForm from './DMMessageForm';
 import { withRouter } from 'react-router-dom';
 import { fetchDirectMessage } from '../../actions/direct_message_actions';
 import { fetchUser } from '../../actions/user_actions';
-import { editMessage} from '../../actions/message_actions';
 
 
 const mSTP = (state, ownProps) => {
@@ -19,8 +18,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
   return {
     fetchDirectMessage: directMessageId => dispatch(fetchDirectMessage(directMessageId)),
-    fetchUser: userId => dispatch(fetchUser(userId)),
-    editMessage: (message) => dispatch(editMessage(message))
+    fetchUser: userId => dispatch(fetchUser(userId))
   }
 }
 

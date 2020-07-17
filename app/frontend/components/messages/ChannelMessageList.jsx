@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MessageShowContainer from './MessageShowContainer';
+import MessageShow from './MessageShow';
 
 class ChannelMessageList extends React.Component{
   constructor(props){
@@ -44,9 +44,7 @@ class ChannelMessageList extends React.Component{
     }
 
     if(this.props.messages.length !== 0){
-      if(this.bottom.current !== null){
-        this.bottom.current.scrollIntoView();
-      }
+      this.bottom.current.scrollIntoView();
     }
   }
 
@@ -64,7 +62,7 @@ class ChannelMessageList extends React.Component{
             {this.props.messages.map(message => {
               lastMessageUserIds.unshift(message.user_id);
               return(<li key={message.id}>
-                <MessageShowContainer message={message} fetchUser={this.props.fetchUser} lastMessageUser={lastMessageUserIds[1]} />
+                <MessageShow message={message} fetchUser={this.props.fetchUser} lastMessageUser={lastMessageUserIds[1]} />
                 <div ref={this.bottom} />
               </li>)
             }

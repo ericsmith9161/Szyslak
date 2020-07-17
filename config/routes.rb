@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
     resource :session, only: [:new, :create, :destroy]  
 
-    resources :messages, only: [:index, :show, :update, :destroy]
+    resources :messages, only: [:index, :show]
 
     resources :direct_messages, only: [:show, :create, :index] do 
       resources :messages, only: [:index]
