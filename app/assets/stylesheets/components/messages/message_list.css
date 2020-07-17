@@ -6,7 +6,8 @@
   flex-direction: column;
   width: 100%;
   background-color: lightgoldenrodyellow;
-  padding: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+
 }
 
 .message-list-list{
@@ -15,9 +16,4 @@
   display:flex;
   flex-direction: column;
   overflow-y: auto;
-  position: relative;
-}
-
-.message-list-list li:first-of-type{
-  padding-top: 16px;
 }
